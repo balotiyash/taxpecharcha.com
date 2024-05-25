@@ -20,7 +20,6 @@
 
     /* background-color: #CAF4FF; */
     background-color: #FFF;
-
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
     
     display: flex;
@@ -80,10 +79,6 @@
 
 #navList a:hover::after {
     width: 100%;
-}
-
-#navList a:hover {
-    color: #000;
 }
 
 #loginBtn {

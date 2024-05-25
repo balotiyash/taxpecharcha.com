@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the home/index page.
     Created on: 24 May 2024
-    Last Modified: 24 May 2024
+    Last Modified: 25 May 2024
 -->
 
 <!DOCTYPE html>
@@ -30,5 +30,8 @@
     <header>
         <?php include "shared/view/navBar.html" ?>
     </header>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
 </body>
 </html>
