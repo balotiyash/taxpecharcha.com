@@ -89,3 +89,8 @@
 #loginBtn {
     margin-right: 16px;
 }
+
+#dashboardBtn {
+    display: none;
+    margin-right: 16px;
+}
