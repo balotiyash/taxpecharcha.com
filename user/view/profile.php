@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the profile page.
     Created on: 26 May 2024
-    Last Modified: 26 May 2024
+    Last Modified: 02 June 2024
 -->
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
 
     <!-- Stylesheets -->
     <!-- Styles for navbar -->
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Profile Page Style -->

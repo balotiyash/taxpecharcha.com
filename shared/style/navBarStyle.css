@@ -1,0 +1,91 @@
+/*
+    File: navBarStyle.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the navbar.
+    Created on: 24 May 2024
+    Last Modified: 02 June 2024
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Navigation Bar */
+#navBar {
+    width: 100vw;
+    padding: 8px;
+    position: fixed;
+
+    /* background-color: #CAF4FF; */
+    background-color: #FFF;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+#navBarChild1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rsLogo {
+    width: 25px;
+}
+
+#logo {
+    width: 500px;
+    margin-left: 8px;
+}
+
+#navBtns {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#navList {
+    display: flex;
+    list-style: none;
+}
+
+#navList li {
+    margin: 0;
+    margin-right: 30px;
+    font-size: large;
+    position: relative;
+}
+
+#navList li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+#navList a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #2196f3;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#navList a:hover::after {
+    width: 100%;
+}
+
+#loginBtn {
+    margin-right: 50px;
+}
+
+#dashboardBtn {
+    display: none;
+    margin-right: 50px;
+}

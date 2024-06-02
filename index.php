@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the home/index page.
     Created on: 24 May 2024
-    Last Modified: 25 May 2024
+    Last Modified: 02 June 2024
 -->
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
     <link rel="icon" type="image/x-icon" href="asset/vectors/Rupees.svg">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shared/style/navBarStyle.css">
     <link rel="stylesheet" href="shared/style/buttonStyle1.css">
 </head>
 <body onload="settle()">

@@ -1,0 +1,100 @@
+/*
+    File: dashWlcmStyle.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the dashboard page mainly Welcome and Recents Blogs.
+    Created on: 02 June 2024
+    Last Modified: 02 June 2024
+*/
+
+#dashBtn {
+    background-color: #2196f3;
+    color: #EEF7FF;
+}
+
+#dashContent {
+    background-color: white;
+    /* width: 1200px; */
+    width: 80vw;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px;
+}
+
+#dashChild1 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#helloDiv {
+    background-color: #FFDB00;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+    padding-left: 16px;
+    margin: 16px 0;
+}
+
+#helloChild1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+#helloImg {
+    width: 200px;
+}
+
+#newPostBtn {
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #01204E;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#recentBlogs {
+    /* background-color: #A7E6FF; */
+    background-color: #EEEEEE;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.recentChild {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recentChild div {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.articleImg {
+    width: 75px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 8px;
+}

@@ -1,0 +1,27 @@
+/*
+    File: todoStyle.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part to fetch existing blogs Page.
+    Created on: 02 June 2024
+    Last Modified: 02 June 2024
+*/
+
+#todoBtn {
+    background-color: #2196f3;
+    color: #EEF7FF;
+}
+
+#dashContent {
+    background-color: white;
+    /* width: 1200px; */
+    width: 80vw;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px;
+}

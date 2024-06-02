@@ -1,0 +1,52 @@
+/*
+    File: dashTallyStyle.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the dashboard page mainly tally and todo.
+    Created on: 02 June 2024
+    Last Modified: 02 June 2024
+*/
+
+#dashChild2 {
+    width: 25%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 8px 0;
+}
+
+.tallyDiv {
+    height: 75px;
+    border: none;
+    border-radius: 10px;
+    margin: 8px 0;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+}
+
+#allTally {
+    background-color: #ff7b7b;
+}
+
+#incomeTally {
+    background-color: #CDFADB;
+}
+
+#gstTally {
+    background-color: #CAF4FF;
+}
+
+#customeTally {
+    background-color: #E49BFF;
+}
+
+#financeImage {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.tallyDiv div {
+    display: flex;
+    flex-direction: column;
+}

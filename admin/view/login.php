@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the login page.
     Created on: 25 May 2024
-    Last Modified: 25 May 2024
+    Last Modified: 02 June 2024
 -->
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
 
     <!-- Stylesheets -->
     <!-- Navbar style -->
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
     
     <!-- Main Page Style -->
