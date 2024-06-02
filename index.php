@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="shared/style/buttonStyle1.css">
 </head>
-<body>
+<body onload="settle()">
     <header>
         <?php include "shared/view/navBar.html" ?>
     </header>

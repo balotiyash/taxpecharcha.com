@@ -1,0 +1,134 @@
+/*
+    File: profileStyle.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of profile page; Personal details block.
+    Created on: 26 May 2024
+    Last Modified: 26 May 2024
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Complete Profile Page */
+#mainPage {
+    display: flex;
+    justify-content: center;
+    /* background-color: #f7f7f9; */
+}
+
+body {
+    background-color: #f7f7f9;
+}
+
+#profile1 {
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 25px;
+}
+
+#profile2 { width: 760px; }
+
+.profileDivStyle {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    background-color: #FFF;
+    border: 3px solid #2196f3;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEFT Panel */
+#contactDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70%;
+}
+
+#profileImg {
+    background-image: url(../../asset/images/Manish.jpg);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#contactDiv h3 { font-size: 30px; }
+
+#contactDiv p {
+    padding: 5px;
+    background-color: #f3f3f3;
+    font-size: 18px;
+    border-radius: 7px;
+    margin-top: -20px;
+}
+
+#socialMedia {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.fa-brands {
+    transform: scale(2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.fa-brands:hover { transform: scale(2.2); }
+
+.fa-linkedin { color: #0a66c2; }
+
+.fa-square-whatsapp { color: #26c943; }
+
+.fa-square-x-twitter { color: black; }
+
+.fa-square-instagram { color: #f72d80; }
+
+#contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f3f3f3;
+    border-radius: 16px;
+    padding: 20px;
+    height: 22%;
+    margin-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tag {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.data { font-size: 16px; }
+
+.contactChild1 {
+    display: flex;
+    align-items: center;
+}
+
+.contactChild1 div { margin-left: 20px; }
+
+.fa-solid { scale: 1.5; }
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+}
+
+.fa-phone { color: #04bd7a; }
+
+.fa-envelope { color: #de3733; }
+
+.fa-location-dot { color: #f2b62c; }

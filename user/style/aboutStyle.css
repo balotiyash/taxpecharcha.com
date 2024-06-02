@@ -1,0 +1,47 @@
+/*
+    File: aboutStyle.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of profile page; About me block.
+    Created on: 26 May 2024
+    Last Modified: 26 May 2024
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* RIGHT Panel */
+#profile2 {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    padding: 20px;
+}
+
+#profileChild1 {
+    display: flex;
+    align-items: center;
+}
+
+#profileChild1 h3 {
+    font-size: 50px;
+}
+
+#profileChild1 div {
+    width: 100px;
+    height: 3px;
+    background-color: #2196f3;
+    margin-left: 25px;
+}
+
+#summary {
+    font-size: 18px;
+    font-weight: bold;
+    /* font-style: italic; */
+}
+
+#brief {
+    text-align: justify;
+}

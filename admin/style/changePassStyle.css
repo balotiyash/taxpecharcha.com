@@ -1,0 +1,131 @@
+/*
+    File: changePassStyle.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the change password page.
+    Created on: 02 June 2024
+    Last Modified: 02 June 2024
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #f7f7f9;
+}
+
+#mainDiv {
+    width: 100%;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+#resetParentDiv {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 750px;
+    border: 3.5px solid #2196f3;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.infoDiv {
+    text-align: center;
+}
+
+.taxpecharchaTxt {
+    font-size: 40px;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.slogan {
+    color: rgb(110, 110, 110);
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+.loginTxt {
+    font-size: 24px;
+    margin: 1vh;
+    color: #1977c4;
+}
+
+.resetChildDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputForm {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#resetParentDiv .form .form-element input[type="text"],
+#resetParentDiv .form .form-element input[type="date"],
+#resetParentDiv .form .form-element #securityQuestion,
+#resetParentDiv .form .form-element input[type="password"] {
+    margin-top: 12px;
+    display: block;
+    width: 300px;
+    padding: 12px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#saveDetailsDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#reviewDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#resetPassBtn {
+    width: 40%;
+    border: none;
+    outline: none;
+    background: #2196f3;
+    color: white;
+    cursor: pointer;
+    margin: 12px;
+}
+
+#review {
+    margin-right: 1%;
+}
+
+#inputForm #part1 .form-element, #inputForm #part2 .form-element {
+    margin: 12px;
+}
+
+#inputForm #part1 .form-element .passHideShow {
+    position: relative;
+}
+
+#inputForm #part1 .form-element .passHideShow input[type="password"] {
+    padding-right: 30px;
+}
+
+#inputForm #part1 .form-element .passHideShow .fa-eye-slash,
+#inputForm #part1 .form-element .passHideShow .fa-eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

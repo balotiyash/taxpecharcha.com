@@ -63,7 +63,7 @@
                     <div id="loginBtnDiv">
 
                         <input type="submit" name="" id="submitBtn" class="button-28">
-                        <p class="disableSelect">Forgot / Reset Password <a href="" id="resetPass">Click here</a></p>
+                        <p class="disableSelect">Forgot / Reset Password <a href="changePassword.php" id="resetPass">Click here</a></p>
 
                     </div>
                 </form>
