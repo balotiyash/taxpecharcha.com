@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the profile page.
     Created on: 26 May 2024
-    Last Modified: 02 June 2024
+    Last Modified: 04 June 2024
 -->
 
 <!DOCTYPE html>
@@ -31,19 +31,22 @@
     <link rel="stylesheet" href="../style/profileStyle.css">
     <link rel="stylesheet" href="../style/aboutStyle.css">
 
+    <!-- Fonts awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Navbar -->
     <header>
         <?php include "../../shared/view/navBar.html" ?>
     </header>
 
+    <!-- Main content area -->
     <main id="mainPage">
+        
         <!-- LEFT Panel -->
         <div id="profile1" class="profileDivStyle">
             <div id="contactDiv">
                 <div id="profileImg"></div>
-                <!-- <img src="../../asset/images/profileImage.jpg" alt="Profile Picture" id="profileImg"> -->
                 <h3>Manish Suvasiya</h3>
                 <p>Chartered Accountant</p>
 
@@ -65,8 +68,6 @@
                     </div>
                 </div> 
 
-                <!-- <div class="divider"></div> -->
-
                 <!-- Email -->
                 <div class="contactChild1">
                     <i class="fa-solid fa-envelope"></i>
@@ -75,8 +76,6 @@
                         <p class="data">camanishsuvasiya@gmail.com</p>
                     </div>
                 </div> 
-
-                <!-- <div class="divider"></div> -->
 
                 <!-- Address -->
                 <div class="contactChild1">
@@ -92,8 +91,5 @@
         <!-- RIGHT Panel -->
         <?php include "../view/aboutMe.html" ?>
     </main>
-
-    <!-- Javascript -->
-    <!-- <script src="../../main.js"></script> -->
 </body>
 </html>

@@ -31,28 +31,36 @@
     <link rel="stylesheet" href="../style/loginStyle.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
         <?php include "../../shared/view/navBar.html" ?>
     </header>
 
+    <!-- Main content area -->
     <main id="mainPage">
         <div id="mainChildDiv">
+
+            <!-- Left image -->
             <div id="imgDiv">
-                <img src="../../asset/vectors/CAImage.svg" alt="" id="taxImg">  
+                <img src="../../asset/vectors/CAImage.svg" alt="Login Illustrative Image" id="taxImg">  
             </div>
 
+            <!-- Right login form -->
             <div id="loginFormDiv">
                 <form action="" id="loginForm">
+                    <!-- Login message -->
                     <div id="wlcmDiv">
                         <p id="wlcmTxt" class="disableSelect">Welcome Back!</p>
                         <p class="greyTxt">Login to continue</p>
                     </div>
 
+                    <!-- Email Div -->
                     <div id="idDiv">
                         <label for="emailTxt" class="disableSelect">Email ID</label><br>
                         <input type="email" name="" id="emailTxt" class="inputStyle" placeholder="abc@gmail.com" require autocomplete="off">
                     </div>
-    
+
+                    <!-- Pass Div -->
                     <div id="passDiv">
                         <label for="passTxt" class="disableSelect">Password</label><br>
                         <input type="password" name="" id="passTxt" class="inputStyle" placeholder="• • • • • • • •" require autocomplete="off"><br>
@@ -60,11 +68,10 @@
                         <label for="showPassCbk" class="greyTxt disableSelect">Show Password</label>
                     </div>
     
+                    <!-- Save / reset password div -->
                     <div id="loginBtnDiv">
-
                         <input type="submit" name="" id="submitBtn" class="button-28">
                         <p class="disableSelect">Forgot / Reset Password <a href="changePassword.php" id="resetPass">Click here</a></p>
-
                     </div>
                 </form>
             </div>

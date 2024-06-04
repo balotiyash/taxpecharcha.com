@@ -3,14 +3,16 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the dashboard page mainly Welcome and Recents Blogs.
     Created on: 02 June 2024
-    Last Modified: 02 June 2024
+    Last Modified: 04 June 2024
 */
 
+/* Changing color of the left navigation button for active state */
 #dashBtn {
     background-color: #2196f3;
     color: #EEF7FF;
 }
 
+/* Main Content Area */
 #dashContent {
     background-color: white;
     /* width: 1200px; */
@@ -26,6 +28,7 @@
     padding: 8px;
 }
 
+/* Left Welcome Div */
 #dashChild1 {
     width: 60%;
     display: flex;
@@ -66,6 +69,7 @@
     cursor: pointer;
 }
 
+/* Left Recent Blog Div */
 #recentBlogs {
     /* background-color: #A7E6FF; */
     background-color: #EEEEEE;

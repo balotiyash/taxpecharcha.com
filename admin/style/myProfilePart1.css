@@ -1,0 +1,125 @@
+/*
+    File: myProfilePart1.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the MY PROFILE Page in dashboard mainly left.
+    Created on: 02 June 2024
+    Last Modified: 04 June 2024
+*/
+
+/* Changing color of the left navigation button for active state */
+#myProfileBtn {
+    background-color: #2196f3;
+    color: #EEF7FF;
+}
+
+#dashContent {
+    width: 80vw;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+}
+
+#profileInfoDiv {
+    width: 48%;
+    height: 100%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 30px 0;
+}
+
+#heading div {
+    display: flex;
+    align-items: center;
+}
+
+#horizontalLine {
+    width: 100px;
+    height: 3px;
+    background-color: #e49bff;
+    margin-left: 8px;
+}
+
+.saveBtn {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #01204E;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+}
+
+#profileImage {
+    border-radius: 50%;
+    width: 250px;
+    margin-bottom: 25px;
+}
+
+/* Reset default styles */
+.inputStyle {
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none; /* Remove the default focus outline */
+    padding: 5px 0; /* Add some padding for better appearance */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    font-size: 16px; /* Adjust font size */
+    text-align: center;
+    margin: 8px;
+}
+
+/* Styling when the input is active or focused */
+.inputStyle:focus,
+.inputStyle:hover {
+    border-bottom: 1px solid #2196f3;
+}
+
+/* Optional: Add a placeholder style */
+.inputStyle::placeholder {
+    color: #999; /* Adjust placeholder color */
+}
+
+/* Optional: Style for disabled input */
+.inputStyle:disabled {
+    opacity: 0.5; /* Adjust opacity for disabled input */
+    cursor: not-allowed; /* Change cursor for disabled input */
+}
+
+.logoDetails {
+    position: relative;
+    display: inline-block; /* Ensures the container wraps around its contents */
+}
+
+.icon-container {
+    position: absolute;
+    top: 50%; 
+    /* Align the icon vertically */
+    left: -25px; 
+    /* Adjust the distance from the left */
+    transform: translateY(-50%); /* Center the icon vertically */
+}
+
+.inputStyle {
+    padding-left: 30px; /* Adjust padding to accommodate the icon */
+}
+
+.icon {
+    transform: scale(1.2);
+}

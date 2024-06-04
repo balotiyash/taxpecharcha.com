@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the navbar.
     Created on: 24 May 2024
-    Last Modified: 02 June 2024
+    Last Modified: 04 June 2024
 */
 
 * {
@@ -17,7 +17,7 @@
     width: 100vw;
     padding: 8px;
     position: fixed;
-
+    z-index: 5;
     /* background-color: #CAF4FF; */
     background-color: #FFF;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
@@ -41,6 +41,7 @@
     margin-left: 8px;
 }
 
+/* Navigation Links */
 #navBtns {
     display: flex;
     justify-content: end;
@@ -81,6 +82,7 @@
     width: 100%;
 }
 
+/* Login / Dashboard buttons */
 #loginBtn {
     margin-right: 50px;
 }

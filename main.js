@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: // TODO
  * Created on: 25 May 2024
- * Last Modified: 25 May 2024
+ * Last Modified: 04 June 2024
 */
 
 // Onload function to change the src of images of navbar as the navbar is used on multiple pages
@@ -15,10 +15,6 @@ function settle() {
 }
 
 // Function to open login page
-// function openLoginPage() {
-//     window.location.href = "admin/view/login.php";
-// }
-
 document.querySelector("#loginBtn").onclick = function() {
     window.location.href = "admin/view/login.php";
 }

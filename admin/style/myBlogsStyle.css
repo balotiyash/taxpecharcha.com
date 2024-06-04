@@ -3,25 +3,94 @@
     Author: Yash Balotiya
     Description: This file contains the styling part to fetch existing blogs Page.
     Created on: 02 June 2024
-    Last Modified: 02 June 2024
+    Last Modified: 04 June 2024
 */
 
+/* Changing color of the left navigation button for active state */
 #myBlogsBtn {
     background-color: #2196f3;
     color: #EEF7FF;
 }
 
+/* Main content area */
 #dashContent {
     background-color: white;
     /* width: 1200px; */
     width: 80vw;
+    height: 79vh;
     margin-top: 100px;
     margin-bottom: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: none;
     border-radius: 14px;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
     align-items: center;
     padding: 8px;
+}
+
+/* Search bar style */
+#searchBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 4px; */
+    margin: 8px;
+    width: 95%;
+    border: 3px solid #E49BFF;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+#mainCatDiv, #subCatDiv, #searchDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px;
+}
+
+#mainCatOption {
+    height: 35px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+#mainCatDiv { width: 330px; }
+
+#subCatDiv { width: 400px; }
+
+#verticalDivider {
+    width: 1px;
+    height: 80%;
+    background-color: #2196f3;
+}
+
+#searchInput {
+    border: 2px solid #aaa;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 8px;
+    width: 50%;
+}
+
+#searchIcon {
+    color: #2196f3;
+    margin: 0 8px 0 0;
+    cursor: pointer;
+}
+
+/* Search data module below search bar */
+#searchImg {
+    width: 500px;
+}
+
+.dataDiv {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

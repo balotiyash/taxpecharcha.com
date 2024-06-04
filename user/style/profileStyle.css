@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of profile page; Personal details block.
     Created on: 26 May 2024
-    Last Modified: 26 May 2024
+    Last Modified: 05 June 2024
 */
 
 * {
@@ -120,12 +120,6 @@ body {
 .contactChild1 div { margin-left: 20px; }
 
 .fa-solid { scale: 1.5; }
-
-.divider {
-    width: 100%;
-    height: 2px;
-    background-color: gray;
-}
 
 .fa-phone { color: #04bd7a; }
 

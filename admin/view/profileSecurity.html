@@ -1,0 +1,121 @@
+<!-- 
+    File: profileSecurity.html
+    Author: Yash Balotiya
+    Description: This file contains all the HTML5 code of the My Profile Page in dashboard specifically right side change security question and password.
+    Created on: 02 June 2024
+    Last Modified: 04 June 2024
+-->
+
+<div id="accountInfoDiv">
+    <!-- This was for change username but later on the plan was change to change security question -->
+    <!-- <div id="changeUnameDiv">
+        <div id="unameChild1">
+            <h3>Change Username</h3>
+            <div id="horizontalLine" style="background-color: #ffdb00;"></div>
+        </div>
+
+        <div id="unameChild2">
+            <div>
+                <img src="../../asset/images/ChangeUname.jpg" alt="" class="changeImage">
+            </div>
+
+            <div>
+                <div class="inputElements">
+                    <label for=""><b>Existing Username</b></label>
+                    <input class="changeInput" type="text" name="" id="">
+                </div>
+
+                <div class="inputElements">
+                    <label for=""><b>New Username</b></label>
+                    <input class="changeInput" type="text" name="" id="">
+                </div>
+
+                <div class="inputElements">
+                    <label for=""><b>Confirm Username</b></label>
+                    <input class="changeInput" type="text" name="" id="">
+                </div>
+
+                <input type="submit" name="" id="" class="button-28 saveBtn">
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Right top div to change security code and dob -->
+    <div id="changeSecurityDiv">
+        <!-- Info -->
+        <div class="secChild1">
+            <h3>Change Security Answer</h3>
+            <div id="horizontalLine" style="background-color: #ffdb00;"></div>
+        </div>
+
+        <div class="secChild2">
+            <!-- Left side image -->
+            <div>
+                <img src="../../asset/images/ChangeUname.jpg" alt="Illustrative Image" class="changeImage">
+            </div>
+
+            <!-- Right side form -->
+            <div class="formElement">
+                <div class="inputElements">
+                    <label for="securityQuestion"><b>Select Question</b></label>
+                    <select name="" id="securityQuestion" required>
+                        <option value="" selected disabled>Select Question</option>
+                        <option value="In what city were you born?">In what city were you born?</option>
+                        <option value="What is your favorite color?">What is your favorite color?</option>
+                        <option value="What is your favorite movie?">What is your favorite movie?</option>
+                        <option value="Who was your childhood best friend?">Who was your childhood best friend?</option>
+                        <option value="What is your favorite food?">What is your favorite food?</option>
+                        <option value="Who is your favorite teacher?">Who is your favorite teacher?</option>
+                    </select>
+                </div>
+
+                <div class="inputElements">
+                    <label for="changeSecurityTxt"><b>Answer</b></label>
+                    <input class="changeInput" type="text" name="" id="changeSecurityTxt">
+                </div>
+
+                <div class="inputElements">
+                    <label for="dobTxt"><b>Confirm DOB</b></label>
+                    <input class="changeInput" type="date" name="" id="dobTxt">
+                </div>
+
+                <input type="submit" name="" id="securitySubmitBtn" class="button-28 saveBtn">
+            </div>
+        </div>
+    </div>
+
+    <!-- Right bottom div to change password -->
+    <div id="changePassDiv">
+        <!-- Info -->
+        <div class="secChild1">
+            <h3>Change Password</h3>
+            <div id="horizontalLine" style="background-color: #ff7b7b;"></div>
+        </div>
+
+        <div class="secChild2">
+            <div>
+                <img src="../../asset/vectors/ChangePassword.svg" alt="Illustrative Image" class="changeImage">
+            </div>
+
+            <!-- Right Form -->
+            <div class="formElement">
+                <div class="inputElements">
+                    <label for="currentPassTxt"><b>Existing Password</b></label>
+                    <input class="changeInput" type="password" name="" id="currentPassTxt">
+                </div>
+
+                <div class="inputElements">
+                    <label for="newPassTxt"><b>New Password</b></label>
+                    <input class="changeInput" type="password" name="" id="newPassTxt">
+                </div>
+
+                <div class="inputElements">
+                    <label for="cfmPassTxt"><b>Confirm Password</b></label>
+                    <input class="changeInput" type="text" name="" id="cfmPassTxt">
+                </div>
+
+                <input type="submit" name="" id="changePassBtn" class="button-28 saveBtn">
+            </div>
+        </div>
+    </div>
+</div>

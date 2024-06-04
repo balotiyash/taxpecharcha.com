@@ -3,18 +3,21 @@
     Author: Yash Balotiya
     Description: This file contains the styling part to fetch existing blogs Page.
     Created on: 02 June 2024
-    Last Modified: 02 June 2024
+    Last Modified: 04 June 2024
 */
 
+/* Changing color of the left navigation button for active state */
 #todoBtn {
     background-color: #2196f3;
     color: #EEF7FF;
 }
 
+/* Main content area */
 #dashContent {
     background-color: white;
     /* width: 1200px; */
     width: 80vw;
+    height: 79vh;
     margin-top: 100px;
     margin-bottom: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -24,4 +27,17 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 8px;
+    line-height: 50px;
+}
+
+#heading {
+    display: flex;
+    align-items: center;
+}
+
+#horizontalLine {
+    width: 100px;
+    height: 3px;
+    background-color: #ff7b7b;
+    margin-left: 8px;
 }

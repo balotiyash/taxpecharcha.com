@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the change or forget password page.
     Created on: 02 June 2024
-    Last Modified: 02 June 2024
+    Last Modified: 04 June 2024
 -->
 
 <!DOCTYPE html>
@@ -23,32 +23,42 @@
     <link rel="icon" type="image/x-icon" href="../../asset/vectors/Rupees.svg">
 
     <!-- Stylesheets -->
+    <!-- Navbar style -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
+
+    <!-- Fonts awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="../style/changePassStyle.css">
     
 </head>
 <body>
+    <!-- Navbar -->
     <header>
         <?php include "../../shared/view/navBar.html" ?>
     </header>
     
+    <!-- Main content area -->
     <main id="mainDiv">
         <div id="resetParentDiv">
+            <!-- Information -->
             <div class="infoDiv">
                 <h1 class="taxpecharchaTxt">Taxpecharcha</h1>
                 <p class="slogan">"Maximize Savings, Minimize Taxes: Your Path to Financial Freedom."</p>
                 <p class="loginTxt">Admin Password Reset</p>
             </div>
-        
+
             <form onsubmit="" class="form" id="resetPassForm">
+                <!-- Left Side -->
                 <div id="inputForm">
                     <div id="part1">
                         <div class="form-element">
                             <label for="emailTxt">Email - ID</label>
                             <input type="text" name="emailTxt" id="emailTxt" placeholder="Enter Email ID" autocomplete="off" required>
                         </div>
+
                         <div class="form-element">
                             <label for="newPassTxt">New Password</label>
                             <div class="passHideShow">
@@ -56,6 +66,7 @@
                                 <i class="fa-solid fa-eye togglePassword" id="eyePass1" onclick="hideShowPassword('newPassTxt')"></i>
                             </div>
                         </div>
+
                         <div class="form-element">
                             <label for="confirmPassTxt">Confirm Password</label>
                             <div class="passHideShow">
@@ -64,12 +75,14 @@
                             </div>
                         </div>
                     </div>
-                    
+
+                    <!-- Right Side -->
                     <div id="part2">
                         <div class="form-element">
                             <label for="dobInput">Date of Birth</label>
                             <input type="date" name="" id="dobInput" required>
                         </div>
+
                         <div class="form-element">
                             <label for="securityQuestion">Select Security Question</label>
                             <select name="" id="securityQuestion" required>
@@ -82,16 +95,21 @@
                                 <option value="Who is your favorite teacher?">Who is your favorite teacher?</option>
                             </select>
                         </div>
+
                         <div class="form-element">
                             <label for="securityAnswer">Answer</label>
                             <input type="text" name="" id="securityAnswer" placeholder="Enter Your Answer" autocomplete="off" required>
                         </div>
                     </div>
                 </div>
+
+                <!-- Checkbox for confirmation -->
                 <div class="form-element" id="reviewDiv">
                     <input type="checkbox" name="" id="review" required>
                     <label for="review">I have reviewed my details.</label>
                 </div>
+
+                <!-- Submit button -->
                 <div class="form-element" id="saveDetailsDiv">
                     <button type="submit" class="button-28" role="button" id="resetPassBtn">Submit</button>
                 </div>
