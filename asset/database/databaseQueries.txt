@@ -23,3 +23,10 @@ INSERT INTO admin_login_details VALUES (
     "In what city were you born?",
     "$2y$10$CZ9yEHzYferf44gwQJ2DcuKmIV9a8rflO2OnabnvyoLF1Yl6Lvbci"
 );
+
+//TO DO TABLE
+CREATE TABLE todo_data (
+    data VARCHAR(65535)
+);
+
+INSERT INTO todo_data VALUES("<h1>Yash Balotiya</h1>");

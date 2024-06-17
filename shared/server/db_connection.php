@@ -10,6 +10,8 @@ $username = "root";
 $password = "";
 $dbname = "taxpecharcha_db";
 
+$tinymceAPIKey = "jrdy5yjibmg02ir6g0t9r327kio35hjmj0e8fy951w88eqi9";
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 

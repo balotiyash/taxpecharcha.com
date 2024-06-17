@@ -51,8 +51,11 @@
         <section id="dashContent">
             <div>
                 <div id="heading">
-                    <h2>TODO</h2>
-                    <div id="horizontalLine"></div>
+                    <div>
+                        <h2>TODO</h2>
+                        <div id="horizontalLine"></div>
+                    </div>
+                    <button class="button-28 saveBtn" id="todoSaveBtn">Save</button>
                 </div>
                 <textarea name="textarea" id="default" required autocomplete="off"></textarea>
             </div>
@@ -60,8 +63,10 @@
     </main>
 
     <!-- scripts -->
-    <script src="../controller/tinymce/tinymce.min.js"></script>
-    <script src="../controller/dashboard.js"></script>
+    <!-- <script src="../controller/tinymce/tinymce.min.js"></script> -->
+    <script src="https://cdn.tiny.cloud/1/jrdy5yjibmg02ir6g0t9r327kio35hjmj0e8fy951w88eqi9/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
     <script src="../controller/todoScript.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
 </body>
 </html>
