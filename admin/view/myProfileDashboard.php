@@ -1,9 +1,9 @@
 <!-- 
-    File: myProfileDashboard.php
+    File: admin/view/myProfileDashboard.php
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the My Profile Page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 04 June 2024
+    Last Modified: 17 June 2024
 -->
 
 <!DOCTYPE html>
@@ -59,6 +59,9 @@
     </main>
 
     <!-- Scripts -->
-    <script src="../controller/dashboard.js"></script>
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+     <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/profilePageScript.js"></script>
 </body>
 </html>

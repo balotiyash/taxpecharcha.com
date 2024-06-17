@@ -1,11 +1,12 @@
 /*
-    File: navBarStyle.css
+    File: shared/style/navBarStyle.css
     Author: Yash Balotiya
     Description: This file contains the styling part of the navbar.
     Created on: 24 May 2024
-    Last Modified: 04 June 2024
+    Last Modified: 17 June 2024
 */
 
+/* General styling */
 * {
     margin: 0;
     padding: 0;
@@ -18,10 +19,8 @@
     padding: 8px;
     position: fixed;
     z-index: 5;
-    /* background-color: #CAF4FF; */
     background-color: #FFF;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
-    
     display: flex;
     justify-content: space-between;
 }
@@ -44,7 +43,6 @@
 /* Navigation Links */
 #navBtns {
     display: flex;
-    justify-content: end;
     align-items: center;
 }
 
@@ -90,4 +88,48 @@
 #dashboardBtn {
     display: none;
     margin-right: 50px;
+}
+
+/* Drop down */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 150%;
+    padding: 8px;
+    margin: 2px 0;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: #FFF;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    line-height: 20px;
+    width: 100%;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-toggle i {
+    margin-left: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
 }

@@ -1,9 +1,9 @@
 <!-- 
-    File: profile.php
+    File: user/view/profile.php
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the profile page.
     Created on: 26 May 2024
-    Last Modified: 04 June 2024
+    Last Modified: 17 June 2024
 -->
 
 <!DOCTYPE html>

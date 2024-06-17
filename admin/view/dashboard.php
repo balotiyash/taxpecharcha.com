@@ -1,9 +1,9 @@
 <!-- 
-    File: dashboard.php
+    File: admin/view/dashboard.php
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the dashboard page after login.
     Created on: 02 June 2024
-    Last Modified: 04 June 2024
+    Last Modified: 17 June 2024
 -->
 
 <!DOCTYPE html>

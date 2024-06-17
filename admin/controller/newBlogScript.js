@@ -1,9 +1,9 @@
 /** 
- * File: newBlogScript.js
+ * File: admin/controller/newBlogScript.js
  * Author: Yash Balotiya
  * Description: // TODO
  * Created on: 03 June 2024
- * Last Modified: 04 June 2024
+ * Last Modified: 17 June 2024
 */
 
 // This is the script for the advanced text editor on the create new blog page

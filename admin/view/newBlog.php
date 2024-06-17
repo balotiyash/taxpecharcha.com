@@ -1,9 +1,9 @@
 <!-- 
-    File: newBlog.php
+    File: admin/view/newBlog.php
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the create new blog page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 03 June 2024
+    Last Modified: 17 June 2024
 -->
 
 <!DOCTYPE html>

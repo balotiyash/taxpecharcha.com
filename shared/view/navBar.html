@@ -1,10 +1,13 @@
 <!-- 
-    File: navBar.html
+    File: shared/view/navBar.html
     Author: Yash Balotiya
     Description: This file contains the HTML5 code of navigation bar.
     Created on: 24 May 2024
-    Last Modified: 25 May 2024
+    Last Modified: 17 June 2024
 -->
+
+<!-- FontsAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- Navigation Panel -->
 <nav id="navBar">
@@ -16,11 +19,24 @@
     <div id="navBtns">
         <ul id="navList">
             <li><a href="../../index.php" id="homeLink">Home</a></li>
-            <li><a href="">Blogs</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" aria-expanded="false">
+                        Services <i class="fa-solid fa-caret-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Income Tax</a></li>
+                        <li><a class="dropdown-item" href="#">GST</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a href="../../user/view/profile.php" id="aboutLink">About</a></li>
         </ul>
 
-        <button class="button-28" id="loginBtn" onclick="window.location.href = '../../admin/view/login.php'">Login</button>
+        <button class="button-28" id="loginBtn"
+            onclick="window.location.href = '../../admin/view/login.php'">Login</button>
         <button class="button-28" id="dashboardBtn">Dashboard</button>
     </div>
 </nav>

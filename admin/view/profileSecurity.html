@@ -1,9 +1,9 @@
 <!-- 
-    File: profileSecurity.html
+    File: admin/view/profileSecurity.html
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the My Profile Page in dashboard specifically right side change security question and password.
     Created on: 02 June 2024
-    Last Modified: 04 June 2024
+    Last Modified: 17 June 2024
 -->
 
 <div id="accountInfoDiv">
@@ -55,10 +55,10 @@
             </div>
 
             <!-- Right side form -->
-            <div class="formElement">
+            <form class="formElement">
                 <div class="inputElements">
                     <label for="securityQuestion"><b>Select Question</b></label>
-                    <select name="" id="securityQuestion" required>
+                    <select id="securityQuestion" required>
                         <option value="" selected disabled>Select Question</option>
                         <option value="In what city were you born?">In what city were you born?</option>
                         <option value="What is your favorite color?">What is your favorite color?</option>
@@ -71,16 +71,16 @@
 
                 <div class="inputElements">
                     <label for="changeSecurityTxt"><b>Answer</b></label>
-                    <input class="changeInput" type="text" name="" id="changeSecurityTxt">
+                    <input class="changeInput" type="text" id="changeSecurityTxt" autocomplete="off">
                 </div>
 
                 <div class="inputElements">
                     <label for="dobTxt"><b>Confirm DOB</b></label>
-                    <input class="changeInput" type="date" name="" id="dobTxt">
+                    <input class="changeInput" type="date" id="dobTxt">
                 </div>
 
-                <input type="submit" name="" id="securitySubmitBtn" class="button-28 saveBtn">
-            </div>
+                <input type="submit" id="securitySubmitBtn" class="button-28 saveBtn">
+            </form>
         </div>
     </div>
 
@@ -98,24 +98,24 @@
             </div>
 
             <!-- Right Form -->
-            <div class="formElement">
+            <form class="formElement" id="changePasswordForm">
                 <div class="inputElements">
                     <label for="currentPassTxt"><b>Existing Password</b></label>
-                    <input class="changeInput" type="password" name="" id="currentPassTxt">
+                    <input class="changeInput" type="password" id="currentPassTxt" placeholder="• • • • • • • •" autocomplete="off" required>
                 </div>
 
                 <div class="inputElements">
                     <label for="newPassTxt"><b>New Password</b></label>
-                    <input class="changeInput" type="password" name="" id="newPassTxt">
+                    <input class="changeInput" type="password" id="newPassTxt" placeholder="• • • • • • • •" autocomplete="off" required>
                 </div>
 
                 <div class="inputElements">
                     <label for="cfmPassTxt"><b>Confirm Password</b></label>
-                    <input class="changeInput" type="text" name="" id="cfmPassTxt">
+                    <input class="changeInput" type="text" id="cfmPassTxt" placeholder="• • • • • • • •" autocomplete="off" required>
                 </div>
 
-                <input type="submit" name="" id="changePassBtn" class="button-28 saveBtn">
-            </div>
+                <input type="submit" id="changePassBtn" class="saveBtn button-28">
+            </form>
         </div>
     </div>
 </div>

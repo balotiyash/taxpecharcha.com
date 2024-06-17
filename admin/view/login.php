@@ -1,9 +1,9 @@
 <!-- 
-    File: login.php
+    File: admin/view/login.php
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the login page.
     Created on: 25 May 2024
-    Last Modified: 02 June 2024
+    Last Modified: 17 June 2024
 -->
 
 <!DOCTYPE html>
@@ -56,7 +56,7 @@
 
                     <!-- Email Div -->
                     <div id="idDiv">
-                        <label for="emailTxt" class="disableSelect">Email ID</label><br>
+                        <label for="emailTxt" class="disableSelect">Login ID</label><br>
                         <input type="email" name="" id="emailTxt" class="inputStyle" placeholder="abc@gmail.com" require autocomplete="off">
                     </div>
 

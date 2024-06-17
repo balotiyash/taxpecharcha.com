@@ -1,9 +1,9 @@
 /*
-    File: myProfilePart1.css
+    File: admin/style/myProfilePart1.css
     Author: Yash Balotiya
     Description: This file contains the styling part of the MY PROFILE Page in dashboard mainly left.
     Created on: 02 June 2024
-    Last Modified: 04 June 2024
+    Last Modified: 17 June 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -58,6 +58,7 @@
 .saveBtn {
     width: 100px;
     height: 40px;
+    margin-top: 10px;
     border: none;
     background-color: #01204E;
     color: white;
@@ -71,6 +72,7 @@
     border-radius: 50%;
     width: 250px;
     margin-bottom: 25px;
+    pointer-events: none;
 }
 
 /* Reset default styles */
@@ -83,6 +85,7 @@
     font-size: 16px; /* Adjust font size */
     text-align: center;
     margin: 8px;
+    pointer-events: none; /* To disable the input fields of the profile data */
 }
 
 /* Styling when the input is active or focused */
@@ -120,6 +123,6 @@
     padding-left: 30px; /* Adjust padding to accommodate the icon */
 }
 
-.icon {
+.logoDetails .icon-container .icon {
     transform: scale(1.2);
 }

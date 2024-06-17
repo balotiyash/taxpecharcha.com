@@ -1,9 +1,9 @@
 <!-- 
-    File: myBlogs.php
+    File: admin/view/myBlogs.php
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code to fetch all the existing blogs in dashboard.
     Created on: 02 June 2024
-    Last Modified: 04 June 2024
+    Last Modified: 17 June 2024
 -->
 
 <!DOCTYPE html>

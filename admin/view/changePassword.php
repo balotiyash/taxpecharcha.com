@@ -1,9 +1,9 @@
 <!-- 
-    File: changePassword.php
+    File: admin/view/changePassword.php
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the change or forget password page.
     Created on: 02 June 2024
-    Last Modified: 04 June 2024
+    Last Modified: 17 June 2024
 -->
 
 <!DOCTYPE html>
@@ -55,7 +55,7 @@
                 <div id="inputForm">
                     <div id="part1">
                         <div class="form-element">
-                            <label for="emailTxt">Email - ID</label>
+                            <label for="emailTxt">Login - ID</label>
                             <input type="text" name="emailTxt" id="emailTxt" placeholder="Enter Email ID" autocomplete="off" required>
                         </div>
 

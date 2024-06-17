@@ -1,9 +1,9 @@
 /*
-    File: profileStyle.css
+    File: user/style/profileStyle.css
     Author: Yash Balotiya
     Description: This file contains the styling part of profile page; Personal details block.
     Created on: 26 May 2024
-    Last Modified: 05 June 2024
+    Last Modified: 17 June 2024
 */
 
 * {
@@ -119,7 +119,7 @@ body {
 
 .contactChild1 div { margin-left: 20px; }
 
-.fa-solid { scale: 1.5; }
+.contactChild1 .fa-solid { scale: 1.5; }
 
 .fa-phone { color: #04bd7a; }
 

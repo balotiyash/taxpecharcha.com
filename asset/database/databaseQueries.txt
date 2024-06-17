@@ -1,0 +1,25 @@
+//
+    File: asset/database/databaseQueries.txt
+    Author: Yash Balotiya
+    Description: This file contains all the SQL queries used while creating or altering any data into the database.
+    Created on: 16 June 2024
+    Last Modified: 17 June 2024
+//
+
+//ADMIN LOGIN DETAILS
+CREATE TABLE admin_login_details (
+    login_id VARCHAR(255) PRIMARY KEY,
+    password VARCHAR(255) NOT NULL,
+    dob DATE NOT NULL,
+    security_question VARCHAR(255) NOT NULL,
+    security_answer VARCHAR(255) NOT NULL
+);
+
+//INSERTING DATA INTO ADMIN LOGIN DETAILS
+INSERT INTO admin_login_details VALUES (
+    "admin",
+    "$2y$10$dUQsGnH/j5KX4xSauqikm.2n.60vYk5v8LMRp4kunwbWZspu.tQgm",
+    "2002-05-29",
+    "In what city were you born?",
+    "$2y$10$CZ9yEHzYferf44gwQJ2DcuKmIV9a8rflO2OnabnvyoLF1Yl6Lvbci"
+);
