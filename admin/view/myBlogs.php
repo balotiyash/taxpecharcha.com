@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code to fetch all the existing blogs in dashboard.
     Created on: 02 June 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 -->
 
 <!DOCTYPE html>
@@ -28,15 +28,15 @@
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Left nav buttons style -->
-    <link rel="stylesheet" href="../../shared/style/dashboardStyle.css">
+    <link rel="stylesheet" href="../../shared/style/dashboardNavBtn.css">
+
+    <!-- Fonts awesome included in navbar -->
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../style/myBlogsStyle.css">
-
-    <!-- Fonts awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
 </head>
-<body onload="initializeDashboard()">
+<body>
     <!-- Navbar -->
     <header>
         <?php include "../../shared/view/navBar.html" ?>
@@ -80,7 +80,7 @@
                 <div id="searchDiv">
                     <label for="searchInput"><b>Search:</b></label>
                     <input type="text" name="" id="searchInput" placeholder="Article No.">
-                    <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+                    <i class="fa-solid fa-magnifying-glass icons" id="searchIcon"></i>
                 </div>
             </div>
 
@@ -93,6 +93,7 @@
     </main>
 
     <!-- Scripts -->
-    <script src="../controller/dashboard.js"></script>
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the profile page.
     Created on: 26 May 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 -->
 
 <!DOCTYPE html>
@@ -27,12 +27,11 @@
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
+    <!-- Fonts awesome is included in navbar -->
+
     <!-- Profile Page Style -->
     <link rel="stylesheet" href="../style/profileStyle.css">
     <link rel="stylesheet" href="../style/aboutStyle.css">
-
-    <!-- Fonts awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- Navbar -->

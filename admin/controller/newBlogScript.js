@@ -1,9 +1,9 @@
 /** 
  * File: admin/controller/newBlogScript.js
  * Author: Yash Balotiya
- * Description: // TODO
+ * Description: This file contains all the js and ajax code to create new blog and to interact with the server.
  * Created on: 03 June 2024
- * Last Modified: 17 June 2024
+ * Last Modified: 20 June 2024
 */
 
 // This is the script for the advanced text editor on the create new blog page

@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the change password page.
     Created on: 02 June 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 */
 
 * {
@@ -12,10 +12,9 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-body {
-    background-color: #f7f7f9;
-}
+body { background-color: #f7f7f9; }
 
+/* Main Div */
 #mainDiv {
     width: 100%;
     height: 89vh;
@@ -36,7 +35,11 @@ body {
     justify-content: space-around;
 }
 
+/* Heading Part */
 .infoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -58,11 +61,10 @@ body {
     color: #1977c4;
 }
 
-.resetChildDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.toast-msg { width: 50%; }
+
+/* Form Style */
+.disableSelect { user-select: none; }
 
 #inputForm {
     display: flex;
@@ -105,21 +107,13 @@ body {
     margin: 12px;
 }
 
-#review {
-    margin-right: 1%;
-}
+#review { margin-right: 1%; }
 
-#inputForm #part1 .form-element, #inputForm #part2 .form-element {
-    margin: 12px;
-}
+#inputForm #part1 .form-element, #inputForm #part2 .form-element { margin: 12px; }
 
-#inputForm #part1 .form-element .passHideShow {
-    position: relative;
-}
+#inputForm #part1 .form-element .passHideShow { position: relative; }
 
-#inputForm #part1 .form-element .passHideShow input[type="password"] {
-    padding-right: 30px;
-}
+#inputForm #part1 .form-element .passHideShow input[type="password"] { padding-right: 30px; }
 
 #inputForm #part1 .form-element .passHideShow .fa-eye-slash,
 #inputForm #part1 .form-element .passHideShow .fa-eye {

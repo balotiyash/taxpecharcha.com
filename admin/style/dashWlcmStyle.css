@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the dashboard page mainly Welcome and Recents Blogs.
     Created on: 02 June 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -54,10 +54,6 @@
     
 }
 
-#helloImg {
-    width: 200px;
-}
-
 #newPostBtn {
     width: 150px;
     height: 30px;
@@ -68,6 +64,8 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+#helloImg { width: 200px; }
 
 /* Left Recent Blog Div */
 #recentBlogs {

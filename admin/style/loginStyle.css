@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of login page.
     Created on: 25 May 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 */
 
 * {
@@ -33,6 +33,7 @@
     display: flex;
 }
 
+/* Left side only image part */
 #imgDiv {
     width: 60%;
     height: 100%;
@@ -41,10 +42,9 @@
     justify-content: center;
 }
 
-#taxImg {
-    width: 400px;
-}
+#taxImg { width: 400px; }
 
+/* Right side login form */
 #loginFormDiv {
     width: 40%;
     height: 100%;
@@ -78,9 +78,7 @@
     padding: 8px;
 }
 
-#idDiv, #passDiv, #loginBtnDiv {
-    line-height: 35px;
-}
+#idDiv, #passDiv, #loginBtnDiv { line-height: 35px; }
 
 #submitBtn {
     width: 150px;
@@ -90,10 +88,6 @@
     color: white;
 }
 
-.disableSelect {
-    user-select: none;
-}
+.disableSelect { user-select: none; }
 
-#resetPass {
-    color: blue;
-}
+#resetPass { color: blue; }

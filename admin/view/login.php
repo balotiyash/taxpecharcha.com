@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the login page.
     Created on: 25 May 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 -->
 
 <!DOCTYPE html>
@@ -26,9 +26,10 @@
     <!-- Navbar style -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
-    
+
     <!-- Main Page Style -->
     <link rel="stylesheet" href="../style/loginStyle.css">
+    <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -47,35 +48,44 @@
 
             <!-- Right login form -->
             <div id="loginFormDiv">
-                <form action="" id="loginForm">
+                <form id="loginForm">
                     <!-- Login message -->
                     <div id="wlcmDiv">
                         <p id="wlcmTxt" class="disableSelect">Welcome Back!</p>
                         <p class="greyTxt">Login to continue</p>
                     </div>
 
+                    <!-- Error Message -->
+                    <div id="error-msg"></div>
+                    <div id="info-msg"></div>
+
                     <!-- Email Div -->
                     <div id="idDiv">
-                        <label for="emailTxt" class="disableSelect">Login ID</label><br>
-                        <input type="email" name="" id="emailTxt" class="inputStyle" placeholder="abc@gmail.com" require autocomplete="off">
+                        <label for="unameTxt" class="disableSelect">Login ID</label><br>
+                        <input type="text" id="unameTxt" class="inputStyle" placeholder="abc@gmail.com" require autocomplete="off">
                     </div>
 
                     <!-- Pass Div -->
                     <div id="passDiv">
                         <label for="passTxt" class="disableSelect">Password</label><br>
-                        <input type="password" name="" id="passTxt" class="inputStyle" placeholder="• • • • • • • •" require autocomplete="off"><br>
-                        <input type="checkbox" name="" id="showPassCbk">
+                        <input type="password" id="passTxt" class="inputStyle" placeholder="• • • • • • • •" require autocomplete="off"><br>
+                        <input type="checkbox" id="showPassCbk">
                         <label for="showPassCbk" class="greyTxt disableSelect">Show Password</label>
                     </div>
     
                     <!-- Save / reset password div -->
                     <div id="loginBtnDiv">
-                        <input type="submit" name="" id="submitBtn" class="button-28">
+                        <input type="submit" id="submitBtn" class="button-28">
                         <p class="disableSelect">Forgot / Reset Password <a href="changePassword.php" id="resetPass">Click here</a></p>
                     </div>
                 </form>
             </div>
         </div>
     </main>
+
+    <!-- Scripts -->
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/loginScript.js"></script>
 </body>
 </html>

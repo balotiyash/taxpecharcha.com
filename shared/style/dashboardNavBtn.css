@@ -1,9 +1,9 @@
 /*
-    File: shared/style/dashboardStyle.css
+    File: shared/style/dashboardNavBtn.css
     Author: Yash Balotiya
     Description: This file contains the styling part of the dashboard page mainly left navigation buttons.
     Created on: 02 June 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 */
 
 * {
@@ -46,31 +46,9 @@ body {
     background-color: #EEEEEE;
 }
 
-.fa-solid {
+.icons {
     transform: scale(1.5);
     margin: 0 40px;
-}
-
-#success-msg, #error-msg, #info-msg {
-    display: none;
-    border-radius: 8px;
-    margin: 8px;
-    padding: 12px;
-}
-
-#success-msg {
-    background-color: #d4edda;   
-    color: #155724;
-}
-
-#error-msg {
-    background-color: #f8d7da;
-    color: #721c24;
-}
-
-#info-msg {
-    background-color: #cce5ff;
-    color: #004085;
 }
 
 .fa-caret-down {

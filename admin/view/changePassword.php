@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the change or forget password page.
     Created on: 02 June 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 -->
 
 <!DOCTYPE html>
@@ -27,11 +27,11 @@
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
-    <!-- Fonts awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts awesome included in navbar -->
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="../style/changePassStyle.css">
+    <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
     
 </head>
 <body>
@@ -43,32 +43,42 @@
     <!-- Main content area -->
     <main id="mainDiv">
         <div id="resetParentDiv">
+
             <!-- Information -->
             <div class="infoDiv">
                 <h1 class="taxpecharchaTxt">Taxpecharcha</h1>
                 <p class="slogan">"Maximize Savings, Minimize Taxes: Your Path to Financial Freedom."</p>
                 <p class="loginTxt">Admin Password Reset</p>
+                
+                <!-- Toast messages -->
+                <div id="error-msg" class="toast-msg"></div>
+                <div id="success-msg" class="toast-msg"></div>
+                <div id="info-msg" class="toast-msg"></div>
             </div>
 
-            <form onsubmit="" class="form" id="resetPassForm">
+            <!-- Reset form -->
+            <form class="form" id="resetPassForm">
                 <!-- Left Side -->
                 <div id="inputForm">
                     <div id="part1">
+                        <!-- Login ID -->
                         <div class="form-element">
-                            <label for="emailTxt">Login - ID</label>
-                            <input type="text" name="emailTxt" id="emailTxt" placeholder="Enter Email ID" autocomplete="off" required>
+                            <label for="emailTxt" class="disableSelect">Login - ID</label>
+                            <input type="text" id="emailTxt" placeholder="Enter Login ID" autocomplete="off" required>
                         </div>
 
+                        <!-- New password -->
                         <div class="form-element">
-                            <label for="newPassTxt">New Password</label>
+                            <label for="newPassTxt" class="disableSelect">New Password</label>
                             <div class="passHideShow">
                                 <input type="password" placeholder="Enter New Password" id="newPassTxt" autocomplete="off" required>
                                 <i class="fa-solid fa-eye togglePassword" id="eyePass1" onclick="hideShowPassword('newPassTxt')"></i>
                             </div>
                         </div>
 
+                        <!-- Confirm password -->
                         <div class="form-element">
-                            <label for="confirmPassTxt">Confirm Password</label>
+                            <label for="confirmPassTxt" class="disableSelect">Confirm Password</label>
                             <div class="passHideShow">
                                 <input type="password" id="confirmPassTxt" placeholder="Re-enter New Password" autocomplete="off" required>
                                 <i class="fa-solid fa-eye togglePassword" id="eyePass2" onclick="hideShowPassword('confirmPassTxt')"></i>
@@ -78,14 +88,16 @@
 
                     <!-- Right Side -->
                     <div id="part2">
+                        <!-- DOB -->
                         <div class="form-element">
-                            <label for="dobInput">Date of Birth</label>
-                            <input type="date" name="" id="dobInput" required>
+                            <label for="dobInput" class="disableSelect">Date of Birth</label>
+                            <input type="date" id="dobInput" required>
                         </div>
 
+                        <!-- Security Question -->
                         <div class="form-element">
-                            <label for="securityQuestion">Select Security Question</label>
-                            <select name="" id="securityQuestion" required>
+                            <label for="securityQuestion" class="disableSelect">Select Security Question</label>
+                            <select id="securityQuestion" required>
                                 <option value="" selected disabled>Select Question</option>
                                 <option value="In what city were you born?">In what city were you born?</option>
                                 <option value="What is your favorite color?">What is your favorite color?</option>
@@ -96,17 +108,18 @@
                             </select>
                         </div>
 
+                        <!-- Security Answer -->
                         <div class="form-element">
-                            <label for="securityAnswer">Answer</label>
-                            <input type="text" name="" id="securityAnswer" placeholder="Enter Your Answer" autocomplete="off" required>
+                            <label for="securityAnswer" class="disableSelect">Answer</label>
+                            <input type="text" id="securityAnswer" placeholder="Enter Your Answer" autocomplete="off" required>
                         </div>
                     </div>
                 </div>
 
                 <!-- Checkbox for confirmation -->
                 <div class="form-element" id="reviewDiv">
-                    <input type="checkbox" name="" id="review" required>
-                    <label for="review">I have reviewed my details.</label>
+                    <input type="checkbox" id="review" required>
+                    <label for="review" class="disableSelect">I have reviewed my details.</label>
                 </div>
 
                 <!-- Submit button -->
@@ -116,5 +129,10 @@
             </form>
         </div>
     </main>
+
+    <!-- Scripts -->
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/loginScript.js"></script>
 </body>
 </html>

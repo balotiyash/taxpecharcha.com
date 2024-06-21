@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the dashboard page after login.
     Created on: 02 June 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 -->
 
 <!DOCTYPE html>
@@ -28,16 +28,17 @@
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Left nav buttons style -->
-    <link rel="stylesheet" href="../../shared/style/dashboardStyle.css">
+    <link rel="stylesheet" href="../../shared/style/dashboardNavBtn.css">
+
+    <!-- Fonts awesome included in navbar -->
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="../style/dashWlcmStyle.css">
     <link rel="stylesheet" href="../style/dashTallyStyle.css">
+    <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
 
-    <!-- Fonts awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body onload="initializeDashboard()">
+<body>
     <!-- Navbar -->
     <header>
         <?php include "../../shared/view/navBar.html" ?>
@@ -112,8 +113,9 @@
 
             <!-- Right Tally -->
             <div id="dashChild2">
+                <!-- All blogs count -->
                 <div class="tallyDiv" id="allTally">
-                    <i class="fa-solid fa-earth-americas"></i>
+                    <i class="fa-solid fa-earth-americas icons"></i>
 
                     <div>
                         <h2>50</h2>
@@ -121,10 +123,12 @@
                     </div>
                 </div>
 
+                <!-- Image -->
                 <img src="../../asset/images/Finance.jpg" id="financeImage" alt="Finance Image">
                 
+                <!-- Income tax -->
                 <div class="tallyDiv" id="incomeTally">
-                    <i class="fa-solid fa-sack-dollar"></i>
+                    <i class="fa-solid fa-sack-dollar icons"></i>
 
                     <div>
                         <h2>10</h2>
@@ -132,8 +136,9 @@
                     </div>
                 </div>
 
+                <!-- GST -->
                 <div class="tallyDiv" id="gstTally">
-                    <i class="fa-solid fa-coins"></i>
+                    <i class="fa-solid fa-coins icons"></i>
 
                     <div>
                         <h2>15</h2>
@@ -141,8 +146,9 @@
                     </div>
                 </div>
 
+                <!-- Custom -->
                 <div class="tallyDiv" id="customeTally">
-                    <i class="fa-solid fa-landmark"></i>
+                    <i class="fa-solid fa-landmark icons"></i>
 
                     <div>
                         <h2>25</h2>
@@ -154,6 +160,8 @@
     </main>
 
     <!-- Scripts -->
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
     <script src="../controller/dashboard.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 /** 
  * File: admin/controller/todoScript.js
  * Author: Yash Balotiya
- * Description: // TODO
+ * Description: This file contains all the js and ajax code to deal with the server of the todo page.
  * Created on: 03 June 2024
- * Last Modified: 17 June 2024
+ * Last Modified: 21 June 2024
 */
 
 // This is the script for the advanced text editor on the todo page
@@ -30,22 +30,28 @@ tinymce.init({
     content_style: 'body{font-family:Helvetica,Arial,sans-serif; font-size:16px}'
 });
 
+// Invokes onload
 $(document).ready(() => {
     
     // To fetch todo data onload
-    function fetchTodoData() {
+    const fetchTodoData = () => {
         $.ajax({
             type: "POST",
             url: "../server/todoServer.php",
-            data: {task: "fetchTodoData"},
+            data: { task: "fetchTodoData" },
             dataType: "json",
-            success: function (response) {
+            success: (response) => {
                 if (response.todoData) {
                     $("#default").val(response.todoData);
+
                 } else if (response.error) {
-                    showToast("#error-msg", "Error: " + response.error);
+                    showToast("#error-msg", `<i class="fa-solid fa-circle-exclamation"></i> Error: ${response.error}.`);
+
                 } else if (response.message) {
-                    showToast("#info-msg", response.message);
+                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> ${response.message}.`);
+
+                } else {
+                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> No message (response) to display.`);
                 }
             },
             error: (xhr, status, error) => {
@@ -60,6 +66,7 @@ $(document).ready(() => {
     $("#todoSaveBtn").on("click", (e) => {
         e.preventDefault();
 
+        // Saving textarea data into todoData constant
         const todoData = tinymce.get("default").getContent();
 
         $.ajax({
@@ -70,16 +77,20 @@ $(document).ready(() => {
                 todoData: todoData
             },
             dataType: "json",
-            success: function (response) {
-                if (response.status == "data inserted") {
-                    showToast("#success-msg", "Your TODO list is updated.");
-                } else if ((response.status == "data insertion failed") || response.error) {
-                    showToast("#error-msg", "Error: " + response.error);
+            success: (response) => {
+                if (response.status === "data inserted") {
+                    showToast("#success-msg", `<i class="fa-solid fa-circle-check"></i> Your TODO list has been updated.`);
+
+                } else if ((response.status === "data insertion failed") || response.error) {
+                    showToast("#error-msg", `<i class="fa-solid fa-circle-exclamation"></i> Error: ${response.error}.`);
+
+                } else {
+                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> No message (response) to display.`);
                 }
             },
             error: (xhr, status, error) => {
                 showError(xhr, status, error);
             }
         });
-    })
+    });
 });

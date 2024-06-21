@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the HTML5 code of navigation bar.
     Created on: 24 May 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 -->
 
 <!-- FontsAwesome -->
@@ -11,11 +11,13 @@
 
 <!-- Navigation Panel -->
 <nav id="navBar">
+    <!-- Logo -->
     <div id="navBarChild1">
         <img src="../../asset/vectors/Rupees.svg" alt="Rupees" id="rsLogo">
         <img src="../../asset/images/Slogan.png" alt="Taxpecharcha" id="logo">
     </div>
 
+    <!-- Links -->
     <div id="navBtns">
         <ul id="navList">
             <li><a href="../../index.php" id="homeLink">Home</a></li>
@@ -27,14 +29,15 @@
                     </a>
 
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Income Tax</a></li>
-                        <li><a class="dropdown-item" href="#">GST</a></li>
+                        <li><a class="dropdown-item" href="https://wa.me/919833591469" target="_blank">Income Tax</a></li>
+                        <li><a class="dropdown-item" href="https://wa.me/919833591469" target="_blank">GST</a></li>
                     </ul>
                 </div>
             </li>
             <li><a href="../../user/view/profile.php" id="aboutLink">About</a></li>
         </ul>
 
+        <!-- login -->
         <button class="button-28" id="loginBtn"
             onclick="window.location.href = '../../admin/view/login.php'">Login</button>
         <button class="button-28" id="dashboardBtn">Dashboard</button>

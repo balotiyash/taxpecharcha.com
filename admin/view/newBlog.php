@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the create new blog page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 -->
 
 <!DOCTYPE html>
@@ -27,20 +27,17 @@
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
     
-    <!-- Bootstrap code removed because it was changing my original style code -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
-    
-    <!-- Fonts awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts awesome included in navbar -->
 
     <!-- Left nav buttons style -->
-    <link rel="stylesheet" href="../../shared/style/dashboardStyle.css">
+    <link rel="stylesheet" href="../../shared/style/dashboardNavBtn.css">
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../style/newBlogStyle.css">
+    <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
 
 </head>
-<body onload="initializeDashboard()">
+<body>
     <!-- Navbar -->
     <header>
         <?php include "../../shared/view/navBar.html" ?>
@@ -123,7 +120,8 @@
 
     <!-- Scripts -->
     <script src="../controller/tinymce/tinymce.min.js"></script>
-    <script src="../controller/dashboard.js"></script>
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
     <script src="../controller/newBlogScript.js"></script>
 
 </body>

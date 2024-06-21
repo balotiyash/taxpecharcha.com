@@ -3,20 +3,20 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to update and display todo data.
 // Created on: 17 June 2024
-// Last Modified: 17 June 2024
+// Last Modified: 21 June 2024
 
+// Including the database connection
 include_once "../../shared/server/db_connection.php";
 
+// Checking if the task parameter is recieved or not, if yes then what is the task
 if (isset($_POST["task"])) {
     $task = $_POST["task"];
 
-    if ($task == "fetchTodoData") {
+    if ($task === "fetchTodoData") {
         fetchTodoData($conn);
 
-    } elseif ($task == "setTodoData") {
+    } elseif ($task === "setTodoData") {
         setTodoData($conn);
-
-    } elseif ($task =="") {
 
     } else {
         echo json_encode(["error" => "Invalid task: " . $task]);
@@ -33,7 +33,7 @@ function fetchTodoData($conn) {
     $result = $conn->query($query);
 
     if ($result === false) {
-        echo json_encode(["error" => "Fetching TODO data Query Failed: " . $conn->error]);
+        echo json_encode(["error" => "Fetching TODO Data query failed: " . $conn->error]);
         $conn->close();
         return;
     }
@@ -52,7 +52,7 @@ function fetchTodoData($conn) {
 // To update todo data
 function setTodoData($conn) {
     if (!isset($_POST["todoData"])) {
-        echo json_encode(["error" => "Missing parameters"]);
+        echo json_encode(["error" => "Missing parameters."]);
         return;
     }
 

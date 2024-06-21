@@ -3,20 +3,22 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to update security details and password after login.
 // Created on: 16 June 2024
-// Last Modified: 17 June 2024
+// Last Modified: 21 June 2024
 
+// Including the database connection
 include_once "../../shared/server/db_connection.php";
 
+// // Checking if the task parameter is recieved or not, if yes then what is the task
 if (isset($_POST["task"])) {
     $task = $_POST["task"];
 
-    if ($task == "fetchSecurityAnswer") {
+    if ($task === "fetchSecurityAnswer") {
         fetchSecurityAnswers($conn);
     
-    } elseif ($task == "setSecurityAnswers") {
+    } elseif ($task === "setSecurityAnswers") {
         setSecurityAnswers($conn);
 
-    } elseif ($task =="changePassword") {
+    } elseif ($task ==="changePassword") {
         changeLoginPassword($conn);
 
     } else {
@@ -25,15 +27,16 @@ if (isset($_POST["task"])) {
 
     $conn->close();
 } else {
-    echo json_encode(["error" => "Task parameter not received from JavaScript"]);
+    echo json_encode(["error" => "Task parameter not received from JavaScript."]);
 }
 
+// To fetch security answers
 function fetchSecurityAnswers($conn) {
-    $query = "SELECT security_question, security_answer, dob FROM admin_login_details";
+    $query = "SELECT security_question, security_answer, dob FROM admin_login_details;";
     $result = $conn->query($query);
 
     if ($result === false) {
-        echo json_encode(["error" => "Fetching Security Answers Query Failed: " . $conn->error]);
+        echo json_encode(["error" => "Fetching Security Answers query failed: " . $conn->error]);
         $conn->close();
         return;
     }
@@ -51,6 +54,7 @@ function fetchSecurityAnswers($conn) {
     }
 }
 
+// To update security answers
 function setSecurityAnswers($conn) {
     if (!isset($_POST["securityQuestion"], $_POST["securityAnswer"], $_POST["dob"])) {
         echo json_encode(["error" => "Missing parameters"]);
@@ -81,6 +85,7 @@ function setSecurityAnswers($conn) {
     $stmt->close();
 }
 
+// To change admin login password
 function changeLoginPassword($conn) {
     if (!isset($_POST["existingPassword"], $_POST["newPassword"])) {
         echo json_encode(["error" => "Missing parameters"]);
@@ -94,7 +99,7 @@ function changeLoginPassword($conn) {
     $result = $conn->query($query1);
 
     if ($result === false) {
-        echo json_encode(["error" => "Fetching Security Answers Query Failed: " . $conn->error]);
+        echo json_encode(["error" => "Fetching Security Answers query failed: " . $conn->error]);
         $conn->close();
         return;
     }
@@ -108,6 +113,7 @@ function changeLoginPassword($conn) {
         if (password_verify($existingPassword, $currentPassword)) {
             $query2 = "UPDATE admin_login_details SET password = ?;";
             $stmt = $conn->prepare($query2);
+            
             if ($stmt === false) {
                 echo json_encode(["error" => "Prepare failed: " . $conn->error]);
                 return;

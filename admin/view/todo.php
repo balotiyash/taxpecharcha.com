@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code for the todo page in the dashboard.
     Created on: 02 June 2024
-    Last Modified: 17 June 2024
+    Last Modified: 21 June 2024
 -->
 
 <!DOCTYPE html>
@@ -28,15 +28,15 @@
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Left nav buttons style -->
-    <link rel="stylesheet" href="../../shared/style/dashboardStyle.css">
+    <link rel="stylesheet" href="../../shared/style/dashboardNavBtn.css">
 
-    <!-- Fonts awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts awesome included in navbar -->
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="../style/todoStyle.css">
+    <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
 </head>
-<body onload="initializeDashboard()">
+<body>
     <!-- Navbar -->
     <header>
         <?php include "../../shared/view/navBar.html" ?>
@@ -63,10 +63,9 @@
     </main>
 
     <!-- scripts -->
-    <!-- <script src="../controller/tinymce/tinymce.min.js"></script> -->
-    <script src="https://cdn.tiny.cloud/1/jrdy5yjibmg02ir6g0t9r327kio35hjmj0e8fy951w88eqi9/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="../controller/tinymce/tinymce.min.js"></script>
     <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
-    <script src="../controller/todoScript.js"></script>
     <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/todoScript.js"></script>
 </body>
 </html>
