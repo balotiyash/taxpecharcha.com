@@ -3,12 +3,12 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to create new blog and to interact with the server.
  * Created on: 03 June 2024
- * Last Modified: 25 June 2024
+ * Last Modified: 26 June 2024
 */
 
 // This is the script for the advanced text editor on the todo page
 const editorWidth = $(window).width() * 0.5;
-const editorHeight = $(window).height() * 0.7;
+const editorHeight = $(window).height() * 0.79;
 
 // This is the script for the advanced text editor on the create new blog page
 tinymce.init({
@@ -77,7 +77,7 @@ $(document).ready(() => {
                     }
                 },
                 error: (xhr, status, error) => {
-                    showToast("#error-msg", `${errorSymbol} An article already exists with same name!`);
+                    showToast("#error-msg", `${errorSymbol} An article already exists with same title!`);
 
                     console.error(xhr);
                     console.error(status);

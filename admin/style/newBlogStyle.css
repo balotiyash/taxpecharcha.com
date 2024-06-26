@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the New Blog Creation Page.
     Created on: 02 June 2024
-    Last Modified: 25 June 2024
+    Last Modified: 26 June 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -18,7 +18,7 @@
     /* width: 1200px; */
     /* width: 80vw; */
     min-width: 80vw;
-    height: 79vh;
+    /* height: 79vh; */
     margin-top: 100px;
     margin-bottom: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -49,7 +49,8 @@
     background-color: #d4edda;
     border: none;
     color: #155724;
-    width: 150px;
+    /* width: 150px; */
+    width: 10vw;
     height: 40px;
     padding: 0;
     border-radius: 8px;
@@ -59,7 +60,8 @@
     background-color: #cce5ff;
     color: #195494;
     border: none;
-    width: 150px;
+    /* width: 150px; */
+    width: 10vw;
     height: 40px;
     padding: 0;
     border-radius: 8px;
@@ -67,7 +69,8 @@
 
 #blogData input[type="text"],
 #mainCatOption {
-    width: 100%;
+    /* width: 100%; */
+    width: 20vw;
     height: 25px;
     padding: 4px;
     border: 1px solid #aaa;
@@ -76,7 +79,8 @@
 }
 
 #mainCatOption {
-    width: 104%;
+    /* width: 104%; */
+    width: 20.7vw;
     height: 36px;
 }
 

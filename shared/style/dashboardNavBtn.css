@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the dashboard page mainly left navigation buttons.
     Created on: 02 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 26 June 2024
 */
 
 * {
@@ -48,7 +48,8 @@ body {
 
 .icons {
     transform: scale(1.5);
-    margin: 0 40px;
+    /* margin: 0 40px; */
+    margin: 0 2vw;
 }
 
 .fa-caret-down {

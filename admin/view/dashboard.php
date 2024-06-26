@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the dashboard page after login.
     Created on: 02 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 26 June 2024
 -->
 
 <!DOCTYPE html>
@@ -37,6 +37,11 @@
     <link rel="stylesheet" href="../style/dashTallyStyle.css">
     <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
 
+    <!-- Scripts -->
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/dashboard.js"></script>
+
 </head>
 <body>
     <!-- Navbar -->
@@ -65,49 +70,35 @@
                 </div>
 
                 <!-- Left Recent Blogs -->
-                <div id="recentBlogs">
+                <div id="topArticles">
                     <h3>Top Articles</h3>
 
-                    <!-- TODO: php dynamic loop -->
-                    <div class="recentChild">
-                        <div>
-                            <p>01</p>
-                            <img src="../../asset/images/DashboardCalc.png" alt="Article Image" class="articleImg">
-                            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius reiciendis delectus voluptatibus.</h4>
-                        </div>
-                        
-                        <p>02-06-2024</p>
-                    </div>
-
-                    <div class="recentChild">
-                        <div>
-                            <p>02</p>
-                            <img src="../../asset/images/DashboardCalc.png" alt="Article Image" class="articleImg">
-                            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius reiciendis delectus voluptatibus.</h4>
-                        </div>
-                        
-                        <p>02-06-2024</p>
-                    </div>
-
-                    <div class="recentChild">
-                        <div>
-                            <p>03</p>
-                            <img src="../../asset/images/DashboardCalc.png" alt="Article Image" class="articleImg">
-                            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius reiciendis delectus voluptatibus.</h4>
-                        </div>
-                        
-                        <p>02-06-2024</p>
-                    </div>
-
-                    <div class="recentChild">
-                        <div>
-                            <p>04</p>
-                            <img src="../../asset/images/DashboardCalc.png" alt="Article Image" class="articleImg">
-                            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius reiciendis delectus voluptatibus.</h4>
-                        </div>
-                        
-                        <p>02-06-2024</p>
-                    </div>
+                    <table id="topArticlesTable">
+                        <tr>
+                            <td id="view1" class="viewsCol">~</td>
+                            <td class="imageCol"><img src="../../asset/vectors/Not Found.svg" alt="Article Image" id="img1" class="articleImg"></td>
+                            <td class="titleCol"><h4 id="title1">Details Not Found!</h4></td>
+                            <td id="date1" class="dateCol">~</td>
+                        </tr>
+                        <tr>
+                            <td id="view2" class="viewsCol">~</td>
+                            <td class="imageCol"><img src="../../asset/vectors/Not Found.svg" alt="Article Image" id="img2" class="articleImg"></td>
+                            <td class="titleCol"><h4 id="title2">Details Not Found!</h4></td>
+                            <td id="date2" class="dateCo2">~</td>
+                        </tr>
+                        <tr>
+                            <td id="view3" class="viewsCol">~</td>
+                            <td class="imageCol"><img src="../../asset/vectors/Not Found.svg" alt="Article Image" id="img3" class="articleImg"></td>
+                            <td class="titleCol"><h4 id="title3">Details Not Found!</h4></td>
+                            <td id="date3" class="dateCo3">~</td>
+                        </tr>
+                        <tr>
+                            <td id="view4" class="viewsCol">~</td>
+                            <td class="imageCol"><img src="../../asset/vectors/Not Found.svg" alt="Article Image" id="img4" class="articleImg"></td>
+                            <td class="titleCol"><h4 id="title4">Details Not Found!</h4></td>
+                            <td id="date4" class="dateCol">~</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
@@ -118,8 +109,8 @@
                     <i class="fa-solid fa-earth-americas icons"></i>
 
                     <div>
-                        <h2>50</h2>
-                        <p>Total Blogs</p>
+                        <h2 id="totalCnt">~</h2>
+                        <p>Total Articles</p>
                     </div>
                 </div>
 
@@ -131,8 +122,8 @@
                     <i class="fa-solid fa-sack-dollar icons"></i>
 
                     <div>
-                        <h2>10</h2>
-                        <p>Income Tax Act Blogs</p>
+                        <h2 id="incomeCnt">~</h2>
+                        <p>Income Tax Act Articles</p>
                     </div>
                 </div>
 
@@ -141,8 +132,8 @@
                     <i class="fa-solid fa-coins icons"></i>
 
                     <div>
-                        <h2>15</h2>
-                        <p>GST Act Blogs</p>
+                        <h2 id="gstCnt">~</h2>
+                        <p>GST Act Articles</p>
                     </div>
                 </div>
 
@@ -151,17 +142,12 @@
                     <i class="fa-solid fa-landmark icons"></i>
 
                     <div>
-                        <h2>25</h2>
-                        <p>Custome Act Blogs</p>
+                        <h2 id="customsCnt">~</h2>
+                        <p>Customs Act Articles</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Scripts -->
-    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
-    <script src="../../shared/controller/sharedJs.js"></script>
-    <script src="../controller/dashboard.js"></script>
 </body>
 </html>

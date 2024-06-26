@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the MY PROFILE Page in dashboard mainly left.
     Created on: 02 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 26 June 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -15,11 +15,12 @@
 /* about profile div */
 #dashContent {
     width: 80vw;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    margin-top: 92px;
     margin-bottom: 25px;
     border: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 8px;
 }
@@ -35,6 +36,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow: auto;
 }
 
 #heading {
@@ -75,6 +77,7 @@
 #profileImage {
     border-radius: 50%;
     width: 250px;
+    max-width: 90%;
     margin-bottom: 25px;
     pointer-events: none;
 }
@@ -82,6 +85,7 @@
 /* All other details */
 /* Reset default styles */
 .inputStyle {
+    width: 31vw;
     border: none;
     border-bottom: 1px solid gray;
     outline: none; /* Remove the default focus outline */
@@ -91,6 +95,10 @@
     text-align: center;
     margin: 8px;
     pointer-events: none; /* To disable the input fields of the profile data */
+}
+
+#adminNameTxt, #adminPhoneTxt, #adminEmailTxt, #adminAddressTxt {
+    width: 14vw;
 }
 
 /* Styling when the input is active or focused */

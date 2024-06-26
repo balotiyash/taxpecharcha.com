@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the dashboard page mainly Welcome and Recents Blogs.
     Created on: 02 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 26 June 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -67,18 +67,28 @@
 
 #helloImg { width: 200px; }
 
-/* Left Recent Blog Div */
-#recentBlogs {
-    /* background-color: #A7E6FF; */
+/* Left Top Blog Div */
+#topArticles {
     background-color: #EEEEEE;
     border: none;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     padding: 16px;
-    margin: 16px 0;
+    margin-bottom: 16px;
+    /* margin: 16px 0; */
 }
+
+#topArticlesTable {
+    width: 100%;
+    text-align: center;
+}
+
+.viewsCol { width: 5%; }
+
+.imageCol { width: 10%; }
+
+.titleCol { width: 70%; }
+
+.dateCol { width: 15%; }
 
 .recentChild {
     display: flex;
@@ -95,8 +105,9 @@
 }
 
 .articleImg {
-    width: 75px;
+    width: 100px;
+    height: 60px;
     background-color: white;
     border-radius: 8px;
-    margin: 8px;
+    margin: 4px 0;
 }

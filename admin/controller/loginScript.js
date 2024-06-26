@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code to validate, authenticate the admin and interact with the server side code of the login page.
  * Created on: 20 June 2024
- * Last Modified: 25 June 2024
+ * Last Modified: 26 June 2024
 */
 
 $(document).ready(() => {
@@ -52,7 +52,7 @@ $(document).ready(() => {
                     showToast("#info-msg", `${infoSymbol} ${response.message}`);
 
                 } else if (response.error) {
-                    showToast("#error-msg", `${errorSymbol} Error: ${response.error}.`);
+                    showToast("#error-msg", `${errorSymbol} Error: ${response.error}`);
 
                 } else {
                     showToast("#info-msg", `${infoSymbol} No message (response) to display.`);
