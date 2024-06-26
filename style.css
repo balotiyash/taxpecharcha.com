@@ -3,10 +3,39 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the index page.
     Created on: 16 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 26 June 2024
 */
 
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body { background-color: #f7f7f9; }
+
+main {
+    /* padding-top: 100px; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#mainSection {
+    width: 75%;
+    height: 40vh;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.slide {
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.slide.visible {
+    opacity: 1;
+    z-index: 1;
 }

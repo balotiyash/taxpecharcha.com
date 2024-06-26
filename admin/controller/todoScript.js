@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to deal with the server of the todo page.
  * Created on: 03 June 2024
- * Last Modified: 21 June 2024
+ * Last Modified: 25 June 2024
 */
 
 // This is the script for the advanced text editor on the todo page
@@ -45,13 +45,13 @@ $(document).ready(() => {
                     $("#default").val(response.todoData);
 
                 } else if (response.error) {
-                    showToast("#error-msg", `<i class="fa-solid fa-circle-exclamation"></i> Error: ${response.error}.`);
+                    showToast("#error-msg", `${successSymbol} Error: ${response.error}.`);
 
                 } else if (response.message) {
-                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> ${response.message}.`);
+                    showToast("#info-msg", `${infoSymbol} ${response.message}.`);
 
                 } else {
-                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> No message (response) to display.`);
+                    showToast("#info-msg", `${infoSymbol} No message (response) to display.`);
                 }
             },
             error: (xhr, status, error) => {
@@ -79,13 +79,13 @@ $(document).ready(() => {
             dataType: "json",
             success: (response) => {
                 if (response.status === "data inserted") {
-                    showToast("#success-msg", `<i class="fa-solid fa-circle-check"></i> Your TODO list has been updated.`);
+                    showToast("#success-msg", `${successSymbol} Your TODO list has been updated.`);
 
                 } else if ((response.status === "data insertion failed") || response.error) {
-                    showToast("#error-msg", `<i class="fa-solid fa-circle-exclamation"></i> Error: ${response.error}.`);
+                    showToast("#error-msg", `${successSymbol} Error: ${response.error}.`);
 
                 } else {
-                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> No message (response) to display.`);
+                    showToast("#info-msg", `${infoSymbol} No message (response) to display.`);
                 }
             },
             error: (xhr, status, error) => {

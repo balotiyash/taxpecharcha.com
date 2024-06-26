@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code to validate, authenticate the admin and interact with the server side code of the login page.
  * Created on: 20 June 2024
- * Last Modified: 21 June 2024
+ * Last Modified: 25 June 2024
 */
 
 $(document).ready(() => {
@@ -30,7 +30,7 @@ $(document).ready(() => {
         const password = $("#passTxt").val().trim();
 
         if (username === '' || password === '') {
-            showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> Please fill in the complete details.`);
+            showToast("#info-msg", `${infoSymbol} Please fill in the complete details.`);
             return;
         }
 
@@ -49,13 +49,13 @@ $(document).ready(() => {
                     window.location.href = "../view/dashboard.php";
 
                 } else if (response.message) {
-                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> ${response.message}.`);
+                    showToast("#info-msg", `${infoSymbol} ${response.message}`);
 
                 } else if (response.error) {
-                    showToast("#error-msg", `<i class="fa-solid fa-circle-exclamation"></i> Error: ${response.error}.`);
+                    showToast("#error-msg", `${errorSymbol} Error: ${response.error}.`);
 
                 } else {
-                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> No message (response) to display.`);
+                    showToast("#info-msg", `${infoSymbol} No message (response) to display.`);
                 }
             },
             error: (xhr, status, error) => {
@@ -77,23 +77,23 @@ $(document).ready(() => {
         const confirmReview = $("#review:checked");
 
         if (username === '' || newPassword === '' || confirmPassword === '' || dob === '' || securityQuestion === '' || securityAnswer === '') {
-            showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> All fields are mandatory.`);
+            showToast("#info-msg", `${infoSymbol} All fields are mandatory.`);
             return;
         }
 
         const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
         if (!passwordRegex.test(newPassword)) {
-            showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> Password must include:<br>- At least 8 characters.<br>- At least 1 uppercase letter.<br>- At least 1 lowercase letter.<br>- At least 1 number.<br>- At least 1 special character (!@#$%^&*).`, 10000);
+            showToast("#info-msg", `${infoSymbol} Password must include:<br>- At least 8 characters.<br>- At least 1 uppercase letter.<br>- At least 1 lowercase letter.<br>- At least 1 number.<br>- At least 1 special character (!@#$%^&*).`, 10000);
             return;
         }
 
         if (newPassword !== confirmPassword) {
-            showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> New Password and Confirm Password did not match. Please try again.`);
+            showToast("#info-msg", `${infoSymbol} New Password and Confirm Password did not match. Please try again.`);
             return;
         }
 
         if (confirmReview.length <= 0) {
-            showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> Please tick the 'I have reviewed my details.' checkbox to proceed further.`);
+            showToast("#info-msg", `${infoSymbol} Please tick the 'I have reviewed my details.' checkbox to proceed further.`);
             return;
         }
 
@@ -111,17 +111,17 @@ $(document).ready(() => {
             dataType: "json",
             success: (response) => {
                 if (response.status) {
-                    showToast("#success-msg", `<i class="fa-solid fa-circle-check"></i> Your password is changed successfully.`);
+                    showToast("#success-msg", `${successSymbol} Your password is changed successfully.`);
                     $("#resetPassForm").trigger("reset");
 
                 } else if (response.message) {
-                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> ${response.message}`);
+                    showToast("#info-msg", `${infoSymbol} ${response.message}`);
 
                 } else if (response.error) {
-                    showToast("#error-msg", `<i class="fa-solid fa-circle-exclamation"></i> Error: ${response.error}.`);
+                    showToast("#error-msg", `${errorSymbol} Error: ${response.error}.`);
 
                 } else {
-                    showToast("#info-msg", `<i class="fa-solid fa-circle-info"></i> No message (response) to display.`);
+                    showToast("#info-msg", `${infoSymbol} No message (response) to display.`);
                 }
             },
             error: (xhr, status, error) => {

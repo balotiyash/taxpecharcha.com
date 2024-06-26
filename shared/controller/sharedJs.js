@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js code which is shared throughout the application.
  * Created on: 17 June 2024
- * Last Modified: 21 June 2024
+ * Last Modified: 25 June 2024
 */
 
 // Drop down function for navbar
@@ -28,8 +28,13 @@
 //     });
 // });
 
+// Fonts awesome symbols
+const errorSymbol = '<i class="fa-solid fa-circle-exclamation"></i>';
+const successSymbol = '<i class="fa-solid fa-circle-check"></i>';
+const infoSymbol = '<i class="fa-solid fa-circle-info"></i>';
+
 // Function to display custom toast message
-const showToast = (target, message, duration = 3000) => {
+const showToast = (target, message, duration = 5000) => {
     $(target).html(message).slideDown();
 
     setTimeout(function() {
@@ -42,5 +47,5 @@ const showError = (xhr, status, error) => {
     console.error("XHR response:", xhr.responseText);
     console.error("Status:", status);
     console.error("Error:", error);
-    showToast("#error-msg", "An unexpected error occurred.");
+    showToast("#error-msg", `${errorSymbol} Error: An unexpected error occurred.`);
 }

@@ -45,7 +45,7 @@ function fetchTodoData($conn) {
         }
         echo json_encode(["todoData" => $todoData]);
     } else {
-        echo json_encode(["message" => "No result found!!"]);
+        echo json_encode(["message" => "No result found"]);
     }
 }
 

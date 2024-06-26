@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the create new blog page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 25 June 2024
 -->
 
 <!DOCTYPE html>
@@ -57,32 +57,32 @@
                 
                 <!-- title of the blog -->
                 <div>
-                    <label for="titleTxt"><b>Title</b></label><br>
-                    <input type="text" name="" id="titleTxt" required autocomplete="off">
+                    <label for="titleTxt"><b>Title</b><span class="note">*</span></label><br>
+                    <input type="text" id="titleTxt" required autocomplete="off">
                 </div>
 
                 <!-- main category of the blog -->
                 <div>
-                    <label for="mainCatOption"><b>Select Category</b></label><br>
-                    <select name="" id="mainCatOption" required>
+                    <label for="mainCatOption"><b>Select Category</b><span class="note">*</span></label><br>
+                    <select id="mainCatOption" required>
                         <option value="" selected disabled>Select Main Category</option>
-                        <option value="">The Income Tax Act, 1961</option>
-                        <option value="">The GST Act, 2017</option>
-                        <option value="">The Customs Act, 1962</option>
+                        <option value="The Income Tax Act, 1961">The Income Tax Act, 1961</option>
+                        <option value="The GST Act, 2017">The GST Act, 2017</option>
+                        <option value="The Customs Act, 1962">The Customs Act, 1962</option>
                     </select>
                 </div>
                 
                 <!-- sub category of the blog -->
                 <div class="subCatRadioDiv">
-                    <label for="subCatRadioChild"><b>Select Sub-Category</b></label><br>
+                    <label for="subCatRadioChild"><b>Select Sub-Category</b><span class="note">*</span></label><br>
                     <div id="subCatRadioChild">
                         <div>
-                            <input type="radio" name="subCategory" id="actRadio" required>
+                            <input type="radio" name="subCategory" id="actRadio" value="Act" required>
                             <label for="actRadio">Act</label>
                         </div>
     
                         <div>
-                            <input type="radio" name="subCategory" id="circularRadio" required>
+                            <input type="radio" name="subCategory" id="circularRadio" value="Circular / Notification" required>
                             <label for="circularRadio">Circular / Notification</label>
                         </div>
                     </div>
@@ -90,25 +90,28 @@
 
                 <!-- article no. of the blog -->
                 <div>
-                    <label for="articleNoTxt"><b>Article No.</b></label><br>
-                    <input type="text" name="" id="articleNoTxt" required autocomplete="off">
+                    <label for="articleNoTxt"><b>Article / Section No.</b><span class="note">*</span></label><br>
+                    <input type="text" id="articleNoTxt" required autocomplete="off">
                 </div>
 
                 <!-- keywords of the blog -->
                 <div>
-                    <label for="keywordsTxt"><b>Keywords</b></label><br>
-                    <input type="text" name="" id="keywordsTxt" required autocomplete="off">
-                    <p class="note">Note: Seperate each keywords with a semicolon (;)</p>
+                    <label for="keywordsTxt"><b>Keywords</b><span class="note">*</span></label><br>
+                    <input type="text" id="keywordsTxt" required autocomplete="off">
+                    <p class="note">Note: Seperate each keywords with a comma (,)</p>
                 </div>
 
                 <!-- blog image -->
                 <div>
-                    <label for="blogImgInput"><b>Select Blog Image</b></label><br>
+                    <label for="blogImgInput"><b>Select Blog Image</b><span class="note">*</span></label><br>
                     <input class="form-control form-control-sm" id="blogImgInput" type="file" accept="image/png, image/gif, image/jpeg, image/jpg, image/svg" required>
                     <p class="note">Note: Choosing Landscape Image is preferred.</p>
                 </div>
 
-                <input type="submit" name="" id="blogSubmit" class="button-28">
+                <div>
+                    <input type="button" id="blogSubmit" class="button-28" value="Upload">
+                    <input type="reset" id="blogReset" class="button-28" value="Reset">
+                </div>
             </div>
 
             <!-- Advanced text area -->

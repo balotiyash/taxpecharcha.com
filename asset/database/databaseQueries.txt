@@ -6,7 +6,7 @@
     Last Modified: 17 June 2024
 //
 
-//ADMIN LOGIN DETAILS
+//ADMIN LOGIN DETAILS////////////////////////////////////////////////////////////////////////////
 CREATE TABLE admin_login_details (
     login_id VARCHAR(255) PRIMARY KEY,
     password VARCHAR(255) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE admin_login_details (
     security_answer VARCHAR(255) NOT NULL
 );
 
-//INSERTING DATA INTO ADMIN LOGIN DETAILS
+//INSERTING DATA INTO ADMIN LOGIN DETAILS///////////////////////////////////////////////////////
 INSERT INTO admin_login_details VALUES (
     "admin",
     "$2y$10$dUQsGnH/j5KX4xSauqikm.2n.60vYk5v8LMRp4kunwbWZspu.tQgm",
@@ -24,9 +24,26 @@ INSERT INTO admin_login_details VALUES (
     "$2y$10$CZ9yEHzYferf44gwQJ2DcuKmIV9a8rflO2OnabnvyoLF1Yl6Lvbci"
 );
 
-//TO DO TABLE
+//TO DO TABLE/////////////////////////////////////////////////////////////////////////////////
 CREATE TABLE todo_data (
     data VARCHAR(65535)
 );
 
+//INSERTING DATA INTO TODO TABLE////////////////////////////////////////////////////////////////
 INSERT INTO todo_data VALUES("<h1>Yash Balotiya</h1>");
+
+//NEW BLOG TABLE
+CREATE TABLE blogs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    slug VARCHAR(255) NOT NULL UNIQUE,
+    title VARCHAR(255) NOT NULL,
+    main_category VARCHAR(255) NOT NULL,
+    sub_category VARCHAR(255) NOT NULL,
+    section VARCHAR(255) NOT NULL,
+    keywords VARCHAR(255) NOT NULL,
+    image VARCHAR(255) NOT NULL,
+    content VARCHAR(65535) NOT NULL,
+    views INT NOT NULL DEFAULT 0,
+    author VARCHAR(255) NOT NULL DEFAULT 'C. A. Manish Suvasiya',
+    date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
