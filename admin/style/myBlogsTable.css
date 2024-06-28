@@ -1,0 +1,101 @@
+/*
+    File: admin/style/myBlogsTable.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part to fetch existing blogs Page TABLE.
+    Created on: 28 June 2024
+    Last Modified: 28 June 2024
+*/
+
+/* Main div which displays blogs list */
+.dataDiv {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchResultDiv { display: none; }
+
+/* Blog list table */
+#searchResultDiv table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-size: 1.05vw;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    line-height: 50px;
+}
+
+tr:hover { background-color: #EEEEEE; }
+
+#blogTitle { width: 50%; }
+
+#blogSectionNo, #blogDate { width: 10%; }
+
+#blogSrNo, #blogViews, #blogEdit, #blogDelete { width: 7.5%; }
+
+.title input {
+    border: none;
+    font-size: 1.05vw;
+    width: 90%;
+    background-color: transparent;
+    outline: none;
+    text-align: center;
+}
+
+/* Edit and Delete buttons */
+.actionBtns {
+    width: 60%;
+    text-align: center;
+    padding: 8px 0;
+    margin-left: 2px;
+}
+
+.editBtn {
+    color: #F4CE14;
+    border-color: #F4CE14;
+}
+
+.editBtn:hover {
+    color: white;
+    background-color: #F4CE14;
+    border-color: #F4CE14;
+}
+
+.deleteBtn {
+    color: #ff7b7b;
+    border-color: #ff7b7b;
+}
+
+.deleteBtn:hover {
+    color: white;
+    background-color: #ff7b7b;
+    border-color: #ff7b7b;
+}
+
+/* Pagination */
+#paginationDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+#paginationDiv p { color: gray; }
+
+.nextBtn, .prevBtn {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    background-color: #01204E;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+}

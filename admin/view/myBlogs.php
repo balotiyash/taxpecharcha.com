@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code to fetch all the existing blogs in dashboard.
     Created on: 02 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 28 June 2024
 -->
 
 <!DOCTYPE html>
@@ -34,6 +34,7 @@
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../style/myBlogsStyle.css">
+    <link rel="stylesheet" href="../style/myBlogsTable.css">
     <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
 </head>
 <body>
@@ -52,16 +53,18 @@
             
             <!-- Search bar -->
             <div id="searchBar">
+                <!-- Main Category -->
                 <div id="mainCatDiv">
                     <label for="mainCatOption"><b>Select Category: </b></label>
-                    <select name="" id="mainCatOption" required>
+                    <select id="mainCatOption" required>
                         <option value="" selected disabled>Select Main Category</option>
-                        <option value="">The Income Tax Act, 1961</option>
-                        <option value="">The GST Act, 2017</option>
-                        <option value="">The Customs Act, 1962</option>
+                        <option value="The Income Tax Act, 1961">The Income Tax Act, 1961</option>
+                        <option value="The GST Act, 2017">The GST Act, 2017</option>
+                        <option value="The Customs Act, 1962">The Customs Act, 1962</option>
                     </select>
                 </div>
 
+                <!-- Sub Category -->
                 <div id="subCatDiv">
                     <label for="actRadio"><b>Select Sub-Category: </b></label><br>
                     <div>
@@ -77,23 +80,26 @@
 
                 <div id="verticalDivider"></div>
 
+                <!-- Search by text input -->
                 <div id="searchDiv">
                     <label for="searchInput"><b>Search:</b></label>
-                    <input type="text" name="" id="searchInput" placeholder="Article No.">
+                    <input type="text" id="searchInput" placeholder="Article No.">
                     <i class="fa-solid fa-magnifying-glass icons" id="searchIcon"></i>
                 </div>
             </div>
 
             <!-- Main Information area after search -->
-            <div class="dataDiv">
+            <div class="dataDiv" id="noResultDiv">
                 <img src="../../asset/vectors/Search.svg" alt="Searching image" id="searchImg">
                 <p>No Result Found</p>
             </div>
+            <div class="dataDiv" id="searchResultDiv"></div>
         </section>
     </main>
 
     <!-- Scripts -->
     <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
     <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/myBlogsScript.js"></script>
 </body>
 </html>
