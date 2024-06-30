@@ -3,10 +3,10 @@
     Author: Yash Balotiya
     Description: This file contains all the SQL queries used while creating or altering any data into the database.
     Created on: 16 June 2024
-    Last Modified: 17 June 2024
+    Last Modified: 30 June 2024
 //
 
-//ADMIN LOGIN DETAILS////////////////////////////////////////////////////////////////////////////
+// ADMIN LOGIN DETAILS////////////////////////////////////////////////////////////////////////////
 CREATE TABLE admin_login_details (
     login_id VARCHAR(255) PRIMARY KEY,
     password VARCHAR(255) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE admin_login_details (
     security_answer VARCHAR(255) NOT NULL
 );
 
-//INSERTING DATA INTO ADMIN LOGIN DETAILS///////////////////////////////////////////////////////
+// INSERTING DATA INTO ADMIN LOGIN DETAILS///////////////////////////////////////////////////////
 INSERT INTO admin_login_details VALUES (
     "admin",
     "$2y$10$dUQsGnH/j5KX4xSauqikm.2n.60vYk5v8LMRp4kunwbWZspu.tQgm",
@@ -24,15 +24,15 @@ INSERT INTO admin_login_details VALUES (
     "$2y$10$CZ9yEHzYferf44gwQJ2DcuKmIV9a8rflO2OnabnvyoLF1Yl6Lvbci"
 );
 
-//TO DO TABLE/////////////////////////////////////////////////////////////////////////////////
+// TO DO TABLE/////////////////////////////////////////////////////////////////////////////////
 CREATE TABLE todo_data (
     data VARCHAR(65535)
 );
 
-//INSERTING DATA INTO TODO TABLE////////////////////////////////////////////////////////////////
+// INSERTING DATA INTO TODO TABLE////////////////////////////////////////////////////////////////
 INSERT INTO todo_data VALUES("<h1>Yash Balotiya</h1>");
 
-//NEW BLOG TABLE
+// NEW BLOG TABLE
 CREATE TABLE blogs (
     id INT AUTO_INCREMENT PRIMARY KEY,
     slug VARCHAR(255) NOT NULL UNIQUE,
@@ -44,6 +44,61 @@ CREATE TABLE blogs (
     image VARCHAR(255) NOT NULL,
     content VARCHAR(65535) NOT NULL,
     views INT NOT NULL DEFAULT 0,
-    author VARCHAR(255) NOT NULL DEFAULT 'C. A. Manish Suvasiya',
+    author VARCHAR(255) NOT NULL DEFAULT 'Manish Suvasiya',
     date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+// Query to insert 50 dummy data into blogs///////////////////////////////////////////////////////
+-- Insert 50 combinations of dummy data
+INSERT INTO blogs (title, slug, main_category, sub_category, section, keywords, image, content)
+VALUES
+('Sample Blog 1', 'sample-blog-1', 'The Income Tax Act, 1961', 'Act', 'Section 1', 'tax, income, deduction', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 2', 'sample-blog-2', 'The GST Act, 2017', 'Circular / Notification', 'Section 2', 'gst, compliance, returns', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 3', 'sample-blog-3', 'The Customs Act, 1962', 'Act', 'Section 3', 'customs, import, export', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 4', 'sample-blog-4', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 4', 'tax, assessment, penalties', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 5', 'sample-blog-5', 'The GST Act, 2017', 'Act', 'Section 5', 'gst, input tax credit', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+('Sample Blog 6', 'sample-blog-6', 'The Income Tax Act, 1961', 'Act', 'Section 6', 'tax, capital gains, exemptions', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 7', 'sample-blog-7', 'The GST Act, 2017', 'Circular / Notification', 'Section 7', 'gst, place of supply, invoices', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 8', 'sample-blog-8', 'The Customs Act, 1962', 'Act', 'Section 8', 'customs, duties, regulations', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 9', 'sample-blog-9', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 9', 'tax, deductions, computation', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 10', 'sample-blog-10', 'The GST Act, 2017', 'Act', 'Section 10', 'gst, compliance, penalties', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+('Sample Blog 11', 'sample-blog-11', 'The Income Tax Act, 1961', 'Act', 'Section 11', 'tax, exemptions, deductions', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 12', 'sample-blog-12', 'The GST Act, 2017', 'Circular / Notification', 'Section 12', 'gst, input tax, returns', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 13', 'sample-blog-13', 'The Customs Act, 1962', 'Act', 'Section 13', 'customs, import, export', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 14', 'sample-blog-14', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 14', 'tax, assessment, penalties', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 15', 'sample-blog-15', 'The GST Act, 2017', 'Act', 'Section 15', 'gst, input tax credit', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+('Sample Blog 16', 'sample-blog-16', 'The Income Tax Act, 1961', 'Act', 'Section 16', 'tax, capital gains, exemptions', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 17', 'sample-blog-17', 'The GST Act, 2017', 'Circular / Notification', 'Section 17', 'gst, place of supply, invoices', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 18', 'sample-blog-18', 'The Customs Act, 1962', 'Act', 'Section 18', 'customs, duties, regulations', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 19', 'sample-blog-19', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 19', 'tax, deductions, computation', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 20', 'sample-blog-20', 'The GST Act, 2017', 'Act', 'Section 20', 'gst, compliance, penalties', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+('Sample Blog 21', 'sample-blog-21', 'The Income Tax Act, 1961', 'Act', 'Section 21', 'tax, exemptions, deductions', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 22', 'sample-blog-22', 'The GST Act, 2017', 'Circular / Notification', 'Section 22', 'gst, input tax, returns', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 23', 'sample-blog-23', 'The Customs Act, 1962', 'Act', 'Section 23', 'customs, import, export', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 24', 'sample-blog-24', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 24', 'tax, assessment, penalties', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 25', 'sample-blog-25', 'The GST Act, 2017', 'Act', 'Section 25', 'gst, input tax credit', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+('Sample Blog 26', 'sample-blog-26', 'The Income Tax Act, 1961', 'Act', 'Section 26', 'tax, capital gains, exemptions', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 27', 'sample-blog-27', 'The GST Act, 2017', 'Circular / Notification', 'Section 27', 'gst, place of supply, invoices', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 28', 'sample-blog-28', 'The Customs Act, 1962', 'Act', 'Section 28', 'customs, duties, regulations', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 29', 'sample-blog-29', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 29', 'tax, deductions, computation', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 30', 'sample-blog-30', 'The GST Act, 2017', 'Act', 'Section 30', 'gst, compliance, penalties', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+('Sample Blog 31', 'sample-blog-31', 'The Income Tax Act, 1961', 'Act', 'Section 31', 'tax, exemptions, deductions', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 32', 'sample-blog-32', 'The GST Act, 2017', 'Circular / Notification', 'Section 32', 'gst, input tax, returns', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 33', 'sample-blog-33', 'The Customs Act, 1962', 'Act', 'Section 33', 'customs, import, export', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 34', 'sample-blog-34', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 34', 'tax, assessment, penalties', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 35', 'sample-blog-35', 'The GST Act, 2017', 'Act', 'Section 35', 'gst, input tax credit', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+('Sample Blog 36', 'sample-blog-36', 'The Income Tax Act, 1961', 'Act', 'Section 36', 'tax, capital gains, exemptions', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 37', 'sample-blog-37', 'The GST Act, 2017', 'Circular / Notification', 'Section 37', 'gst, place of supply, invoices', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 38', 'sample-blog-38', 'The Customs Act, 1962', 'Act', 'Section 38', 'customs, duties, regulations', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 39', 'sample-blog-39', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 39', 'tax, deductions, computation', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 40', 'sample-blog-40', 'The GST Act, 2017', 'Act', 'Section 40', 'gst, compliance, penalties', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+('Sample Blog 41', 'sample-blog-41', 'The Income Tax Act, 1961', 'Act', 'Section 41', 'tax, exemptions, deductions', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 42', 'sample-blog-42', 'The GST Act, 2017', 'Circular / Notification', 'Section 42', 'gst, input tax, returns', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 43', 'sample-blog-43', 'The Customs Act, 1962', 'Act', 'Section 43', 'customs, import, export', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 44', 'sample-blog-44', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 44', 'tax, assessment, penalties', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 45', 'sample-blog-45', 'The GST Act, 2017', 'Act', 'Section 45', 'gst, input tax credit', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+('Sample Blog 46', 'sample-blog-46', 'The Income Tax Act, 1961', 'Act', 'Section 46', 'tax, capital gains, exemptions', '../../asset/uploads/3156.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+('Sample Blog 47', 'sample-blog-47', 'The GST Act, 2017', 'Circular / Notification', 'Section 47', 'gst, place of supply, invoices', '../../asset/uploads/3156.jpg', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+('Sample Blog 48', 'sample-blog-48', 'The Customs Act, 1962', 'Act', 'Section 48', 'customs, duties, regulations', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+('Sample Blog 49', 'sample-blog-49', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 49', 'tax, deductions, computation', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
+('Sample Blog 50', 'sample-blog-50', 'The GST Act, 2017', 'Act', 'Section 50', 'gst, compliance, penalties', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');

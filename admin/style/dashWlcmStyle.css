@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the dashboard page mainly Welcome and Recents Blogs.
     Created on: 02 June 2024
-    Last Modified: 26 June 2024
+    Last Modified: 30 June 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -31,9 +31,11 @@
 /* Left Welcome Div */
 #dashChild1 {
     width: 60%;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
 }
 
 #helloDiv {

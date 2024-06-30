@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to fetch and display all the blogs category-wise or search-wise data.
 // Created on: 28 June 2024
-// Last Modified: 28 June 2024
+// Last Modified: 30 June 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -12,10 +12,9 @@ include_once "../../shared/server/db_connection.php";
 if (isset($_POST["task"])) {
     $task = $_POST["task"];
 
-    if ($task === "fetchBlogs") {
-        fetchBlogs($conn);
-    } elseif ($task === "fetchBySearch") {
-        fetchBySearch($conn);
+    if ($task === "fetchBlogs" || $task === "fetchBySearch") {
+        fetchBlogs($conn, $task);
+
     } else {
         echo json_encode(["error" => "Invalid task: " . $task]);
     }
@@ -25,22 +24,43 @@ if (isset($_POST["task"])) {
     echo json_encode(["error" => "Task parameter not received from JavaScript"]);
 }
 
-// Function to fetch category wise data and render it to js
-function fetchBlogs($conn) {
-    if (!isset($_POST["mainCategory"], $_POST["subCategory"], $_POST["page"], $_POST["itemsPerPage"])) {
+// Function to fetch data and render it to js
+function fetchBlogs($conn, $task) {
+    if ($task === "fetchBlogs" && (!isset($_POST["mainCategory"], $_POST["subCategory"], $_POST["page"], $_POST["itemsPerPage"]))) {
         echo json_encode(["error" => "Missing parameters."]);
         return;
     }
 
-    $mainCategory = $_POST["mainCategory"];
-    $subCategory = $_POST["subCategory"];
+    if ($task === "fetchBySearch" && (!isset($_POST["searchText"], $_POST["page"], $_POST["itemsPerPage"]))) {
+        echo json_encode(["error" => "Missing parameters."]);
+        return;
+    }
+
+    $mainCategory = $_POST["mainCategory"] ?? null;
+    $subCategory = $_POST["subCategory"] ?? null;
+    $searchText = $_POST["searchText"] ?? null;
     $page = (int)$_POST["page"];
     $itemsPerPage = (int)$_POST["itemsPerPage"];
     $offset = ($page - 1) * $itemsPerPage;
 
-    $query = "SELECT id, slug, title, section, views, date FROM blogs WHERE main_category = ? AND sub_category = ? LIMIT ?, ?;";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssii", $mainCategory, $subCategory, $offset, $itemsPerPage);
+    if ($task === "fetchBlogs") {
+        $query = "SELECT id, slug, title, section, views, date FROM blogs WHERE main_category = ? AND sub_category = ? ORDER BY date DESC LIMIT ?, ?";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("ssii", $mainCategory, $subCategory, $offset, $itemsPerPage);
+        $countQuery = "SELECT COUNT(*) as total FROM blogs WHERE main_category = ? AND sub_category = ?";
+        $countStmt = $conn->prepare($countQuery);
+        $countStmt->bind_param("ss", $mainCategory, $subCategory);
+        
+    } else {
+        $query = "SELECT id, slug, title, section, views, date FROM blogs WHERE section LIKE ? ORDER BY date DESC LIMIT ?, ?";
+        $stmt = $conn->prepare($query);
+        $searchText = "%" . $searchText . "%";
+        $stmt->bind_param("sii", $searchText, $offset, $itemsPerPage);
+        $countQuery = "SELECT COUNT(*) as total FROM blogs WHERE section LIKE ?";
+        $countStmt = $conn->prepare($countQuery);
+        $countStmt->bind_param("s", $searchText);
+    }
+
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -77,9 +97,6 @@ function fetchBlogs($conn) {
         $data .= '</tbody></table>';
 
         // Fetch total number of records for pagination
-        $countQuery = "SELECT COUNT(*) as total FROM blogs WHERE main_category = ? AND sub_category = ?";
-        $countStmt = $conn->prepare($countQuery);
-        $countStmt->bind_param("ss", $mainCategory, $subCategory);
         $countStmt->execute();
         $countResult = $countStmt->get_result();
         $totalRecords = $countResult->fetch_assoc()["total"];
@@ -88,8 +105,8 @@ function fetchBlogs($conn) {
         $pagination = '<div id="paginationDiv">
                     <p>Page ' . $page . ' of ' . $totalPages . '</p>
                     <div>
-                        <button class="prevBtn" ' . ($page == 1 ? 'disabled' : ' ') . '>Back</button>
-                        <button class="nextBtn" ' . ($page == $totalPages ? 'disabled' : ' ') . '>Next</button>
+                        <button class="prevBtn" ' . ($page == 1 ? 'disabled' : '') . '>Back</button>
+                        <button class="nextBtn" ' . ($page == $totalPages ? 'disabled' : '') . '>Next</button>
                     </div>
                 </div>';
 
@@ -99,12 +116,6 @@ function fetchBlogs($conn) {
     }
 
     $stmt->close();
-    if (isset($countStmt)) {
-        $countStmt->close();
-    }
-}
-
-function fetchBySearch($conn) {
-    // Implement search functionality
+    $countStmt->close();
 }
 ?>
