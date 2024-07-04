@@ -48,6 +48,9 @@ CREATE TABLE blogs (
     date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+ALTER TABLE blogs
+MODIFY COLUMN date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
 // Query to insert 50 dummy data into blogs///////////////////////////////////////////////////////
 -- Insert 50 combinations of dummy data
 INSERT INTO blogs (title, slug, main_category, sub_category, section, keywords, image, content)

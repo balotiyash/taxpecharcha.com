@@ -17,6 +17,7 @@
     background-color: white;
     /* width: 1200px; */
     width: 80vw;
+    min-height: 78vh;
     /* height: 79vh; */
     margin-top: 100px;
     margin-bottom: 25px;

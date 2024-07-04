@@ -1,8 +1,8 @@
 /** 
- * File: admin/controller/newBlogScript.js
+ * File: admin/controller/editBlogScript.js
  * Author: Yash Balotiya
- * Description: This file contains all the js and ajax code to create new blog and to interact with the server.
- * Created on: 03 June 2024
+ * Description: This file contains all the js and ajax code to edit existing blog and to interact with the server.
+ * Created on: 30 June 2024
  * Last Modified: 02 July 2024
 */
 
@@ -31,10 +31,51 @@ tinymce.init({
     content_style: 'body{font-family:Helvetica,Arial,sans-serif; font-size:16px}'
 });
 
-// This function invokes on load
+// to fetch id from url GET method
+const urlParams = new URLSearchParams(window.location.search);
+
+// On load function
 $(document).ready(() => {
 
-    // To send data to the server /db
+    // Function to load blog data to be edited on load
+    const loadBlogData = () => {
+        $.ajax({
+            type: "GET",
+            url: "../server/editBlogServer.php",
+            data: {
+                task: "fetchBlogDetails",
+                id: urlParams.get('id')
+            },
+            dataType: "json",
+            success: function (response) {
+                if (response.error) {
+                    showToast("#error-msg", `${errorSymbol} ${response.error}`);
+                    
+                } else if (response.message) {
+                    showToast("#info-msg", `${infoSymbol} ${response.message}`);
+
+                } else {
+                    $("#titleTxt").val(response.title);
+                    $("#mainCatOption").val(response.mainCategory);
+
+                    if (response.subCategory === "Act") {
+                        $("#actRadio").prop("checked", true);
+                    } else if (response.subCategory === "Circular / Notification") {
+                        $("#circularRadio").prop("checked", true);
+                    }
+                    $("#articleNoTxt").val(response.section);
+                    $("#keywordsTxt").val(response.keywords);
+                    $("#default").val(response.content);
+                }
+            },
+            error: (xhr, status, error) => {
+                showError(xhr, status, error);
+            }
+        });
+    }
+    loadBlogData();
+
+    // Function to save edit into database
     $("#blogSubmit").on("click", (e) => {
         e.preventDefault();
 
@@ -46,21 +87,32 @@ $(document).ready(() => {
         const blogImage = $("#blogImgInput")[0].files[0];
         const content = tinymce.get("default").getContent();
 
-        if (title === '' || mainCategory === '' || subCategory === '' || articleNo === '' || keywords === '' || blogImage === '' || content === '') {
+        if (title === '' || mainCategory === '' || subCategory === '' || articleNo === '' || keywords === '' || content === '') {
             showToast("#info-msg", `${infoSymbol} All fields are mandatory to fill!`);
             return;
         }
 
-        if (confirm("You are about to publish this blog. Are you sure you want to upload it?")) {
+        if (confirm("Are you sure you want to update this article? This action is irreversible.")) {
             const formData = new FormData();
-            formData.append('task', 'uploadNewBlog');
             formData.append('title', title);
             formData.append('mainCategory', mainCategory);
             formData.append('subCategory', subCategory);
             formData.append('articleNo', articleNo);
             formData.append('keywords', keywords);
-            formData.append('blogImage', blogImage);
             formData.append('content', content);
+            formData.append('id', urlParams.get('id'));
+
+            let task = null;
+
+            if (blogImage === undefined) {
+                // formData.append('blogImage', null);
+                task = "updateWithoutImage";
+            } else {
+                formData.append('blogImage', blogImage);
+                task = "updateWithImage";
+            }
+
+            formData.append('task', task);
 
             $.ajax({
                 type: "POST",
@@ -73,16 +125,16 @@ $(document).ready(() => {
                     if (response.error) {
                         showToast("#error-msg", `${errorSymbol} ${response.error}`);
                     } else {
-                        showToast("#success-msg", `${successSymbol} Article uploaded successfully! Refreshing page in 5 seconds`);
-                        
+                        showToast("#success-msg", `${successSymbol} Article updated successfully! Redirecting to 'My Articles' page in 5 seconds.`);
+
                         setTimeout(() => {
-                            $("#dashContent").trigger("reset");
+                            window.location.href = "../view/myBlogs.php";
                         }, 5000);
                     }
                 },
                 error: (xhr, status, error) => {
                     showToast("#error-msg", `${errorSymbol} An article already exists with same title!`);
-                    // showError(xhr, status, error);
+                    showError(xhr, status, error);
                 }
             });
         }

@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to fetch and display all the blogs category-wise or search-wise data.
 // Created on: 28 June 2024
-// Last Modified: 30 June 2024
+// Last Modified: 02 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -84,14 +84,14 @@ function fetchBlogs($conn, $task) {
         $srNo = $offset + 1;
         while ($row = $result->fetch_assoc()) {
             $data .= '<tr>
-                            <td>' . $srNo++ . '</td>
-                            <td class="title"><input type="text" readonly value="' . htmlspecialchars($row["title"]) . '" /></td>
-                            <td>' . htmlspecialchars($row["section"]) . '</td>
-                            <td>' . htmlspecialchars($row["views"]) . '</td>
-                            <td>' . substr(htmlspecialchars($row["date"]), 0, 10) . '</td>
-                            <td><button id="' . htmlspecialchars($row["id"]) . '" class="button-28 actionBtns editBtn"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                            <td><button id="' . htmlspecialchars($row["id"]) . '" class="button-28 actionBtns deleteBtn"><i class="fa-solid fa-trash"></i></button></td>
-                        </tr>';
+                        <td>' . $srNo++ . '</td>
+                        <td class="title"><input type="text" readonly value="' . htmlspecialchars($row["title"]) . '" /></td>
+                        <td>' . htmlspecialchars($row["section"]) . '</td>
+                        <td>' . htmlspecialchars($row["views"]) . '</td>
+                        <td>' . substr(htmlspecialchars($row["date"]), 0, 10) . '</td>
+                        <td><button onclick="editBlog(' . htmlspecialchars($row["id"]) . ')" class="button-28 actionBtns editBtn"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                        <td><button onclick="deleteBlog(this, ' . htmlspecialchars($row["id"]) . ')" class="button-28 actionBtns deleteBtn"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>';
         }
 
         $data .= '</tbody></table>';

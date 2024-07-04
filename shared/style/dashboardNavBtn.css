@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the dashboard page mainly left navigation buttons.
     Created on: 02 June 2024
-    Last Modified: 26 June 2024
+    Last Modified: 30 June 2024
 */
 
 * {
@@ -40,6 +40,10 @@ body {
     border-radius: 8px;
     background-color: #f7f7f9;
     cursor: pointer;
+}
+
+#editBlogBtn {
+    /* display: none; */
 }
 
 .navBtns:hover {

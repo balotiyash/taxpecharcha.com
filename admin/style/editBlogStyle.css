@@ -1,13 +1,13 @@
 /*
     File: admin/style/newBlogStyle.css
     Author: Yash Balotiya
-    Description: This file contains the styling part of the New Blog Creation Page.
-    Created on: 02 June 2024
+    Description: This file contains the styling part of the edit Blog Page.
+    Created on: 30 June 2024
     Last Modified: 01 July 2024
 */
 
 /* Changing color of the left navigation button for active state */
-#newBlogBtn {
+#editBlogBtn {
     background-color: #2196f3;
     color: #EEF7FF;
 }
@@ -34,7 +34,12 @@
 #horizontalLine {
     width: 100px;
     height: 3px;
-    background-color: #ffdb00;
+    background-color: #91DDCF;
+}
+
+#titleIntro {
+    display: flex;
+    align-items: center;
 }
 
 #blogData {
@@ -54,9 +59,9 @@
 }
 
 #blogSubmit {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #155724;
+    background-color: #fff3cd;
+    color: #664d03;
+    border: 1px solid #664d03;
 }
 
 #blogReset {

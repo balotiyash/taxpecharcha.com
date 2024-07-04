@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the login page.
     Created on: 25 May 2024
-    Last Modified: 21 June 2024
+    Last Modified: 02 July 2024
 -->
 
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <?php include "../../shared/view/navBar.html" ?>
+        <?php include "../../shared/view/navBar.php" ?>
     </header>
 
     <!-- Main content area -->

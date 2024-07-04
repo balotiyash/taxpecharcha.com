@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to deal with the server of the my blogs page to fetch existing blog.
  * Created on: 28 June 2024
- * Last Modified: 30 June 2024
+ * Last Modified: 02 July 2024
  */
 
 // This function invokes on load of the page
@@ -41,7 +41,7 @@ $(document).ready(() => {
     });
 
     // Function to actually fetch the details using ajax from database PHP
-    const fetchViaCategory = (mainCategory, subCategory, searchText, currentPage, itemsPerPage) => {
+    function fetchViaCategory (mainCategory, subCategory, searchText, currentPage, itemsPerPage) {
         if (mainCategory === '' || mainCategory === null) {
             showToast("#info-msg", `${infoSymbol} Main Category is Mandatory to be selected!`);
             $('input[name="subCategory"]').prop('checked', false);
@@ -52,7 +52,7 @@ $(document).ready(() => {
     };
 
     // Function to fetch blogs using search input text
-    const fetchViaText = (currentPage, itemsPerPage) => {
+    function fetchViaText (currentPage, itemsPerPage) {
         const searchText = $("#searchInput").val();
         if (searchText === '') {
             showToast("#info-msg", `${infoSymbol} Search field cannot be empty!`);
@@ -119,3 +119,47 @@ $(document).ready(() => {
         });
     };
 });
+
+// function to handle click event of edit button
+function editBlog(id) {
+    if (id === '') {
+        showToast("error-msg", `${errorSymbol} Cannot edit the article! ID parameter not recieved.`);
+
+    } else {
+        window.location.href = `editBlog.php?id=${id}`;
+        $("#searchBar").trigger("reset");
+    }
+}
+
+// function to handle click event of delete button
+function deleteBlog(t, id) {
+    if (id === '') {
+        showToast("error-msg", `${errorSymbol} Cannot delete the article! ID parameter not recieved.`);
+        return;
+    }
+
+    if (confirm("Are you sure, you want to delete this article? This action is irreversible.")) {
+        $.ajax({
+            type: "POST",
+            url: "../server/editBlogServer.php",
+            data: {
+                task: "deleteBlog",
+                id: id
+            },
+            dataType: "json",
+            success: function (response) {
+                if (response.success) {
+                    $(t).closest("tr").fadeOut();
+                    showToast("success-msg", `${successSymbol} Article deleted successfully.`);
+                } else if (response.message) {
+                    showToast("info-msg", `${infoSymbol} ${response.message}`);
+                } else if (response.error) {
+                    showToast("error-msg", `${errorSymbol} ${response.error}`);
+                }
+            },
+            error: (xhr, status, error) => {
+                showError(xhr, status, error);
+            }
+        });
+    }
+}

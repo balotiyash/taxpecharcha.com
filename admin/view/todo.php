@@ -3,8 +3,19 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code for the todo page in the dashboard.
     Created on: 02 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 02 July 2024
 -->
+    
+<?php
+    session_start();
+
+    // Check if user is logged in
+    if (!isset($_SESSION["isAdminLoggedin"])) {
+        // Redirect to login page
+        header("location: login.php");
+        exit;
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +50,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <?php include "../../shared/view/navBar.html" ?>
+        <?php include "../../shared/view/navBar.php" ?>
     </header>
 
     <!-- Main content area -->
@@ -66,6 +77,6 @@
     <script src="../controller/tinymce/tinymce.min.js"></script>
     <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
     <script src="../../shared/controller/sharedJs.js"></script>
-    <script src="../controller/todoScript.js"></script>
+    <script type="module" src="../controller/todoScript.js"></script>
 </body>
 </html>

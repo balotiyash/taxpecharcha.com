@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the change or forget password page.
     Created on: 02 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 02 July 2024
 -->
 
 <!DOCTYPE html>
@@ -37,7 +37,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <?php include "../../shared/view/navBar.html" ?>
+        <?php include "../../shared/view/navBar.php" ?>
     </header>
     
     <!-- Main content area -->

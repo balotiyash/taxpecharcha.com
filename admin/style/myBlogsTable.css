@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part to fetch existing blogs Page TABLE.
     Created on: 28 June 2024
-    Last Modified: 28 June 2024
+    Last Modified: 30 June 2024
 */
 
 /* Main div which displays blogs list */
@@ -57,25 +57,25 @@ tr:hover { background-color: #EEEEEE; }
 }
 
 .editBtn {
-    color: #F4CE14;
-    border-color: #F4CE14;
+    color: #FFC700;
+    border-color: #FFC700;
 }
 
 .editBtn:hover {
     color: white;
-    background-color: #F4CE14;
-    border-color: #F4CE14;
+    background-color: #FFC700;
+    border-color: #FFC700;
 }
 
 .deleteBtn {
-    color: #ff7b7b;
-    border-color: #ff7b7b;
+    color: #FF0000;
+    border-color: #FF0000;
 }
 
 .deleteBtn:hover {
     color: white;
-    background-color: #ff7b7b;
-    border-color: #ff7b7b;
+    background-color: #FF0000;
+    border-color: #FF0000;
 }
 
 /* Pagination */

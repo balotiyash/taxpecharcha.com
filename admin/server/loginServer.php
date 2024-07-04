@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to authenticate login and to change password at login page at the server side.
 // Created on: 20 June 2024
-// Last Modified: 21 June 2024
+// Last Modified: 02 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -58,7 +58,10 @@ function validateLogin($conn) {
     }
 
     if (($username === $actualUname) && (password_verify($password, $actualPassword))) {
+        session_start();
+        $_SESSION["isAdminLoggedin"] = true;
         echo json_encode(["status" => "User Authenticated Successfully"]);
+        
     } else {
         echo json_encode(["error" => "Invalid Login Crenditials!"]);
     }

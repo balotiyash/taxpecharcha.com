@@ -3,8 +3,19 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code to fetch all the existing blogs in dashboard.
     Created on: 02 June 2024
-    Last Modified: 28 June 2024
+    Last Modified: 02 July 2024
 -->
+
+<?php
+    session_start();
+
+    // Check if user is logged in
+    if (!isset($_SESSION["isAdminLoggedin"])) {
+        // Redirect to login page
+        header("location: login.php");
+        exit;
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +51,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <?php include "../../shared/view/navBar.html" ?>
+        <?php include "../../shared/view/navBar.php" ?>
     </header>
 
     <!-- Content area -->
@@ -52,7 +63,7 @@
         <section id="dashContent">
             
             <!-- Search bar -->
-            <div id="searchBar">
+            <form id="searchBar">
                 <!-- Main Category -->
                 <div id="mainCatDiv">
                     <label for="mainCatOption"><b>Select Category: </b></label>
@@ -86,7 +97,7 @@
                     <input type="text" id="searchInput" placeholder="Article No.">
                     <i class="fa-solid fa-magnifying-glass icons" id="searchIcon"></i>
                 </div>
-            </div>
+            </form>
 
             <!-- Main Information area after search -->
             <div class="dataDiv" id="noResultDiv">
@@ -98,8 +109,10 @@
     </main>
 
     <!-- Scripts -->
+    <script src="../controller/tinymce/tinymce.min.js"></script>
     <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
     <script src="../../shared/controller/sharedJs.js"></script>
     <script src="../controller/myBlogsScript.js"></script>
+    <!-- <script src="../controller/editBlogScript.js"></script> -->
 </body>
 </html>

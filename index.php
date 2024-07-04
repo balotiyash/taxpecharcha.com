@@ -3,8 +3,11 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the home/index page.
     Created on: 24 May 2024
-    Last Modified: 22 June 2024
+    Last Modified: 03 July 2024
 -->
+
+<!-- Session handling for login or dashboard button on the navbar -->
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +36,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <?php include "shared/view/navBar.html" ?>
+        <?php include "shared/view/navBar.php" ?>
     </header>
 
     <main>
@@ -54,6 +57,7 @@
     </main>
 
     <!-- Scripts -->
+     <script src="shared/controller/jquery-3.7.1.min.js"></script>
     <script src="shared/controller/sharedJs.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="main.js"></script>

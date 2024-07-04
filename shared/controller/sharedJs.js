@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js code which is shared throughout the application.
  * Created on: 17 June 2024
- * Last Modified: 25 June 2024
+ * Last Modified: 02 July 2024
 */
 
 // Drop down function for navbar
@@ -49,3 +49,21 @@ const showError = (xhr, status, error) => {
     console.error("Error:", error);
     showToast("#error-msg", `${errorSymbol} Error: An unexpected error occurred.`);
 }
+
+$(document).ready(() => {
+    $("#logoutBtn").on("click", () => {
+        if (confirm("Confirm Logout!")) {
+            $.ajax({
+                type: "POST",
+                url: "../../admin/server/dashboardServer.php",
+                data: { task: "logout" },
+                dataType: "json",
+                success: function (response) {
+                    if (response.success) {
+                        window.location.href = "login.php";
+                    }
+                }
+            });
+        }
+    });
+});

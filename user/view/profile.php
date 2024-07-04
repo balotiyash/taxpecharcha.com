@@ -3,8 +3,11 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the profile page.
     Created on: 26 May 2024
-    Last Modified: 21 June 2024
+    Last Modified: 02 July 2024
 -->
+
+<!-- Session handling for login or dashboard button on the navbar -->
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +39,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <?php include "../../shared/view/navBar.html" ?>
+        <?php include "../../shared/view/navBar.php" ?>
     </header>
 
     <!-- Main content area -->

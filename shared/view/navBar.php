@@ -1,9 +1,9 @@
 <!-- 
-    File: shared/view/navBar.html
+    File: shared/view/navBar.php
     Author: Yash Balotiya
     Description: This file contains the HTML5 code of navigation bar.
     Created on: 24 May 2024
-    Last Modified: 21 June 2024
+    Last Modified: 02 July 2024
 -->
 
 <!-- FontsAwesome -->
@@ -20,7 +20,7 @@
     <!-- Links -->
     <div id="navBtns">
         <ul id="navList">
-            <li><a href="../../index.php" id="homeLink">Home</a></li>
+            <li><a href="../../" id="homeLink">Home</a></li>
             <li><a href="#">Blogs</a></li>
             <li>
                 <div class="dropdown">
@@ -38,8 +38,18 @@
         </ul>
 
         <!-- login -->
-        <button class="button-28" id="loginBtn"
-            onclick="window.location.href = '../../admin/view/login.php'">Login</button>
-        <button class="button-28" id="dashboardBtn">Dashboard</button>
+        <!-- Session handling for login or dashboard button on the navbar -->
+        <?php
+        if (isset($_SESSION["isAdminLoggedin"])) {
+        ?>
+            <button class="button-28" id="dashboardBtn" onclick="window.location.href = '../../admin/view/dashboard.php'">Dashboard</button>
+        <?php
+        } else {
+        ?>
+            <button class="button-28" id="loginBtn" onclick="window.location.href = '../../admin/view/login.php'">Login</button>
+        <?php
+        }
+        ?>
+
     </div>
 </nav>
