@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the home/index page.
     Created on: 24 May 2024
-    Last Modified: 03 July 2024
+    Last Modified: 07 July 2024
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -11,6 +11,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,10 @@
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user/style/homePageStyle.css">
+    <link rel="stylesheet" href="shared/style/footer.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <header>
@@ -40,26 +44,36 @@
     </header>
 
     <main>
-        <section id="mainSection">
-            <div>
+        <!-- Section 1: Image Banner & Welcome Screen -->
+        <section id="welcomeSection">
+            <div id="imageContainer">
                 <img src="asset/images/Taxpecharcha Dashboard2 RBG.png" class="slide visible">
                 <img src="asset/images/Taxpecharcha Dashboard1 RBG.png" class="slide">
                 <img src="asset/images/Taxpecharcha Dashboard3 RBG.png" class="slide">
                 <img src="asset/images/Taxpecharcha Dashboard5 RBG.png" class="slide">
                 <img src="asset/images/Taxpecharcha Dashboard4 RBG.png" class="slide">
             </div>
-            <div>
-                <h6>Welcome to,</h6>
-                <h1>Taxpecharcha</h1>
-                <p><span class="auto-type"></span></p>
+            <div id="welcomeDiv">
+                <p id="welcomeTxt">Welcome to,</p>
+                <h1 id="taxpecharchaTxt"><span id="taxTxt">Tax</span><span id="underlineTxt">pecharcha</span></h1>
+                <br>
+                <p id="sloganTxt"><span class="auto-type"></span></p>
             </div>
         </section>
+        <?php include "user/view/incomeTax.html" ?>
+        <?php include "user/view/gstSection.html" ?>
+        <?php include "user/view/customSection.html" ?>
     </main>
 
+    <footer>
+        <?php include "shared/view/footer.html" ?>
+    </footer>
+
     <!-- Scripts -->
-     <script src="shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="shared/controller/jquery-3.7.1.min.js"></script>
     <script src="shared/controller/sharedJs.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

@@ -108,7 +108,7 @@
 
                 <!-- Blog image -->
                 <div>
-                    <label for="blogImgInput"><b>Select Blog Image</b><span class="note">*</span></label><br>
+                    <label for="blogImgInput"><b>Select Blog Image</b></label><br>
                     <input class="form-control form-control-sm" id="blogImgInput" type="file" accept="image/*" required>
                     <p class="note">Note: Choosing Landscape Image is preferred.</p>
                 </div>

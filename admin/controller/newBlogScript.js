@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to create new blog and to interact with the server.
  * Created on: 03 June 2024
- * Last Modified: 02 July 2024
+ * Last Modified: 07 July 2024
 */
 
 // This is the script for the advanced text editor on the todo page
@@ -46,9 +46,9 @@ $(document).ready(() => {
         const blogImage = $("#blogImgInput")[0].files[0];
         const content = tinymce.get("default").getContent();
 
-        if (title === '' || mainCategory === '' || subCategory === '' || articleNo === '' || keywords === '' || blogImage === '' || content === '') {
+        if (!title || !mainCategory || !subCategory || !articleNo || !keywords || !blogImage || !content) {
             showToast("#info-msg", `${infoSymbol} All fields are mandatory to fill!`);
-            return;
+            return false;
         }
 
         if (confirm("You are about to publish this blog. Are you sure you want to upload it?")) {

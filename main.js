@@ -3,14 +3,14 @@
  * Author: Yash Balotiya
  * Description: // TODO
  * Created on: 25 May 2024
- * Last Modified: 03 July 2024
+ * Last Modified: 04 July 2024
 */
 
 $(document).ready(() => {
     // Onload to change the src of images of navbar as the navbar is used on multiple pages
     document.querySelector("#rsLogo").src = "asset/vectors/Rupees.svg";
     document.querySelector("#logo").src = "asset/images/Slogan.png";
-    document.querySelector("#homeLink").href = "index.php";
+    document.querySelector("#homeLink").href = "";
     document.querySelector("#aboutLink").href = "user/view/profile.php";
 
     $("#dashboardBtn").on("click", () => {
@@ -46,7 +46,7 @@ $(document).ready(() => {
 
     // Typing effect
     var typed = new Typed(".auto-type", {
-        strings: ["Maximize Savings, Minimize Taxes: Your Path to Financial Freedom."],
+        strings: ["Maximize Savings, Minimize Taxes:<br>Your Path to Financial Freedom."],
         typeSpeed: 50,
         backSpeed: 100,
         loop: false
