@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the profile page.
     Created on: 26 May 2024
-    Last Modified: 02 July 2024
+    Last Modified: 09 July 2024
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -48,7 +48,8 @@
         <!-- LEFT Panel -->
         <div id="profile1" class="profileDivStyle">
             <div id="contactDiv">
-                <div id="profileImg"></div>
+                <!-- <div id="profileImg"></div> -->
+                 <img src="../../asset/images/Manish.png" alt="" id="profileImg">
                 <h3>Manish Suvasiya</h3>
                 <p>Chartered Accountant</p>
 

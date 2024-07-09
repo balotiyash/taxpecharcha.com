@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the HTML5 code of navigation bar.
     Created on: 24 May 2024
-    Last Modified: 02 July 2024
+    Last Modified: 08 July 2024
 -->
 
 <!-- FontsAwesome -->
@@ -14,14 +14,14 @@
     <!-- Logo -->
     <div id="navBarChild1">
         <img src="../../asset/vectors/Rupees.svg" alt="Rupees" id="rsLogo">
-        <img src="../../asset/images/Slogan.png" alt="Taxpecharcha" id="logo">
+        <img src="../../asset/images/Slogan.png" alt="Taxpecharcha" id="logo" onclick="openTaxpecharcha()">
     </div>
 
     <!-- Links -->
     <div id="navBtns">
         <ul id="navList">
-            <li><a href="../../" id="homeLink">Home</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="https://www.taxpecharcha.com/" id="homeLink">Home</a></li>
+            <li><a href="#">Articles</a></li>
             <li>
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" aria-expanded="false">

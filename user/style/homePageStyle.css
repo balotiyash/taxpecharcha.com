@@ -74,8 +74,10 @@ Last Modified: 06 July 2024 */
 .recentChilds {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: space-between;
+    padding-bottom: 12px;
     /* text-align: justify; */
+    width: 50%;
     max-width: 30%;
     /* min-height: 50%; */
     /* height: 500px; */
@@ -105,6 +107,7 @@ Last Modified: 06 July 2024 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* height: 175px; */
     /* height: 50%; */
 }
 

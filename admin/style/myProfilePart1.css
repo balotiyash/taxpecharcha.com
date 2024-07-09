@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the MY PROFILE Page in dashboard mainly left.
     Created on: 02 June 2024
-    Last Modified: 30 June 2024
+    Last Modified: 09 July 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -78,9 +78,14 @@
 
 /* Profile image */
 #profileImage {
-    border-radius: 50%;
-    width: 250px;
-    max-width: 90%;
+    /* border-radius: 50%; */
+    /* width: 250px; */
+    /* width: 250px; */
+    /* max-width: 90%; */
+    width: 200px;
+    max-width: 50%;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin-bottom: 25px;
     pointer-events: none;
 }

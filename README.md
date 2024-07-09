@@ -67,7 +67,7 @@
 ### Home Page
 The homepage features the top and recent articles published by C. A. Manish Suvasia. Users can click on any article to read the full content.
 
-![Home Page](path/to/homepage-image.png)
+![Home Page](asset/outputs/Home%20Page.png)
 
 ### Articles Page
 The articles page lists all articles categorized under The Income Tax Act - 1961, The GST Act - 2017, and The Customs Act - 1962. Users can search for articles by category or keyword.
@@ -82,50 +82,46 @@ Clicking on an article from the homepage or articles page opens a new page displ
 ### Services Page
 The services page includes a submenu with options for Income Tax and GST services. Clicking on these options redirects to C. A. Manish Suvasia's WhatsApp for direct consultation.
 
-![Services Page](path/to/services-page-image.png)
-
 ### About Page
 The about page provides information about CA Manish Suvasia, including his image, social media links, contact information, and a brief description of his services.
 
-![About Page](path/to/about-page-image.png)
+![About Page](asset/outputs/About%20Page.png)
 
 ### Admin Login
 The admin login page is for C .A. Manish Suvasia to access the dashboard. It includes options to reset or forget the password.
 
-![Admin Login Page](path/to/admin-login-page-image.png)
-![Admin Password Reset Page](path/to/admin-login-page-image.png)
+![Admin Login Page](asset/outputs/Login.png)
+![Admin Password Reset Page](asset/outputs/Reset%20Password.png)
 
 ### Admin Dashboard
 The dashboard displays the top-rated articles, the count of articles uploaded by category, and buttons for navigating to different admin functionalities.
 
-![Admin Dashboard](path/to/admin-dashboard-image.png)
+![Admin Dashboard](asset/outputs/Dashboard.png)
 
 ## Admin Functionalities
 
 ### New Article
 Allows the admin to create a new article by providing a title, category, subcategory, article no., keywords, a landscape image and content using TinyMCE editor.
 
-![Publish New Article](path/to/admin-dashboard-image.png)
+![Publish New Article](asset/outputs/New%20Article.png)
 
 ### Manage Articles
 Enables the admin to view, edit, or delete existing articles. Articles can be searched individually within this page.
 
-![My Articles](path/to/admin-dashboard-image.png)
+![My Articles](asset/outputs/My%20Articles.png)
 
 ### To-Do List
 A feature for the admin to add and save tasks for future reference.
 
-![TO-DO](path/to/admin-dashboard-image.png)
+![TO-DO](asset/outputs/Todo.png)
 
 ### Profile Management
 The profile page displays the admin's profile image, social media links, contact information, and allows updating security question, security answer, date of birth, and changing the login password.
 
-![My Profile](path/to/admin-dashboard-image.png)
+![My Profile](asset/outputs/Profile%20Page.png)
 
 ## UI Design
 The UI design is modern, intuitive, and user-friendly, ensuring a seamless experience for both the admin and users. The design emphasizes readability and ease of navigation.
-
-![UI Design](path/to/ui-design-image.png)
 
 ## Contributing
 We welcome contributions to enhance the functionality and features of taxpecharcha. To contribute, please follow these steps:

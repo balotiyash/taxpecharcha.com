@@ -3,8 +3,19 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the change or forget password page.
     Created on: 02 June 2024
-    Last Modified: 02 July 2024
+    Last Modified: 09 July 2024
 -->
+
+<?php
+    session_start();
+
+    // Check if user is logged in
+    if (isset($_SESSION["isAdminLoggedin"])) {
+        // Redirect to login page
+        header("location: https://www.taxpecharcha.com/");
+        exit;
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">

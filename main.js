@@ -3,14 +3,14 @@
  * Author: Yash Balotiya
  * Description: // TODO
  * Created on: 25 May 2024
- * Last Modified: 04 July 2024
+ * Last Modified: 09 July 2024
 */
 
 $(document).ready(() => {
     // Onload to change the src of images of navbar as the navbar is used on multiple pages
     document.querySelector("#rsLogo").src = "asset/vectors/Rupees.svg";
     document.querySelector("#logo").src = "asset/images/Slogan.png";
-    document.querySelector("#homeLink").href = "";
+    // document.querySelector("#homeLink").href = "";
     document.querySelector("#aboutLink").href = "user/view/profile.php";
 
     $("#dashboardBtn").on("click", () => {
@@ -52,4 +52,43 @@ $(document).ready(() => {
         loop: false
     });
 
+    const fetchRecentArticles = () => {
+        $.ajax({
+            type: "POST",
+            url: "user/server/homePageServer.php",
+            data: { task: "fetchRecentArticles" },
+            dataType: "json",
+            success: (response) => {
+                if (response.success) {
+                    // console.log(response.success)
+
+                    for (let i = 0; i < response.success.length; i++) {
+                        $(`#articleImg${i + 1}`).attr("src", response.success[i]["image"]);
+                        $(`#articleTitle${i + 1}`).html(response.success[i]["title"]);
+                        $(`#articleContent${i + 1}`).html(response.success[i]["content"]);
+                        $(`#articleViews${i + 1}`).html(response.success[i]["views"]);
+                    }
+
+
+                } else if (response.error) {
+                    showToast("#error-msg", `${successSymbol} Error: ${response.error}.`);
+
+                } else if (response.message) {
+                    showToast("#info-msg", `${infoSymbol} ${response.message}.`);
+
+                }
+            },
+            error: (xhr, status, error) => {
+                showError(xhr, status, error);
+            }
+        });
+    }
+
+    fetchRecentArticles();
+
 });
+
+// Function to open Yash Balotiya's Profile
+function openYashProfile() {  
+    window.open("https://balotiyash.github.io/Personal-Portfolio/")
+}

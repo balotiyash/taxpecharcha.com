@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the navbar.
     Created on: 24 May 2024
-    Last Modified: 02 July 2024
+    Last Modified: 09 July 2024
 */
 
 /* General styling */
@@ -32,7 +32,7 @@
 }
 
 #rsLogo {
-    width: 25px;
+    width: 32px;
 }
 
 #logo {
@@ -94,7 +94,9 @@
 .dropdown-menu {
     display: none;
     position: absolute;
-    width: 150%;
+    /* width: 150%; */
+    /* width: 8vw; */
+    width: 140px;
     padding: 8px;
     margin: 2px 0;
     border: 1px solid gray;
