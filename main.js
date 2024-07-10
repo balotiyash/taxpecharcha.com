@@ -3,15 +3,18 @@
  * Author: Yash Balotiya
  * Description: // TODO
  * Created on: 25 May 2024
- * Last Modified: 09 July 2024
+ * Last Modified: 10 July 2024
 */
 
 $(document).ready(() => {
     // Onload to change the src of images of navbar as the navbar is used on multiple pages
     document.querySelector("#rsLogo").src = "asset/vectors/Rupees.svg";
     document.querySelector("#logo").src = "asset/images/Slogan.png";
-    // document.querySelector("#homeLink").href = "";
     document.querySelector("#aboutLink").href = "user/view/profile.php";
+    document.querySelector("#rupeesLogo").src = "asset/vectors/Rupees.svg";
+    document.querySelector("#rupeesLogo").src = "asset/vectors/Rupees.svg";
+    document.querySelector("#aboutMeLink").href = "user/view/profile.php";
+    document.querySelector("#algoDevsImg").src = "asset/images/AlgoDevs.png";
 
     $("#dashboardBtn").on("click", () => {
         window.location.href = "admin/view/dashboard.php";
@@ -67,14 +70,15 @@ $(document).ready(() => {
                         $(`#articleTitle${i + 1}`).html(response.success[i]["title"]);
                         $(`#articleContent${i + 1}`).html(response.success[i]["content"]);
                         $(`#articleViews${i + 1}`).html(response.success[i]["views"]);
+                        $(`#articleLink${i + 1}`).attr("href", `user/view/article.php?slug=${response.success[i]["slug"]}`);
                     }
 
 
                 } else if (response.error) {
-                    showToast("#error-msg", `${successSymbol} Error: ${response.error}.`);
+                    showToast("#error-msg", `${successSymbol} Error: ${response.error}`);
 
                 } else if (response.message) {
-                    showToast("#info-msg", `${infoSymbol} ${response.message}.`);
+                    showToast("#info-msg", `${infoSymbol} ${response.message}`);
 
                 }
             },
@@ -87,8 +91,3 @@ $(document).ready(() => {
     fetchRecentArticles();
 
 });
-
-// Function to open Yash Balotiya's Profile
-function openYashProfile() {  
-    window.open("https://balotiyash.github.io/Personal-Portfolio/")
-}

@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js code which is shared throughout the application.
  * Created on: 17 June 2024
- * Last Modified: 09 July 2024
+ * Last Modified: 10 July 2024
 */
 
 // Drop down function for navbar
@@ -69,6 +69,11 @@ $(document).ready(() => {
 });
 
 // Function to open homepage onclick of logo on the navbar
-const openTaxpecharcha = () => {
+function openTaxpecharcha() {
     window.open("https://www.taxpecharcha.com/", "_self");
+}
+
+// Function to open Yash Balotiya's Profile
+function openYashProfile() {  
+    window.open("https://balotiyash.github.io/Personal-Portfolio/")
 }

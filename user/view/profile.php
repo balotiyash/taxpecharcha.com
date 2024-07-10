@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
+    <!-- Footer Style -->
+    <link rel="stylesheet" href="../../shared/style/footer.css">
+
     <!-- Fonts awesome is included in navbar -->
 
     <!-- Profile Page Style -->
@@ -49,7 +52,7 @@
         <div id="profile1" class="profileDivStyle">
             <div id="contactDiv">
                 <!-- <div id="profileImg"></div> -->
-                 <img src="../../asset/images/Manish.png" alt="" id="profileImg">
+                 <img src="../../asset/images/Manish.png" alt="Manish Suvasiya" id="profileImg">
                 <h3>Manish Suvasiya</h3>
                 <p>Chartered Accountant</p>
 
@@ -94,5 +97,13 @@
         <!-- RIGHT Panel -->
         <?php include "../view/aboutMe.html" ?>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <?php include "../../shared/view/footer.html" ?>
+    </footer>
+
+    <!-- Javascripts -->
+    <script src="../../shared/controller/sharedJs.js"></script>
 </body>
 </html>

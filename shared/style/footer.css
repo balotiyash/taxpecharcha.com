@@ -2,7 +2,7 @@
 Author: Yash Balotiya
 Description: This file contains the styling part of the footer.
 Created on: 07 July 2024
-Last Modified: 07 July 2024 */
+Last Modified: 10 July 2024 */
 
 #aboutFooter {
     width: 100%;
@@ -12,7 +12,7 @@ Last Modified: 07 July 2024 */
     display: flex;
     justify-content: space-evenly;
     align-items: start;
-    padding: 40px;
+    padding: 40px 0;
 }
 
 #rupeesLogo {
@@ -45,6 +45,10 @@ Last Modified: 07 July 2024 */
 
 #aboutTaxpecharcha a {
     color: #2196f3;
+}
+
+#aboutTaxpecharcha p {
+    width: 350px;
 }
 
 #contactMe, #devInfo {
