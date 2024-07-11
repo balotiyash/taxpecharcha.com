@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the HTML5 code of navigation bar.
     Created on: 24 May 2024
-    Last Modified: 08 July 2024
+    Last Modified: 11 July 2024
 -->
 
 <!-- FontsAwesome -->
@@ -21,7 +21,7 @@
     <div id="navBtns">
         <ul id="navList">
             <li><a href="https://www.taxpecharcha.com/" id="homeLink">Home</a></li>
-            <li><a href="#">Articles</a></li>
+            <li><a href="../../user/view/blogs.php" id="articleLink">Articles</a></li>
             <li>
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" aria-expanded="false">

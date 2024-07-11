@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the edit Blog Page.
     Created on: 30 June 2024
-    Last Modified: 01 July 2024
+    Last Modified: 11 July 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -16,10 +16,8 @@
 #dashContent {
     background-color: white;
     /* width: 1200px; */
-    /* width: 80vw; */
     min-width: 80vw;
     min-height: 78vh;
-    /* height: 79vh; */
     margin-top: 100px;
     margin-bottom: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -72,7 +70,6 @@
 
 #blogData input[type="text"],
 #mainCatOption {
-    /* width: 100%; */
     width: 20vw;
     height: 25px;
     padding: 4px;
@@ -82,7 +79,6 @@
 }
 
 #mainCatOption {
-    /* width: 104%; */
     width: 20.7vw;
     height: 36px;
 }

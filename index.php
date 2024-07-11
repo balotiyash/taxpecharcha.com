@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the home/index page.
     Created on: 24 May 2024
-    Last Modified: 07 July 2024
+    Last Modified: 11 July 2024
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -61,11 +61,18 @@
                 <p id="sloganTxt"><span class="auto-type"></span></p>
             </div>
         </section>
+
+        <!-- Section 2: Income Tax -->
         <?php include "user/view/incomeTax.html" ?>
+
+        <!-- Section 3: GST -->
         <?php include "user/view/gstSection.html" ?>
+
+        <!-- Section 4: Customs -->
         <?php include "user/view/customSection.html" ?>
     </main>
 
+    <!-- Footer -->
     <footer>
         <?php include "shared/view/footer.html" ?>
     </footer>

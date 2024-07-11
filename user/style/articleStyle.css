@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of article page to be viewed by the user.
     Created on: 10 July 2024
-    Last Modified: 10 July 2024
+    Last Modified: 11 July 2024
 */
 
 * {
@@ -17,18 +17,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
     min-height: 100vh;
-    /* width: 100vw; */
 }
 
+/* Main content area */
 main {
     padding-top: 100px;
     width: 50%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    /* background-color: white; */
 }
 
 #articleTitle {
@@ -38,23 +36,16 @@ main {
 }
 
 #articleImg {
-    /* width: 500px; */
     width: 100%;
     display: block;
     margin: 20px auto;
 }
 
-#blogDetails {
-    display: none;
-}
+#blogDetails { display: none; }
 
-#articleContent, #blogDetails {
-    line-height: 32px;
-}
+#articleContent, #blogDetails { line-height: 32px; }
 
-#articleContent {
-    margin-top: 20px;
-}
+#articleContent { margin-top: 20px; }
 
 #blogWriterDetails {
     display: flex;

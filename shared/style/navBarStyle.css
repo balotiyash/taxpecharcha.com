@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the navbar.
     Created on: 24 May 2024
-    Last Modified: 09 July 2024
+    Last Modified: 11 July 2024
 */
 
 /* General styling */
@@ -31,9 +31,7 @@
     align-items: center;
 }
 
-#rsLogo {
-    width: 32px;
-}
+#rsLogo { width: 32px; }
 
 #logo {
     width: 500px;
@@ -76,26 +74,17 @@
     left: 0;
 }
 
-#navList a:hover::after {
-    width: 100%;
-}
+#navList a:hover::after { width: 100%; }
 
 /* Login / Dashboard buttons */
-#loginBtn {
-    margin-right: 50px;
-}
+#loginBtn { margin-right: 50px; }
 
-#dashboardBtn {
-    /* display: none; */
-    margin-right: 50px;
-}
+#dashboardBtn { margin-right: 50px; }
 
 /* Drop down */
 .dropdown-menu {
     display: none;
     position: absolute;
-    /* width: 150%; */
-    /* width: 8vw; */
     width: 140px;
     padding: 8px;
     margin: 2px 0;
@@ -116,13 +105,9 @@
     cursor: pointer;
 }
 
-.dropdown-toggle i {
-    margin-left: 10px;
-}
+.dropdown-toggle i { margin-left: 10px; }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+.dropdown:hover .dropdown-menu { display: block; }
 
 .dropdown-item {
     padding: 8px 16px;
@@ -132,6 +117,4 @@
     transition: background-color 0.3s ease;
 }
 
-.dropdown-item:hover {
-    background-color: #f1f1f1;
-}
+.dropdown-item:hover { background-color: #f1f1f1; }

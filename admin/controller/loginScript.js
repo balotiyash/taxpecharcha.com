@@ -3,14 +3,16 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code to validate, authenticate the admin and interact with the server side code of the login page.
  * Created on: 20 June 2024
- * Last Modified: 26 June 2024
+ * Last Modified: 11 July 2024
 */
 
+// Executes onload successfully
 $(document).ready(() => {
 
     // Show password checkbox
     let isPasswordVisible = false;
 
+    // Function / Click event to handle hide or show password of the login page
     $("#showPassCbk").on("click", () => {
         const passwordInput = $("#passTxt");
         isPasswordVisible = !isPasswordVisible;

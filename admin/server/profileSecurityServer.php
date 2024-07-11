@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to update security details and password after login.
 // Created on: 16 June 2024
-// Last Modified: 21 June 2024
+// Last Modified: 11 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -134,7 +134,6 @@ function changeLoginPassword($conn) {
             echo json_encode(["status" => "incorrect current password"]);
         }
     } else {
-        // Return a message indicating no results found
         echo json_encode(["status" => "No result found!!"]);
     }
 }

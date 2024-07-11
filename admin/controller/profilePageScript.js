@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code to validate and interact with the server side code of the change password and security answers page inside profile page.
  * Created on: 16 June 2024
- * Last Modified: 25 June 2024
+ * Last Modified: 11 July 2024
 */
 
 // If the page loads successfully then this function runs
@@ -15,9 +15,8 @@ $(document).ready(() => {
             type: "POST",
             url: "../server/profileSecurityServer.php",
             data: { task: "fetchSecurityAnswer" }, // Use an empty object instead of null for better readability
-            dataType: "json", // Set to the expected data type ("json" in this case)
+            dataType: "json",
             success: (response) => {
-                // Handle the response from the server here
                 if (response.error) {
                     showToast("#error-msg", `${errorSymbol} Error: ${response.error}.`);
 
@@ -25,7 +24,6 @@ $(document).ready(() => {
                     showToast("#info-msg", `${infoSymbol} ${response.message}.`);
 
                 } else {
-                    // Update the UI with the response data
                     response.forEach((item) => {
                         $("#securityQuestion").val(item.security_question);
                         $("#changeSecurityTxt").val(item.security_answer);
@@ -34,7 +32,6 @@ $(document).ready(() => {
                 }
             },
             error: (xhr, status, error) => {
-                // Handle any errors here
                 console.error("Error loading security answer: ", error);
                 showError(xhr, status, error);
             }

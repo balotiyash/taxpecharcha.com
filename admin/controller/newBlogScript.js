@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to create new blog and to interact with the server.
  * Created on: 03 June 2024
- * Last Modified: 07 July 2024
+ * Last Modified: 11 July 2024
 */
 
 // This is the script for the advanced text editor on the todo page
@@ -82,7 +82,7 @@ $(document).ready(() => {
                 },
                 error: (xhr, status, error) => {
                     showToast("#error-msg", `${errorSymbol} An article already exists with same title!`);
-                    // showError(xhr, status, error);
+                    showError(xhr, status, error);
                 }
             });
         }

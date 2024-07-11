@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to load blog data of the home page.
 // Created on: 09 July 2024
-// Last Modified: 09 July 2024
+// Last Modified: 11 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -24,6 +24,7 @@ if (isset($_POST["task"])) {
     echo json_encode(["error" => "Task parameter not received from JavaScript"]);
 }
 
+// Function to fetch recent articles to be displayed on the home page
 function fetchRecentArticles($conn) {
     $query = "(
         SELECT id, slug, image, title, content, views 

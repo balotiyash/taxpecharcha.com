@@ -1,13 +1,15 @@
 /** 
- * File: admin/controller/dashboard.js
+ * File: admin/controller/articleScript.js
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code of the article page to interact with the server.
  * Created on: 10 July 2024
- * Last Modified: 10 July 2024
+ * Last Modified: 11 July 2024
 */
 
 // Runs when doc is loaded successfully
 $(document).ready(() => {
+
+    // function to load data on load of the home page
     const loadArticle = () => {
         const slug = getSlugFromURL(); // Assuming this function extracts the slug from the URL
 
@@ -35,9 +37,9 @@ $(document).ready(() => {
                     $("#datePublish").html(response.success["date"]);
                     
                 } else if (response.error) {
-                    showToast("#error-msg", `${successSymbol} Error: ${response.error}`);
+                    alert(`Error: ${response.error}`);
                 } else if (response.message) {
-                    showToast("#info-msg", `${infoSymbol} ${response.message}`);
+                    alert(response.message);
                 }
             },
             error: (xhr, status, error) => {
@@ -49,6 +51,7 @@ $(document).ready(() => {
     loadArticle();
 });
 
+// Function to fetch slug from url
 function getSlugFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('slug');

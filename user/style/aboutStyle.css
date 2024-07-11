@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of profile page; About me block.
     Created on: 26 May 2024
-    Last Modified: 17 June 2024
+    Last Modified: 11 July 2024
 */
 
 * {
@@ -16,7 +16,6 @@
 #profile2 {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     padding: 20px;
 }
 
@@ -25,9 +24,7 @@
     align-items: center;
 }
 
-#profileChild1 h3 {
-    font-size: 50px;
-}
+#profileChild1 h3 { font-size: 50px; }
 
 #profileChild1 div {
     width: 100px;
@@ -39,9 +36,6 @@
 #summary {
     font-size: 18px;
     font-weight: bold;
-    /* font-style: italic; */
 }
 
-#brief {
-    text-align: justify;
-}
+#brief { text-align: justify; }

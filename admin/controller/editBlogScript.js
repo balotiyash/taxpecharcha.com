@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to edit existing blog and to interact with the server.
  * Created on: 30 June 2024
- * Last Modified: 02 July 2024
+ * Last Modified: 11 July 2024
 */
 
 // This is the script for the advanced text editor on the todo page
@@ -105,7 +105,6 @@ $(document).ready(() => {
             let task = null;
 
             if (blogImage === undefined) {
-                // formData.append('blogImage', null);
                 task = "updateWithoutImage";
             } else {
                 formData.append('blogImage', blogImage);

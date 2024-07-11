@@ -1,6 +1,6 @@
 /* File: style.css
 Author: Yash Balotiya
-Description: This file contains the styling part of the index page.
+Description: This file contains the styling part of the index page mainly sliding images part.
 Created on: 16 June 2024
 Last Modified: 09 July 2024 */
 
@@ -17,8 +17,6 @@ body {
 
 /* Banner Code */
 main {
-    /* width: 100vw; */
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,8 +28,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex-direction: column; */
-    /* width: 100%; */
     height: 70vh;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -41,7 +37,6 @@ main {
     position: relative;
     width: 100%;
     min-height: 100%;
-    /* height: 100vh; */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -65,7 +60,6 @@ main {
     align-items: center;
     text-align: center;
     margin-right: 16px;
-    /* margin-top: 20px; */
 }
 
 #welcomeTxt {
@@ -73,20 +67,13 @@ main {
     font-weight: 600;
 }
 
-#welcomeDiv h1 {
-    font-size: 60px;
-}
+#welcomeDiv h1 { font-size: 60px; }
 
-#taxTxt {
-    color: #2162ff;
-}
+#taxTxt { color: #2162ff; }
 
 #underlineTxt {
     text-decoration-line: underline;
     text-decoration-color: #ff004f;
-    /* text-decoration-color: blueviolet; */
 }
 
-#sloganTxt {
-    font-size: 20px;
-}
+#sloganTxt { font-size: 20px; }

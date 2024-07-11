@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to fetch the counts of the blogs category wise and to fetch the top viewed articles by users on the dashboard page.
 // Created on: 26 June 2024
-// Last Modified: 02 july 2024
+// Last Modified: 11 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -19,10 +19,8 @@ if (isset($_POST["task"])) {
         fetchTopArticles($conn);
         
     } elseif ($task === "logout") {
-        // Start the session
         session_start();
 
-        // Unset a specific session variable
         if (isset($_SESSION['isAdminLoggedin'])) {
             session_unset();
             session_destroy();
@@ -108,3 +106,5 @@ function fetchTopArticles($conn) {
         echo json_encode(["message" => "No count result found"]);
     }
 }
+
+?>

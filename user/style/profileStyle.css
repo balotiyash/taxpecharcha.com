@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of profile page; Personal details block.
     Created on: 26 May 2024
-    Last Modified: 09 July 2024
+    Last Modified: 11 July 2024
 */
 
 * {
@@ -16,12 +16,9 @@
 #mainPage {
     display: flex;
     justify-content: center;
-    /* background-color: #f7f7f9; */
 }
 
-body {
-    background-color: #f7f7f9;
-}
+body { background-color: #f7f7f9; }
 
 #profile1 {
     width: 325px;
@@ -54,12 +51,7 @@ body {
 }
 
 #profileImg {
-    /* background-image: url(../../asset/images/Manish.png); */
-    /* background-size: cover; */
-    /* width: 250px; */
     width: 200px;
-    /* height: 250px; */
-    /* border-radius: 50%; */
     border-radius: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

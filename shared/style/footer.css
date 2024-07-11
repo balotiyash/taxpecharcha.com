@@ -2,11 +2,10 @@
 Author: Yash Balotiya
 Description: This file contains the styling part of the footer.
 Created on: 07 July 2024
-Last Modified: 10 July 2024 */
+Last Modified: 11 July 2024 */
 
 #aboutFooter {
     width: 100%;
-    /* height: 300px; */
     background-color: #01204E;
     margin-top: 12vh;
     display: flex;
@@ -15,9 +14,7 @@ Last Modified: 10 July 2024 */
     padding: 40px 0;
 }
 
-#rupeesLogo {
-    width: 28px;
-}
+#rupeesLogo { width: 28px; }
 
 #fLogo {
     display: flex;
@@ -29,13 +26,9 @@ Last Modified: 10 July 2024 */
     margin-left: 8px;
 }
 
-#fLogo h1 {
-    font-size: 28px;
-}
+#fLogo h1 { font-size: 28px; }
 
-#fLogo p {
-    font-size: 12px;
-}
+#fLogo p { font-size: 12px; }
 
 #aboutTaxpecharcha p, #contactMe a {
     color: white;
@@ -43,13 +36,9 @@ Last Modified: 10 July 2024 */
     text-decoration: none;
 }
 
-#aboutTaxpecharcha a {
-    color: #2196f3;
-}
+#aboutTaxpecharcha a { color: #2196f3; }
 
-#aboutTaxpecharcha p {
-    width: 350px;
-}
+#aboutTaxpecharcha p { width: 350px; }
 
 #contactMe, #devInfo {
     display: flex;
@@ -78,9 +67,7 @@ Last Modified: 10 July 2024 */
     cursor: pointer;
 }
 
-#devInfo p {
-    font-size: 12px;
-}
+#devInfo p { font-size: 12px; }
 
 #copyFooter {
     width: 100%;

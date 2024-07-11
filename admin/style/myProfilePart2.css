@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the MY PROFILE Page in dashboard mainly right.
     Created on: 02 June 2024
-    Last Modified: 26 June 2024
+    Last Modified: 11 July 2024
 */
 
 /* Right side */
@@ -41,7 +41,6 @@
 .inputElements label { font-size: 15px; }
 
 .changeInput {
-    /* width: 100%; */
     width: 15vw;
     height: 20px;
     border: 1px solid #aaa;
@@ -73,7 +72,6 @@
 }
 
 #securityQuestion {
-    /* width: 107%; */
     width: 16.2vw;
     height: 30px;
     border-radius: 4px;

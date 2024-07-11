@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the dashboard page mainly left navigation buttons.
     Created on: 02 June 2024
-    Last Modified: 30 June 2024
+    Last Modified: 11 July 2024
 */
 
 * {
@@ -12,9 +12,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-body {
-    background-color: #f7f7f9;
-}
+body { background-color: #f7f7f9; }
 
 #mainDiv {
     display: flex;
@@ -30,7 +28,6 @@ body {
 
 .navBtns {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     height: 50px;
     margin: 8px;
@@ -42,17 +39,10 @@ body {
     cursor: pointer;
 }
 
-#editBlogBtn {
-    /* display: none; */
-}
-
-.navBtns:hover {
-    background-color: #EEEEEE;
-}
+.navBtns:hover { background-color: #EEEEEE; }
 
 .icons {
     transform: scale(1.5);
-    /* margin: 0 40px; */
     margin: 0 2vw;
 }
 

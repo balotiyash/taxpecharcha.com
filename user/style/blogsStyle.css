@@ -1,0 +1,127 @@
+/*
+    File: user/style/blogsStyle.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of all article page to be viewed by the user Blogs.
+    Created on: 11 July 2024
+    Last Modified: 11 July 2024
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #f7f7f9;
+}
+
+/* Main Content Area */
+main {
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Search bar style */
+#searchBarSec, #categorySec { width: 75%; }
+
+#searchBar {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 8px;
+    border: 3px solid #E49BFF;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+#mainCatDiv, #subCatDiv, #searchDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px;
+}
+
+#mainCatOption {
+    height: 35px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+#mainCatDiv { width: 330px; }
+
+#subCatDiv { width: 400px; }
+
+#verticalDivider {
+    width: 1px;
+    height: 80%;
+    background-color: #2196f3;
+}
+
+#searchInput {
+    border: 2px solid #aaa;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 8px;
+    width: 50%;
+}
+
+#searchIcon {
+    color: #2196f3;
+    font-size: 28px;
+    margin: 0 8px 0 0;
+    cursor: pointer;
+}
+
+/* Search data module below search bar */
+#searchImg { width: 500px; }
+
+/* Category section */
+#infoTxt {
+    margin-top: 40px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#categorySec {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#categorySec div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 28%;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding-bottom: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    margin: 20px;
+}
+
+#categorySec div:hover { transform: scale(1.1); }
+
+#categorySec div img { width: 90%; }
+
+#customImg { margin-top: 60px; }
+
+#whatsappLogo {
+    width: 75px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: 0.5s all ease;
+}
+
+#whatsappLogo:hover { transform: scale(1.2); }
