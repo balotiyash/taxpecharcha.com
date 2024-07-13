@@ -1,0 +1,144 @@
+/*
+    File: user/style/allBlogsStyle.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of all income tax act Blogs dedicated.
+    Created on: 11 July 2024
+    Last Modified: 13 July 2024
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #f7f7f9;
+}
+
+/* Main Content Area */
+main {
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* INFO */
+h2 {
+    font-size: 40px;
+    display: none;
+}
+
+h1 {
+    font-size: large;
+    margin: 4px 0;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+/* Main Articles */
+#mainSection {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.articleContainer {
+    width: 350px;
+    /* width: 30%; */
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.5s all ease;
+}
+
+.articleContainer:hover {
+    transform: scale(1.05);
+}
+
+.recentChilds {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    width: 50%;
+    max-width: 30%;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.articleImg {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+}
+
+.recentChilds h1 {
+    font-size: large;
+    margin: 4px 0;
+}
+
+.articleInfo {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.desc { margin: 8px 0; }
+
+.recentChilds div a { color: blue; }
+
+/* Writters Info */
+.articleDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 12px 12px 12px;
+}
+
+.articleDetails div {
+    display: flex;
+    align-items: center;
+}
+
+.fa-eye {
+    margin-right: 4px;
+    color: #45474B;
+}
+
+.loadMoreBtn {
+    width: 250px;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    background-color: #01204E;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 24px;
+    align-self: center;
+    display: block;
+}
+
+#notFoundDiv {
+    text-align: center;
+    display: none;
+}
+
+#notFoundImg {
+    width: 450px;
+    margin: 20px 0;
+    border-radius: 20px;
+}

@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code of the article page to interact with the server.
  * Created on: 10 July 2024
- * Last Modified: 11 July 2024
+ * Last Modified: 13 July 2024
 */
 
 // Runs when doc is loaded successfully
@@ -21,7 +21,7 @@ $(document).ready(() => {
                 slug: slug
             },
             dataType: "json",
-            success: function (response) {
+            success: (response) => {
                 if (response.success) {
                     $("#articleTitle").html(response.success["title"]);
                     $("#articleImg").attr("src", response.success["image"]);
@@ -38,8 +38,10 @@ $(document).ready(() => {
                     
                 } else if (response.error) {
                     alert(`Error: ${response.error}`);
+                    
                 } else if (response.message) {
-                    alert(response.message);
+                    // alert(response.message);
+                    $("#blogWriterDetails").css("display", "none");
                 }
             },
             error: (xhr, status, error) => {

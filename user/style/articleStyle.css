@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of article page to be viewed by the user.
     Created on: 10 July 2024
-    Last Modified: 11 July 2024
+    Last Modified: 13 July 2024
 */
 
 * {
@@ -36,7 +36,8 @@ main {
 }
 
 #articleImg {
-    width: 100%;
+    width: 450px;
+    border-radius: 20px;
     display: block;
     margin: 20px auto;
 }

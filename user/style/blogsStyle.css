@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of all article page to be viewed by the user Blogs.
     Created on: 11 July 2024
-    Last Modified: 11 July 2024
+    Last Modified: 13 July 2024
 */
 
 * {
@@ -40,35 +40,37 @@ main {
     font-size: 18px;
 }
 
-#mainCatDiv, #subCatDiv, #searchDiv {
+/* #mainCatDiv, #subCatDiv,  */
+#searchDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 12px;
 }
 
-#mainCatOption {
+/* #mainCatOption {
     height: 35px;
     font-size: 16px;
     border-radius: 8px;
-}
+} */
 
-#mainCatDiv { width: 330px; }
+/* #mainCatDiv { width: 330px; } */
 
-#subCatDiv { width: 400px; }
+/* #subCatDiv { width: 400px; } */
 
-#verticalDivider {
+/* #verticalDivider {
     width: 1px;
     height: 80%;
     background-color: #2196f3;
-}
+} */
 
 #searchInput {
     border: 2px solid #aaa;
     border-radius: 8px;
     font-size: 16px;
     padding: 8px;
-    width: 50%;
+    /* width: 50%; */
+    margin: 0 20px;
 }
 
 #searchIcon {

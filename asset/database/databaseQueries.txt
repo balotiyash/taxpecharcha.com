@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the SQL queries used while creating or altering any data into the database.
     Created on: 16 June 2024
-    Last Modified: 30 June 2024
+    Last Modified: 13 July 2024
 //
 
 // ADMIN LOGIN DETAILS////////////////////////////////////////////////////////////////////////////
@@ -105,3 +105,12 @@ VALUES
 ('Sample Blog 48', 'sample-blog-48', 'The Customs Act, 1962', 'Act', 'Section 48', 'customs, duties, regulations', '../../asset/uploads/3156.jpg', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
 ('Sample Blog 49', 'sample-blog-49', 'The Income Tax Act, 1961', 'Circular / Notification', 'Section 49', 'tax, deductions, computation', '../../asset/uploads/3156.jpg', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'),
 ('Sample Blog 50', 'sample-blog-50', 'The GST Act, 2017', 'Act', 'Section 50', 'gst, compliance, penalties', '../../asset/uploads/3156.jpg', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+
+
+
+
+//////////////////////////////
+security captcha/otp
+data backup db
+responsivness
+loading animation
