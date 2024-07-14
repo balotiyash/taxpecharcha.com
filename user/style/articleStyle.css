@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of article page to be viewed by the user.
     Created on: 10 July 2024
-    Last Modified: 13 July 2024
+    Last Modified: 14 July 2024
 */
 
 * {
@@ -36,7 +36,8 @@ main {
 }
 
 #articleImg {
-    width: 450px;
+    /* width: 450px; */
+    width: 100%;
     border-radius: 20px;
     display: block;
     margin: 20px auto;
@@ -57,3 +58,14 @@ main {
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+/* Whatsapp Logo */
+#whatsappLogo {
+    width: 75px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: 0.5s all ease;
+}
+
+#whatsappLogo:hover { transform: scale(1.2); }

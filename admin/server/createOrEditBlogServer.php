@@ -1,9 +1,9 @@
 <?php
-// File: admin/server/newBlogServer.php
+// File: admin/server/createOrEditBlogServer.php
 // Author: Yash Balotiya
 // Description: This file contains the code to upload or update a blog.
 // Created on: 25 June 2024
-// Last Modified: 02 July 2024
+// Last Modified: 14 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";

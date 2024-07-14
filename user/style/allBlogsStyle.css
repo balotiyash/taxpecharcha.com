@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of all income tax act Blogs dedicated.
     Created on: 11 July 2024
-    Last Modified: 13 July 2024
+    Last Modified: 14 July 2024
 */
 
 * {
@@ -129,12 +129,12 @@ h1 {
     padding: 0;
     margin-top: 24px;
     align-self: center;
-    display: block;
+    display: none;
 }
 
 #notFoundDiv {
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 
 #notFoundImg {
@@ -142,3 +142,14 @@ h1 {
     margin: 20px 0;
     border-radius: 20px;
 }
+
+/* Whatsapp Logo */
+#whatsappLogo {
+    width: 75px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: 0.5s all ease;
+}
+
+#whatsappLogo:hover { transform: scale(1.2); }

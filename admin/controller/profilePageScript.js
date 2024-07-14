@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code to validate and interact with the server side code of the change password and security answers page inside profile page.
  * Created on: 16 June 2024
- * Last Modified: 11 July 2024
+ * Last Modified: 14 July 2024
 */
 
 // If the page loads successfully then this function runs
@@ -51,7 +51,7 @@ $(document).ready(() => {
             const securityAnswer = $("#changeSecurityTxt").val().trim().toLowerCase();
             const dob = $("#dobTxt").val();
     
-            if (securityQuestion === '' || securityAnswer === '' || dob === '') {
+            if (!securityQuestion || !securityAnswer || !dob) {
                 showToast("#info-msg", `${infoSymbol} Answer field or DOB field cannot be empty.`);
                 return;
             }
@@ -93,7 +93,7 @@ $(document).ready(() => {
         const confirmPassword = $("#cfmPassTxt").val().trim();
         const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
         
-        if (existingPassword === '' || newPassword === '' || confirmPassword === '') {
+        if (!existingPassword || !newPassword || !confirmPassword) {
             showToast("#info-msg", `${infoSymbol} All fields are mandatory to fill.`);
             return;
         }

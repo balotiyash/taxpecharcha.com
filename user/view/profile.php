@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the profile page.
     Created on: 26 May 2024
-    Last Modified: 09 July 2024
+    Last Modified: 14 July 2024
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -15,11 +15,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- TODO -->
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Browse all articles on Taxpecharcha, covering topics related to Income Tax, GST, and Customs.">
+
+    <meta name="keywords" content="Manish Suvasia, Yash Balotiya, Income Tax Articles, GST Articles, Customs Act Articles, Tax Blogs, Financial Freedom, Tax Savings, Professional Articles, Taxation Information, Tax Law, Tax Notifications, Income Tax Act 1961, GST Act 2017, Customs Act 1962, Tax Circulars, Tax Notifications, Financial Planning, Tax Consultancy, Tax Advice, Indian Tax Law, Tax Compliance, Tax Updates, GST Compliance, Income Tax Compliance, Custom Duties, Tax News, Financial Articles, Tax Expert, Tax Solutions, Tax Management, Wealth Management, Tax Strategies, Personal Finance, Corporate Tax, Indirect Tax, Direct Tax, Accounting, Audit, Tax Filing, Tax Refund, Tax Regulations, Taxpayer Resources, Tax Policy, Tax Amendments, Tax, Income, GST, Act, Notification, Circular, Yash Balotiya">
+
     <meta name="author" content="Yash Balotiya">
-    <meta name="application-name" content="">
+    <meta name="application-name" content="taxpecharcha">
 
     <!-- Tab Data -->
     <title>Taxpecharcha - Profile</title>
@@ -38,6 +39,9 @@
     <!-- Profile Page Style -->
     <link rel="stylesheet" href="../style/profileStyle.css">
     <link rel="stylesheet" href="../style/aboutStyle.css">
+
+    <!-- Javascripts -->
+    <script src="../../shared/controller/sharedJs.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -54,8 +58,9 @@
                 <!-- <div id="profileImg"></div> -->
                  <img src="../../asset/images/Manish.png" alt="Manish Suvasiya" id="profileImg">
                 <h3>Manish Suvasiya</h3>
-                <p>Chartered Accountant</p>
+                <p>Founder of Taxpecharcha</p>
 
+                <!-- Social Media -->
                 <div id="socialMedia">
                     <a href="https://www.linkedin.com/in/manish-suvasiya-3a41251a0/" target="_main"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://wa.me/919833591469" target="_main"><i class="fa-brands fa-square-whatsapp"></i></a>
@@ -102,8 +107,5 @@
     <footer>
         <?php include "../../shared/view/footer.html" ?>
     </footer>
-
-    <!-- Javascripts -->
-    <script src="../../shared/controller/sharedJs.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the JS AJAX code of the all articles page to interact with the server.
  * Created on: 13 July 2024
- * Last Modified: 13 July 2024
+ * Last Modified: 14 July 2024
 */
 
 // Executes on load successfully
@@ -34,11 +34,16 @@ $(document).ready(() => {
             dataType: "json",
             success: (response) => {
                 if (response.success) {
+                    $("#notFoundDiv").css("display", "none");
+                    $("#loadMoreBtn").css("display", "block");
+
                     // Display titles based on task
                     if (task === "allIncomeTax" || task === "incomeTaxAct" || task === "incomeTaxCircular") {
                         $("#incomeTitle").css("display", "block");
+
                     } else if (task === "allGst" || task === "gstAct" || task === "gstCircular") {
                         $("#gstTitle").css("display", "block");
+
                     } else if (task === "allCustoms" || task === "customsAct" || task === "customsCircular") {
                         $("#customsTitle").css("display", "block");
                     }
@@ -46,6 +51,7 @@ $(document).ready(() => {
                     // Append fetched data to main section
                     $("#mainSection").append(response.success);
                     $(".loadMoreBtn").attr("data-id", response.lastId);
+                    
                     loading = false; // Reset loading flag
                     flag = true;
 

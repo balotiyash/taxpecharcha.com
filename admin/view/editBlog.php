@@ -3,9 +3,10 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the edit existing blog page in dashboard.
     Created on: 30 June 2024
-    Last Modified: 02 July 2024
+    Last Modified: 14 July 2024
 -->
 
+<!-- Session management -->
 <?php
     session_start();
 
@@ -23,25 +24,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+
+    <meta name="description" content="Edit article page for the admin to edit existing articles on Taxpecharcha.">
+
+    <meta name="keywords" content="Manish Suvasia, Yash Balotiya, Income Tax Articles, GST Articles, Customs Act Articles, Tax Blogs, Financial Freedom, Tax Savings, Professional Articles, Taxation Information, Tax Law, Tax Notifications, Income Tax Act 1961, GST Act 2017, Customs Act 1962, Tax Circulars, Tax Notifications, Financial Planning, Tax Consultancy, Tax Advice, Indian Tax Law, Tax Compliance, Tax Updates, GST Compliance, Income Tax Compliance, Custom Duties, Tax News, Financial Articles, Tax Expert, Tax Solutions, Tax Management, Wealth Management, Tax Strategies, Personal Finance, Corporate Tax, Indirect Tax, Direct Tax, Accounting, Audit, Tax Filing, Tax Refund, Tax Regulations, Taxpayer Resources, Tax Policy, Tax Amendments, Tax, Income, GST, Act, Notification, Circular, Yash Balotiya">
+
     <meta name="author" content="Yash Balotiya">
-    <meta name="application-name" content="">
+    <meta name="application-name" content="taxpecharcha">
 
     <!-- Tab Data -->
-    <title>Taxpecharcha - Edit Blog</title>
+    <title>Taxpecharcha - Edit Article</title>
     <link rel="icon" type="image/x-icon" href="../../asset/vectors/Rupees.svg">
 
     <!-- Stylesheets -->
+    <!-- Navbar Style -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
+
+    <!-- Left nav buttons style -->
+    <link rel="stylesheet" href="../../shared/style/dashboardNavBtn.css">
+
+    <!-- Footer Style -->
+    <link rel="stylesheet" href="../../shared/style/footer.css">
+
+    <!-- Main Stylesheets -->
     <link rel="stylesheet" href="../../shared/style/dashboardNavBtn.css">
     <link rel="stylesheet" href="../style/editBlogStyle.css">
     <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
 
-    <!-- TinyMCE -->
-    <script src="../controller/tinymce/tinymce.min.js"></script>
+    <!-- Javascripts -->
+    <!-- <script src="../controller/tinymce/tinymce.min.js"></script> -->
+    <script src="https://balotiyash.github.io/advanced-text-editor/tinymce.min.js"></script>
     <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/editBlogScript.js"></script>
 </head>
 
 <body>
@@ -108,7 +124,7 @@
 
                 <!-- Blog image -->
                 <div>
-                    <label for="blogImgInput"><b>Select Blog Image</b></label><br>
+                    <label for="blogImgInput"><b>Select Article Image</b></label><br>
                     <input class="form-control form-control-sm" id="blogImgInput" type="file" accept="image/*" required>
                     <p class="note">Note: Choosing Landscape Image is preferred.</p>
                 </div>
@@ -127,9 +143,10 @@
         </form>
     </main>
 
-    <!-- Scripts -->
-    <script src="../../shared/controller/sharedJs.js"></script>
-    <script type="module" src="../controller/editBlogScript.js"></script>
+    <!-- Footer -->
+    <footer>
+        <?php include "../../shared/view/footer.html" ?>
+    </footer>
 </body>
 
 </html>

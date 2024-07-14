@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the initialization, js, ajax code to deal with the server of the index page
  * Created on: 25 May 2024
- * Last Modified: 11 July 2024
+ * Last Modified: 14 July 2024
 */
 
 // This invokes on load
@@ -89,5 +89,4 @@ $(document).ready(() => {
     }
 
     fetchRecentArticles();
-
 });

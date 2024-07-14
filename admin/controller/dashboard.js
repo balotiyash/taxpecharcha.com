@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code of the dashboard page to interact with the server.
  * Created on: 02 June 2024
- * Last Modified: 26 June 2024
+ * Last Modified: 14 July 2024
 */
 
 // This is executed on load successfully
@@ -14,7 +14,7 @@ $(document).ready(() => {
         $.ajax({
             type: "POST",
             url: "../server/dashboardServer.php",
-            data: {task: "fetchBlogsCount"},
+            data: { task: "fetchBlogsCount" },
             dataType: "json",
             success: (response) => {
                 if (response.success) {
@@ -42,7 +42,7 @@ $(document).ready(() => {
         $.ajax({
             type: "POST",
             url: "../server/dashboardServer.php",
-            data: {task: "fetchTopArticles"},
+            data: { task: "fetchTopArticles" },
             dataType: "json",
             success: (response) => {
                 if (response.success) {

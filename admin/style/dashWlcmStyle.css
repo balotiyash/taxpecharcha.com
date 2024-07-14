@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the dashboard page mainly Welcome and Recents Blogs.
     Created on: 02 June 2024
-    Last Modified: 30 June 2024
+    Last Modified: 14 July 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -34,7 +34,6 @@
     min-height: 75vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     justify-content: space-evenly;
 }
 
@@ -53,7 +52,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
 }
 
 #newPostBtn {
@@ -76,7 +74,6 @@
     border-radius: 10px;
     padding: 16px;
     margin-bottom: 16px;
-    /* margin: 16px 0; */
 }
 
 #topArticlesTable {
@@ -103,7 +100,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
 }
 
 .articleImg {

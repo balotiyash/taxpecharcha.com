@@ -1,9 +1,9 @@
 /*
-    File: admin/style/newBlogStyle.css
+    File: admin/style/editBlogStyle.css
     Author: Yash Balotiya
     Description: This file contains the styling part of the edit Blog Page.
     Created on: 30 June 2024
-    Last Modified: 11 July 2024
+    Last Modified: 14 July 2024
 */
 
 /* Changing color of the left navigation button for active state */
@@ -35,11 +35,6 @@
     background-color: #91DDCF;
 }
 
-#titleIntro {
-    display: flex;
-    align-items: center;
-}
-
 #blogData {
     height: 95%;
     display: flex;
@@ -49,25 +44,7 @@
 
 #blogData div { line-height: 24px; }
 
-.blogBtns {
-    width: 10vw;
-    height: 40px;
-    padding: 0;
-    border-radius: 8px;
-}
-
-#blogSubmit {
-    background-color: #fff3cd;
-    color: #664d03;
-    border: 1px solid #664d03;
-}
-
-#blogReset {
-    background-color: #cce5ff;
-    color: #195494;
-    border: 1px solid #195494;
-}
-
+/* Input Fields */
 #blogData input[type="text"],
 #mainCatOption {
     width: 20vw;
@@ -94,8 +71,6 @@
     margin: 0;
 }
 
-.tox-menubar { z-index: -1; }
-
 /* file upload button */
 input[type="file"]::file-selector-button {
     border-radius: 4px;
@@ -117,4 +92,24 @@ input[type="file"]::file-selector-button:hover {
 /* file upload button active state */
 input[type="file"]::file-selector-button:active {
     background-color: #e5e7eb;
+}
+
+/* Submit and Reset Btns */
+.blogBtns {
+    width: 10vw;
+    height: 40px;
+    padding: 0;
+    border-radius: 8px;
+}
+
+#blogSubmit {
+    background-color: #fff3cd;
+    color: #664d03;
+    border: 1px solid #664d03;
+}
+
+#blogReset {
+    background-color: #cce5ff;
+    color: #195494;
+    border: 1px solid #195494;
 }

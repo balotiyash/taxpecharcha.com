@@ -3,9 +3,10 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the My Profile Page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 02 July 2024
+    Last Modified: 14 July 2024
 -->
 
+<!-- Session management -->
 <?php
     session_start();
 
@@ -23,11 +24,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- TODO -->
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="My profile page for the admin to view basic information, and to change or update the login password and security answer on Taxpecharcha.">
+
+    <meta name="keywords" content="Manish Suvasia, Yash Balotiya, Income Tax Articles, GST Articles, Customs Act Articles, Tax Blogs, Financial Freedom, Tax Savings, Professional Articles, Taxation Information, Tax Law, Tax Notifications, Income Tax Act 1961, GST Act 2017, Customs Act 1962, Tax Circulars, Tax Notifications, Financial Planning, Tax Consultancy, Tax Advice, Indian Tax Law, Tax Compliance, Tax Updates, GST Compliance, Income Tax Compliance, Custom Duties, Tax News, Financial Articles, Tax Expert, Tax Solutions, Tax Management, Wealth Management, Tax Strategies, Personal Finance, Corporate Tax, Indirect Tax, Direct Tax, Accounting, Audit, Tax Filing, Tax Refund, Tax Regulations, Taxpayer Resources, Tax Policy, Tax Amendments, Tax, Income, GST, Act, Notification, Circular, Yash Balotiya">
+
     <meta name="author" content="Yash Balotiya">
-    <meta name="application-name" content="">
+    <meta name="application-name" content="taxpecharcha">
 
     <!-- Tab Data -->
     <title>Taxpecharcha - My Profile</title>
@@ -41,12 +43,20 @@
     <!-- Left nav buttons style -->
     <link rel="stylesheet" href="../../shared/style/dashboardNavBtn.css">
 
+    <!-- Footer Style -->
+    <link rel="stylesheet" href="../../shared/style/footer.css">
+
     <!-- Fonts awesome included in navbar -->
 
     <!-- Main stylesheets -->
     <link rel="stylesheet" href="../style/myProfilePart1.css">
     <link rel="stylesheet" href="../style/myProfilePart2.css">
     <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
+
+    <!-- Scripts -->
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/profilePageScript.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -69,9 +79,9 @@
         </section>
     </main>
 
-    <!-- Scripts -->
-    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
-    <script src="../../shared/controller/sharedJs.js"></script>
-    <script src="../controller/profilePageScript.js"></script>
+    <!-- Footer -->
+    <footer>
+        <?php include "../../shared/view/footer.html" ?>
+    </footer>
 </body>
 </html>

@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to load blog data of the articles page.
 // Created on: 10 July 2024
-// Last Modified: 10 July 2024
+// Last Modified: 14 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -83,16 +83,6 @@ function updateBlog($conn) {
 
     $stmt->bind_param('s', $slug);
     $stmt->execute();
-
-    // if ($stmt->execute()) {
-    //     if ($stmt->affected_rows > 0) {
-    //         // echo json_encode(["success" => "Views updated successfully."]);
-    //     } else {
-    //         // echo json_encode(["message" => "No blog found with the provided slug."]);
-    //     }
-    // } else {
-    //     // echo json_encode(["error" => "Failed to execute statement: " . $stmt->error]);
-    // }
 
     $stmt->close();
 }

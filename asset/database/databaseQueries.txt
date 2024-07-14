@@ -114,3 +114,4 @@ security captcha/otp
 data backup db
 responsivness
 loading animation
+SEO

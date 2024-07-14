@@ -3,9 +3,10 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the create new blog page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 02 July 2024
+    Last Modified: 14 July 2024
 -->
 
+<!-- session handling -->
 <?php
     session_start();
 
@@ -23,14 +24,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- TODO -->
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="New Article page to upload a new article by admin on the Taxpecharcha platform.">
+
+    <meta name="keywords" content="Manish Suvasia, Yash Balotiya, Income Tax Articles, GST Articles, Customs Act Articles, Tax Blogs, Financial Freedom, Tax Savings, Professional Articles, Taxation Information, Tax Law, Tax Notifications, Income Tax Act 1961, GST Act 2017, Customs Act 1962, Tax Circulars, Tax Notifications, Financial Planning, Tax Consultancy, Tax Advice, Indian Tax Law, Tax Compliance, Tax Updates, GST Compliance, Income Tax Compliance, Custom Duties, Tax News, Financial Articles, Tax Expert, Tax Solutions, Tax Management, Wealth Management, Tax Strategies, Personal Finance, Corporate Tax, Indirect Tax, Direct Tax, Accounting, Audit, Tax Filing, Tax Refund, Tax Regulations, Taxpayer Resources, Tax Policy, Tax Amendments, Tax, Income, GST, Act, Notification, Circular, Yash Balotiya">
+
     <meta name="author" content="Yash Balotiya">
-    <meta name="application-name" content="">
+    <meta name="application-name" content="taxpecharcha">
 
     <!-- Tab Data -->
-    <title>Taxpecharcha - New Blog</title>
+    <title>Taxpecharcha - New Article</title>
     <link rel="icon" type="image/x-icon" href="../../asset/vectors/Rupees.svg">
 
     <!-- Stylesheets -->
@@ -43,10 +45,19 @@
     <!-- Left nav buttons style -->
     <link rel="stylesheet" href="../../shared/style/dashboardNavBtn.css">
 
+    <!-- Footer Style -->
+    <link rel="stylesheet" href="../../shared/style/footer.css">
+
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../style/newBlogStyle.css">
     <link rel="stylesheet" href="../../shared/style/toastMsgStyle.css">
 
+    <!-- Scripts -->
+    <!-- <script src="../controller/tinymce/tinymce.min.js"></script> -->
+    <script src="https://balotiyash.github.io/advanced-text-editor/tinymce.min.js"></script>
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/newBlogScript.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -132,11 +143,9 @@
         </form>
     </main>
 
-    <!-- Scripts -->
-    <script src="../controller/tinymce/tinymce.min.js"></script>
-    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
-    <script src="../../shared/controller/sharedJs.js"></script>
-    <script src="../controller/newBlogScript.js"></script>
-
+    <!-- Footer -->
+    <footer>
+        <?php include "../../shared/view/footer.html" ?>
+    </footer>
 </body>
 </html>

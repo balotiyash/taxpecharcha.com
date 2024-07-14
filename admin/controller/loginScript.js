@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code to validate, authenticate the admin and interact with the server side code of the login page.
  * Created on: 20 June 2024
- * Last Modified: 11 July 2024
+ * Last Modified: 14 July 2024
 */
 
 // Executes onload successfully
@@ -24,15 +24,15 @@ $(document).ready(() => {
         }
     });
 
-    // Authentication Login Page
+    // Authentication Login Page to validate user login
     $("#submitBtn").on("click", (e) => {
         e.preventDefault();
 
         const username = $("#unameTxt").val().trim().toLowerCase();
         const password = $("#passTxt").val().trim();
 
-        if (username === '' || password === '') {
-            showToast("#info-msg", `${infoSymbol} Please fill in the complete details.`);
+        if (!username || !password) {
+            showToast("#info-msg", `${infoSymbol} Please fill the complete details.`);
             return;
         }
 
@@ -78,8 +78,8 @@ $(document).ready(() => {
         const securityAnswer = $("#securityAnswer").val().trim().toLowerCase();
         const confirmReview = $("#review:checked");
 
-        if (username === '' || newPassword === '' || confirmPassword === '' || dob === '' || securityQuestion === '' || securityAnswer === '') {
-            showToast("#info-msg", `${infoSymbol} All fields are mandatory.`);
+        if (!username || !newPassword || !confirmPassword || !dob || !securityQuestion || !securityAnswer) {
+            showToast("#info-msg", `${infoSymbol} All fields are mandatory to fill.`);
             return;
         }
 

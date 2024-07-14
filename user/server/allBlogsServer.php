@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to load blog data of the all articles page.
 // Created on: 13 July 2024
-// Last Modified: 13 July 2024
+// Last Modified: 14 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -14,10 +14,13 @@ if (isset($_POST["task"])) {
 
     if ($task === "allIncomeTax") {
         fetchArticles($conn, "The Income Tax Act, 1961");
+
     } else if ($task === "allGst") {
         fetchArticles($conn, "The GST Act, 2017");
+
     } else if ($task === "allCustoms") {
         fetchArticles($conn, "The Customs Act, 1962");
+        
     } else if ($task === "search") {
         if (!isset($_POST["searchText"])) {
             echo json_encode(["error" => "Search Text Not Received."]);

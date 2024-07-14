@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of all articles to be displayed and viewed by the users 2nd tab.
     Created on: 11 July 2024
-    Last Modified: 13 July 2024
+    Last Modified: 14 July 2024
 -->
 
 <!DOCTYPE html>
@@ -13,14 +13,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- TODO -->
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Yash Balotiya">
-    <meta name="application-name" content="">
+    <meta name="description" content="Browse all articles on Taxpecharcha, covering topics related to Income Tax, GST, and Customs.">
 
-    <!-- TODO Tab Data -->
-    <title>Taxpecharcha</title>
+    <meta name="keywords" content="Manish Suvasia, Yash Balotiya, Income Tax Articles, GST Articles, Customs Act Articles, Tax Blogs, Financial Freedom, Tax Savings, Professional Articles, Taxation Information, Tax Law, Tax Notifications, Income Tax Act 1961, GST Act 2017, Customs Act 1962, Tax Circulars, Tax Notifications, Financial Planning, Tax Consultancy, Tax Advice, Indian Tax Law, Tax Compliance, Tax Updates, GST Compliance, Income Tax Compliance, Custom Duties, Tax News, Financial Articles, Tax Expert, Tax Solutions, Tax Management, Wealth Management, Tax Strategies, Personal Finance, Corporate Tax, Indirect Tax, Direct Tax, Accounting, Audit, Tax Filing, Tax Refund, Tax Regulations, Taxpayer Resources, Tax Policy, Tax Amendments, Tax, Income, GST, Act, Notification, Circular, Yash Balotiya">
+
+    <meta name="author" content="Yash Balotiya">
+    <meta name="application-name" content="taxpecharcha">
+
+    <title>Taxpecharcha - Expert Insights on Tax Laws and Regulations</title>
     <link rel="icon" type="image/x-icon" href="../../asset/vectors/Rupees.svg">
 
     <!-- Stylesheets -->
@@ -35,6 +35,11 @@
 
     <!-- Main Style -->
     <link rel="stylesheet" href="../style/blogsStyle.css">
+
+    <!-- Scripts -->
+    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
+    <script src="../../shared/controller/sharedJs.js"></script>
+    <script src="../controller/blogsScript.js"></script>
 </head>
 
 <body>
@@ -91,22 +96,26 @@
 
         <!-- Category Section -->
         <section id="categorySec">
+            <!-- Income tax -->
             <div onclick="window.location.href = 'allBlogs.php?task=allIncomeTax'">
                 <img src="../../asset/images/IncomeTax.jpg" alt="Income Tax">
                 <big><b>The Income Tax Act, 1961</b></big>
             </div>
 
+            <!-- GST -->
             <div onclick="window.location.href = 'allBlogs.php?task=allGst'">
                 <img src="../../asset/images/GST.png" alt="GST">
                 <big><b>The GST Act, 2017</b></big>
             </div>
 
+            <!-- Customs -->
             <div onclick="window.location.href = 'allBlogs.php?task=allCustoms'">
                 <img src="../../asset/images/Customs.png" alt="Customs Act" id="customImg">
                 <big><b>The Customs Act, 1962</b></big>
             </div>
-            </section>
+        </section>
 
+        <!-- Whatsapp Logo -->
         <section>
             <a href="https://wa.me/919833591469" target="_blank"><img src="../../asset/images/WhatsappLogo.png" alt="Whatsapp" id="whatsappLogo"></a>
         </section>
@@ -116,11 +125,6 @@
     <footer>
         <?php include "../../shared/view/footer.html" ?>
     </footer>
-
-    <!-- Scripts -->
-    <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
-    <script src="../../shared/controller/sharedJs.js"></script>
-    <script src="../controller/blogsScript.js"></script>
 </body>
 
 </html>

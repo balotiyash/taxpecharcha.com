@@ -3,10 +3,10 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to create new blog and to interact with the server.
  * Created on: 03 June 2024
- * Last Modified: 11 July 2024
+ * Last Modified: 14 July 2024
 */
 
-// This is the script for the advanced text editor on the todo page
+// For dynamically identifing width and height of the advanced text editor
 const editorWidth = $(window).width() * 0.5;
 const editorHeight = $(window).height() * 0.79;
 
@@ -72,6 +72,7 @@ $(document).ready(() => {
                 success: function (response) {
                     if (response.error) {
                         showToast("#error-msg", `${errorSymbol} ${response.error}`);
+                        
                     } else {
                         showToast("#success-msg", `${successSymbol} Article uploaded successfully! Refreshing page in 5 seconds`);
                         

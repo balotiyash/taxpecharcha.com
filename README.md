@@ -72,12 +72,13 @@ The homepage features the top and recent articles published by C. A. Manish Suva
 ### Articles Page
 The articles page lists all articles categorized under The Income Tax Act - 1961, The GST Act - 2017, and The Customs Act - 1962. Users can search for articles by category or keyword.
 
-![Articles Page](path/to/articles-page-image.png)
+![Articles Page](asset/outputs/Articles%20Page.png)
+![All Articles Page](asset/outputs/All%20Articles%20Page.png)
 
 ### Article Detail Page
 Clicking on an article from the homepage or articles page opens a new page displaying the full content of the article.
 
-![Article Detail Page](path/to/article-detail-page-image.png)
+![Article Detail Page](asset/outputs/Article%20Page.png)
 
 ### Services Page
 The services page includes a submenu with options for Income Tax and GST services. Clicking on these options redirects to C. A. Manish Suvasia's WhatsApp for direct consultation.
@@ -110,6 +111,11 @@ Enables the admin to view, edit, or delete existing articles. Articles can be se
 
 ![My Articles](asset/outputs/My%20Articles.png)
 
+### Edit Articles
+Enables the admin to edit existing article. Articles can be searched individually within My Articles page.
+
+![Edit Article](asset/outputs/Edit%20Article.png)
+
 ### To-Do List
 A feature for the admin to add and save tasks for future reference.
 
@@ -118,7 +124,7 @@ A feature for the admin to add and save tasks for future reference.
 ### Profile Management
 The profile page displays the admin's profile image, social media links, contact information, and allows updating security question, security answer, date of birth, and changing the login password.
 
-![My Profile](asset/outputs/Profile%20Page.png)
+![My Profile](asset/outputs/My%20Profile.png)
 
 ## UI Design
 The UI design is modern, intuitive, and user-friendly, ensuring a seamless experience for both the admin and users. The design emphasizes readability and ease of navigation.

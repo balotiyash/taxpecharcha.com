@@ -1,9 +1,10 @@
-/* File: style.css
+/* File: footer.css
 Author: Yash Balotiya
 Description: This file contains the styling part of the footer.
 Created on: 07 July 2024
-Last Modified: 11 July 2024 */
+Last Modified: 14 July 2024 */
 
+/* Footer Area */
 #aboutFooter {
     width: 100%;
     background-color: #01204E;
@@ -14,6 +15,7 @@ Last Modified: 11 July 2024 */
     padding: 40px 0;
 }
 
+/* Taxpecharcha */
 #rupeesLogo { width: 28px; }
 
 #fLogo {
@@ -30,6 +32,7 @@ Last Modified: 11 July 2024 */
 
 #fLogo p { font-size: 12px; }
 
+/* About Taxpecharcha */
 #aboutTaxpecharcha p, #contactMe a {
     color: white;
     line-height: 28px;
@@ -40,6 +43,7 @@ Last Modified: 11 July 2024 */
 
 #aboutTaxpecharcha p { width: 350px; }
 
+/* Contact Me */
 #contactMe, #devInfo {
     display: flex;
     flex-direction: column;
@@ -50,6 +54,7 @@ Last Modified: 11 July 2024 */
     font-size: 30px;
 }
 
+/* Developer's Info */
 #devInfo {
     align-items: center;
     color: white;
@@ -69,6 +74,7 @@ Last Modified: 11 July 2024 */
 
 #devInfo p { font-size: 12px; }
 
+/* Copywrite */
 #copyFooter {
     width: 100%;
     height: 50px;

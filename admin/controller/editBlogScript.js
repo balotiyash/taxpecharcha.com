@@ -3,10 +3,10 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to edit existing blog and to interact with the server.
  * Created on: 30 June 2024
- * Last Modified: 11 July 2024
+ * Last Modified: 14 July 2024
 */
 
-// This is the script for the advanced text editor on the todo page
+// For dynamically identifing width and height of the advanced text editor
 const editorWidth = $(window).width() * 0.5;
 const editorHeight = $(window).height() * 0.79;
 
@@ -60,6 +60,7 @@ $(document).ready(() => {
 
                     if (response.subCategory === "Act") {
                         $("#actRadio").prop("checked", true);
+
                     } else if (response.subCategory === "Circular / Notification") {
                         $("#circularRadio").prop("checked", true);
                     }
@@ -87,7 +88,7 @@ $(document).ready(() => {
         const blogImage = $("#blogImgInput")[0].files[0];
         const content = tinymce.get("default").getContent();
 
-        if (title === '' || mainCategory === '' || subCategory === '' || articleNo === '' || keywords === '' || content === '') {
+        if (!title || !mainCategory || !subCategory || !articleNo || !keywords || !content) {
             showToast("#info-msg", `${infoSymbol} All fields are mandatory to fill!`);
             return;
         }
@@ -123,6 +124,7 @@ $(document).ready(() => {
                 success: function (response) {
                     if (response.error) {
                         showToast("#error-msg", `${errorSymbol} ${response.error}`);
+                        
                     } else {
                         showToast("#success-msg", `${successSymbol} Article updated successfully! Redirecting to 'My Articles' page in 5 seconds.`);
 
@@ -137,5 +139,16 @@ $(document).ready(() => {
                 }
             });
         }
+    });
+
+    // Reset button
+    $("#blogReset").on("click", function(e) {
+        e.preventDefault()
+
+        // Reset the form
+        $("#dashContent")[0].reset(); 
+
+        // Reset the select element with ID 'mainCatOption'
+        $("#mainCatOption").val('');
     });
 });

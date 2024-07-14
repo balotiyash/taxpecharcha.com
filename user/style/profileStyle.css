@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of profile page; Personal details block.
     Created on: 26 May 2024
-    Last Modified: 11 July 2024
+    Last Modified: 14 July 2024
 */
 
 * {
@@ -66,6 +66,7 @@ body { background-color: #f7f7f9; }
     margin-top: -20px;
 }
 
+/* Social media */
 #socialMedia {
     display: flex;
     justify-content: space-between;
@@ -99,6 +100,7 @@ body { background-color: #f7f7f9; }
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+/* Other Data */
 .tag {
     font-size: 14px;
     font-weight: bold;

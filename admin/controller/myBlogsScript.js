@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to deal with the server of the my blogs page to fetch existing blog.
  * Created on: 28 June 2024
- * Last Modified: 02 July 2024
+ * Last Modified: 14 July 2024
  */
 
 // This function invokes on load of the page
@@ -151,8 +151,10 @@ function deleteBlog(t, id) {
                 if (response.success) {
                     $(t).closest("tr").fadeOut();
                     showToast("success-msg", `${successSymbol} Article deleted successfully.`);
+
                 } else if (response.message) {
                     showToast("info-msg", `${infoSymbol} ${response.message}`);
+
                 } else if (response.error) {
                     showToast("error-msg", `${errorSymbol} ${response.error}`);
                 }
