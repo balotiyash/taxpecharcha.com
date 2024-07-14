@@ -2,7 +2,7 @@
 **Maximise Savings, Minimize Taxes: Your Path to Financial Freedom**
 
 ## Overview
-**taxpecharcha** is a modern, user-friendly website developed for C. A. Manish Suvasia to publish articles related to Income Tax, GST, and Customs Acts. The platform aims to provide valuable insights and guidance to users on various tax laws and regulations in India.
+**taxpecharcha** is a modern, user-friendly website developed for C. A. Manish Suvasiya to publish articles related to Income Tax, GST, and Customs Acts. The platform aims to provide valuable insights and guidance to users on various tax laws and regulations in India.
 
 ## Table of Contents
 1. [Features](#features)
@@ -141,7 +141,7 @@ We welcome contributions to enhance the functionality and features of taxpecharc
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contact
-Created by [Yash Balotiya](balotiyash.github.io/Personal-Portfolio/) - feel free to contact me!
+Created by [Yash Balotiya](https://balotiyash.github.io/Personal-Portfolio/) - feel free to contact me!
 
 ---
 

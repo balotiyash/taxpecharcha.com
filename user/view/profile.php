@@ -42,6 +42,9 @@
 
     <!-- Javascripts -->
     <script src="../../shared/controller/sharedJs.js"></script>
+
+    <!-- Google Ads -->
+    <meta name="google-adsense-account" content="ca-pub-2791961608830349">
 </head>
 <body>
     <!-- Navbar -->

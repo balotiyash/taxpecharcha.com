@@ -45,6 +45,9 @@
     <script src="shared/controller/sharedJs.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="main.js"></script>
+
+    <!-- Google Ads -->
+    <meta name="google-adsense-account" content="ca-pub-2791961608830349">
 </head>
 
 <body>

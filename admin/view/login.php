@@ -50,6 +50,9 @@
     <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
     <script src="../../shared/controller/sharedJs.js"></script>
     <script src="../controller/loginScript.js"></script>
+
+    <!-- Google Ads -->
+    <meta name="google-adsense-account" content="ca-pub-2791961608830349">
 </head>
 <body>
     <!-- Navbar -->
