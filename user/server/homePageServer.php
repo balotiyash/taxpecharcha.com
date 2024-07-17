@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to load blog data of the home page.
 // Created on: 09 July 2024
-// Last Modified: 11 July 2024
+// Last Modified: 14 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -17,6 +17,8 @@ if (isset($_POST["task"])) {
 
     } else {
         echo json_encode(["error" => "Invalid task: " . $task]);
+        
+        // echo json_encode(["error" => "Cannot connect to database.\nPlease contact your Admin or Developer.", "errorLog" => "Invalid task: " . $task . ". \nExpected task: fetchRecentArticles"]);
     }
 
     $conn->close();

@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code for the todo page in the dashboard.
     Created on: 02 June 2024
-    Last Modified: 14 July 2024
+    Last Modified: 17 July 2024
 -->
     
 <!-- Session handling -->
@@ -61,6 +61,8 @@
 
     <!-- Google Ads -->
     <meta name="google-adsense-account" content="ca-pub-2791961608830349">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2791961608830349"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Navbar -->

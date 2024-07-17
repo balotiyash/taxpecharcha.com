@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to deal with the server of the my blogs page to fetch existing blog.
  * Created on: 28 June 2024
- * Last Modified: 14 July 2024
+ * Last Modified: 17 July 2024
  */
 
 // This function invokes on load of the page
@@ -118,6 +118,14 @@ $(document).ready(() => {
             }
         });
     };
+
+    // Prevents Enter Button to be clicked
+    $(window).keydown(function(event){
+        if(event.keyCode == 13) {
+          event.preventDefault();
+          return false;
+        }
+    });
 });
 
 // function to handle click event of edit button

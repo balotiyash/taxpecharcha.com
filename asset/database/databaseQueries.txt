@@ -115,3 +115,4 @@ data backup db
 responsivness
 loading animation
 SEO
+Error messages

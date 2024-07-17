@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the create new blog page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 14 July 2024
+    Last Modified: 17 July 2024
 -->
 
 <!-- session handling -->
@@ -61,6 +61,8 @@
 
     <!-- Google Ads -->
     <meta name="google-adsense-account" content="ca-pub-2791961608830349">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2791961608830349"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -84,6 +86,12 @@
                 <div>
                     <label for="titleTxt"><b>Title</b><span class="note">*</span></label><br>
                     <input type="text" id="titleTxt" required autocomplete="off">
+                </div>
+
+                <!-- article no. of the blog -->
+                <div>
+                    <label for="articleNoTxt"><b>Article / Section No.</b><span class="note">*</span></label><br>
+                    <input type="text" id="articleNoTxt" required autocomplete="off">
                 </div>
 
                 <!-- main category of the blog -->
@@ -111,12 +119,6 @@
                             <label for="circularRadio">Circular / Notification</label>
                         </div>
                     </div>
-                </div>
-
-                <!-- article no. of the blog -->
-                <div>
-                    <label for="articleNoTxt"><b>Article / Section No.</b><span class="note">*</span></label><br>
-                    <input type="text" id="articleNoTxt" required autocomplete="off">
                 </div>
 
                 <!-- keywords of the blog -->

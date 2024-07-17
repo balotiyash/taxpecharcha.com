@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the initialization, js, ajax code to deal with the server of the index page
  * Created on: 25 May 2024
- * Last Modified: 14 July 2024
+ * Last Modified: 17 July 2024
 */
 
 // This invokes on load
@@ -76,10 +76,10 @@ $(document).ready(() => {
                         $(`#articleLink${i + 1}`).attr("href", `user/view/article.php?slug=${response.success[i]["slug"]}`);
                     }
                 } else if (response.error) {
-                    showToast("#error-msg", `${successSymbol} Error: ${response.error}`);
+                    alert(`Error: ${response.error}`);
 
                 } else if (response.message) {
-                    showToast("#info-msg", `${infoSymbol} ${response.message}`);
+                    alert(`${response.message}`);
                 }
             },
             error: (xhr, status, error) => {

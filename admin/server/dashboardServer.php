@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to fetch the counts of the blogs category wise and to fetch the top viewed articles by users on the dashboard page.
 // Created on: 26 June 2024
-// Last Modified: 11 July 2024
+// Last Modified: 17 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -43,7 +43,7 @@ function fetchBlogsCount($conn) {
     $result = $conn->query($query1);
 
     if ($result === false) {
-        echo json_encode(["error" => "Fetching TODO Data query failed: " . $conn->error]);
+        echo json_encode(["error" => "Fetching blog counts query failed: " . $conn->error]);
         $conn->close();
         return;
     }

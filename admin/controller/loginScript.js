@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js ajax code to validate, authenticate the admin and interact with the server side code of the login page.
  * Created on: 20 June 2024
- * Last Modified: 14 July 2024
+ * Last Modified: 17 July 2024
 */
 
 // Executes onload successfully
@@ -95,7 +95,7 @@ $(document).ready(() => {
         }
 
         if (confirmReview.length <= 0) {
-            showToast("#info-msg", `${infoSymbol} Please tick the 'I have reviewed my details.' checkbox to proceed further.`);
+            showToast("#info-msg", `${infoSymbol} Please tick the '<b>I have reviewed my details.</b>' checkbox to proceed further.`);
             return;
         }
 

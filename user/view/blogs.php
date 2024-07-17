@@ -3,8 +3,11 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of all articles to be displayed and viewed by the users 2nd tab.
     Created on: 11 July 2024
-    Last Modified: 14 July 2024
+    Last Modified: 17 July 2024
 -->
+
+<!-- Session handling for login or dashboard button on the navbar -->
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,6 +46,8 @@
 
     <!-- Google Ads -->
     <meta name="google-adsense-account" content="ca-pub-2791961608830349">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2791961608830349"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -55,7 +60,7 @@
     <main>
         <section id="searchBarSec">
             <!-- Search bar -->
-            <form id="searchBar">
+            <div id="searchBar">
                 <!-- Main Category -->
                 <!-- <div id="mainCatDiv">
                     <label for="mainCatOption"><b>Select Category: </b></label>
@@ -89,7 +94,7 @@
                     <input type="text" id="searchInput" placeholder="Article No.">
                     <i class="fa-solid fa-magnifying-glass icons" id="searchIcon"></i>
                 </div>
-            </form>
+            </div>
         </section>
 
         <!-- Info / Main Section -->
