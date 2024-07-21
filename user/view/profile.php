@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the profile page.
     Created on: 26 May 2024
-    Last Modified: 17 July 2024
+    Last Modified: 21 July 2024
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -13,7 +13,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     
     <meta name="description" content="Browse all articles on Taxpecharcha, covering topics related to Income Tax, GST, and Customs.">
 

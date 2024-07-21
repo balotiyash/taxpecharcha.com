@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This file contains all the js and ajax code to create new blog and to interact with the server.
  * Created on: 03 June 2024
- * Last Modified: 14 July 2024
+ * Last Modified: 21 July 2024
 */
 
 // For dynamically identifing width and height of the advanced text editor
@@ -43,10 +43,10 @@ $(document).ready(() => {
         const subCategory = $('input[name="subCategory"]:checked').val();
         const articleNo = $("#articleNoTxt").val().trim();
         const keywords = $("#keywordsTxt").val().trim();
-        const blogImage = $("#blogImgInput")[0].files[0];
+        let blogImage = $("#blogImgInput")[0].files[0];
         const content = tinymce.get("default").getContent();
 
-        if (!title || !mainCategory || !subCategory || !articleNo || !keywords || !blogImage || !content) {
+        if (!title || !mainCategory || !subCategory || !articleNo || !keywords || !content) {
             showToast("#info-msg", `${infoSymbol} All fields are mandatory to fill!`);
             return false;
         }

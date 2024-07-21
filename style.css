@@ -2,7 +2,7 @@
 Author: Yash Balotiya
 Description: This file contains the styling part of the index page mainly sliding images part.
 Created on: 16 June 2024
-Last Modified: 09 July 2024 */
+Last Modified: 21 July 2024 */
 
 * {
     margin: 0;
@@ -73,7 +73,7 @@ main {
 
 #underlineTxt {
     text-decoration-line: underline;
-    text-decoration-color: #ff004f;
+    text-decoration-color: #2164ffc8;
 }
 
 #sloganTxt { font-size: 20px; }

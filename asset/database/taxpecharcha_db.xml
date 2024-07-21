@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jul 17, 2024 at 11:21 AM
+- Server version: 10.4.32-MariaDB
+- PHP Version: 8.2.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="taxpecharcha_db" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="admin_login_details">
+                CREATE TABLE `admin_login_details` (
+                  `login_id` varchar(255) NOT NULL,
+                  `password` varchar(255) NOT NULL,
+                  `dob` date NOT NULL,
+                  `security_question` varchar(255) NOT NULL,
+                  `security_answer` varchar(255) NOT NULL,
+                  PRIMARY KEY (`login_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="blogs">
+                CREATE TABLE `blogs` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `slug` varchar(255) NOT NULL,
+                  `title` varchar(255) NOT NULL,
+                  `main_category` varchar(255) NOT NULL,
+                  `sub_category` varchar(255) NOT NULL,
+                  `section` varchar(255) NOT NULL,
+                  `keywords` varchar(255) NOT NULL,
+                  `image` varchar(255) NOT NULL,
+                  `content` mediumtext NOT NULL,
+                  `views` int(11) NOT NULL DEFAULT 0,
+                  `author` varchar(255) NOT NULL DEFAULT &#039;C. A. Manish Suvasiya&#039;,
+                  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `slug` (`slug`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=146 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="todo_data">
+                CREATE TABLE `todo_data` (
+                  `data` mediumtext DEFAULT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'taxpecharcha_db'
+    -->
+    <database name="taxpecharcha_db">
+        <!-- Table admin_login_details -->
+        <table name="admin_login_details">
+            <column name="login_id">admin</column>
+            <column name="password">$2y$10$nPV8dv5IRO8InF8Dp6Py6uaTlerU894PrT0zR8LT/8t9ykAEErlua</column>
+            <column name="dob">2002-05-08</column>
+            <column name="security_question">In what city were you born?</column>
+            <column name="security_answer">mumbai</column>
+        </table>
+        <!-- Table blogs -->
+        <table name="blogs">
+            <column name="id">1</column>
+            <column name="slug">self-assessment-tax-section-59</column>
+            <column name="title">SELF ASSESSMENT TAX (SECTION 59)</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 59</column>
+            <column name="keywords">Self Assessement tax, GSTR 3B, Tax Laibility</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">&lt;p dir=&quot;ltr&quot;&gt;Every registered person shall himself assess the tax liability and pay to the government (Eg.. Calculation of GST Payable at the time of GSTR 3B)&lt;/p&gt;</column>
+            <column name="views">10</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-07-10 22:30:00</column>
+        </table>
+        <table name="blogs">
+            <column name="id">3</column>
+            <column name="slug">provisional-assessment-section-60</column>
+            <column name="title">PROVISIONAL ASSESSMENT (SECTION 60)</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 60</column>
+            <column name="keywords">Provision Assessment, Final Assessment, Applicability of Provisional Assessment, Joint Commissioner, Additional Commissioner, Interest Rate etc.</column>
+            <column name="image">../../asset/uploads/4937.jpg</column>
+            <column name="content">&lt;ul&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;Person unable to determine the value of Supply or rate of Tax can pay tax under sec. 60&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;Payment should be made on the execution of the bond with the GST Department.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Final Assessment&lt;/strong&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Final assessment should be completed within the period of 6 month from the date of above order.&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Extension can be given by the Joint commissioner/Additional Commissioner for 6 more month but not exceeding 4 years.&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;If after conclusion of the final assessment it is seen that assesse has short paid the tax amount then tax shall be payable by the assesse with interest u/s 50 i.e. 18% p.a.&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;If assessee has excess paid the taxes, then refund shall be given by the department u/s 56 i.e. 6% p.a..&lt;/p&gt;</column>
+            <column name="views">29</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-07-10 22:40:01</column>
+        </table>
+        <table name="blogs">
+            <column name="id">4</column>
+            <column name="slug">scrutiny-of-return-section-61</column>
+            <column name="title">SCRUTINY OF RETURN (SECTION 61)	</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 61</column>
+            <column name="keywords">Scrutiny of Return, Examination of return, Section 65,66,67,73,74</column>
+            <column name="image">../../asset/uploads/9519.jpg</column>
+            <column name="content">&lt;ul&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;In order to verify the accuracy of the return the proper officer may examine the return and seek explanation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;If explanation offered by the assessee is adequate and satisfactory to the officer then in this case no further action to be taken.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;If no explanation offered or unsatisfactory explanation offered to the officer then action to be taken under section 65,66,67,73 or 74.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</column>
+            <column name="views">7</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-07-10 22:31:01</column>
+        </table>
+        <table name="blogs">
+            <column name="id">6</column>
+            <column name="slug">assessment-of-a-non---filer-of-return-section-62</column>
+            <column name="title">Assessment of a Non - Filer of Return (Section 62)</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 62</column>
+            <column name="keywords">Assessment of a Non – Filer, Notices, annual return, 60days, Rs.100 late fee etc.</column>
+            <column name="image">../../asset/uploads/good-service-tax-concept-with-financial-elements_1302-10253.png</column>
+            <column name="content">&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Assessment of a Non - Filer of Return (Section 62)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;If assessee not furnished return even after service of the notice u/s 46.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;Proper officer shall assess the liability of tax within the period of 5 years from the due date specified under section 44 for furnishing annual return i.e. 31st December of next financial year.&lt;strong&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;Apart from the above, if registered person furnishes a valid return within the period of 60 days of serving of the assessement order, the order passed earlier shall be consider as withdrawal of order but the payment of interest or late fee shall be continued.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;If registered person failed to furnish a valid return within the period of 60 days of serving of the assessement order he may furnish a return within the period of further 60 days on payment of the additional 100Rs. Penalty per day beyond 60 days i.e. from 61st day&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</column>
+            <column name="views">4</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-07-10 22:31:47</column>
+        </table>
+        <table name="blogs">
+            <column name="id">7</column>
+            <column name="slug">assessment-of-a-unregisterd-person-section-63</column>
+            <column name="title">Assessment of a Unregisterd person (Section 63)</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 63</column>
+            <column name="keywords">Assessment of a Unregisterd person, Notices, 15 days etc.</column>
+            <column name="image">../../asset/uploads/Taxpecharcha Dashboard1 (2).png</column>
+            <column name="content">&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Assessment of a Unregisterd person (Section 63)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;This section is applicable to the unregistered person i.e. person who are liable to obtain registration under section 22 and have failed to obtain registration.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;This provisions also covers the cases whose registration was cancelled.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;For assessment under this section, notice has to be issued by the proper officer. The notice would contain the grounds on which the assessment is proposed to be made on best judgment basis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;The taxable person is allowed a time of 15 days to furnish his reply,&amp;nbsp; After conidering the said explanation, the order will be passed.&lt;strong&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;Proper officer to the best of his judgment may issue an assessment order within a period of 5 years from the due date specified u/s 44 for furnishing annual return.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</column>
+            <column name="views">3</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-26 11:27:11</column>
+        </table>
+        <table name="blogs">
+            <column name="id">8</column>
+            <column name="slug">summary-assessment-in-certain-special-cases-section-64</column>
+            <column name="title">Summary Assessment in certain special cases (Section 64)</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 64</column>
+            <column name="keywords">tax liability, Joint Commissioner, additional commissioner, withdrawal of the order, section 73 &amp; 74</column>
+            <column name="image">../../asset/uploads/Taxpecharcha Dashboard1 (4).png</column>
+            <column name="content">&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;SUMMARY ASSESSMENT IN CERTAIN SPECIAL CASES (SECTION 64)&lt;/strong&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;The summary assessment can be undertaken in case all of the following conditions are satisfied:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;The proper officer must have a evidence that there may be tax liability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;The proper office has obtained proper permission of additional /Joint&amp;nbsp; Commissioner to assess the tax liability summarily.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;The proper must have a sufficient ground to believe that any delay in passing assessment order would result in loss of revenue.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Such failure to pay tax, penalty or interest must be due to reasons attributable to the tax payer (Eg: Insolvency, Instances of defaulting, absconding etc.)&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Withdrawals of Order&lt;/strong&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;The summary assessment order can be withdrawn by the AC/JC, if he consider that such order is erroneous.&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;On application by the taxable person for withdrawal of the summary assessment order within the period of 30 days from the date of receipt of order OR on his own motion and follow the producer laid down in Section 73 or Section 74 for determination of tax liability of such taxable person.&lt;/p&gt;</column>
+            <column name="views">9</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-07-10 22:37:32</column>
+        </table>
+        <table name="blogs">
+            <column name="id">9</column>
+            <column name="slug">section-115bac-of-income-tax-act-1961-applicability-tax-rates-surcharge-conditions-deduction-not-allowed-etc</column>
+            <column name="title">Section 115BAC of Income Tax Act 1961: Applicability, Tax Rates, Surcharge, Conditions, deduction not allowed etc.</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Act</column>
+            <column name="section">115BAC</column>
+            <column name="keywords">Section 115BAC of Income Tax Act 1961                     Applicability                    Tax Rates                       Surcharge                    Conditions                      Default tax regime</column>
+            <column name="image">../../asset/uploads/Taxpecharcha Dashboard1.png</column>
+            <column name="content">&lt;p dir=&quot;ltr&quot;&gt;Applicability: This section is applicable to the Assessee who is Individual, HUF (Hindu undivided family), AOP/BOI and Artificial Judicial Person.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Tax Rates:&amp;nbsp;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Tax rates before Assessment year 2024-2025 (1.0)&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img src=&quot;https://lh7-us.googleusercontent.com/docsz/AD_4nXeMCneumEXNILgKs0r71tLJWIS3AwWMQf_r4cpqFqUVoNnIlpbsUTVytL6DuFy0eCGXi9fxba0S7gS_LnDrezRP4Ka3g9UzzeHy5pMqQD_TD1PVRA4bBp9UkyMCV0jW8Ayl-BdQJd950-W_q7vUuqd_WBPBfb9upCa_zNkRfqxjetYB05vo3XE?key=TT2jhDoCCPTDM-Vay1sU7A&quot; width=&quot;383&quot; height=&quot;178&quot;&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Tax rates from and after Assessment year 2024-2025 (2.0)&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img src=&quot;https://lh7-us.googleusercontent.com/docsz/AD_4nXeNbGpBXkfjwBodCxn6fpj4RkpeGCE6aKOjRQ08gHkQCCt2-_phtmgyBitW8NAgHIpuAXR1cbxhOdQP4BYxyE36x77VcYvVD6cQOijkNslrqUCt2xM-K0FUoj30O_fzjr-XTnQHnf2qFWXk2NfZ2wfqo-gUpYaZ4Te7NXd0IgVIsnl4gtuC-nc?key=TT2jhDoCCPTDM-Vay1sU7A&quot; width=&quot;382&quot; height=&quot;152&quot;&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Under both the scenario, Special income i.e. income chargeable under section 111A, 112, 112A, winning etc, shall be taxed under special rates only.&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Surcharge: Surcharge in case of the section 115BAC shall be 10% (if income is more than Rs.50 lakhs but upto Rs. 1 crore), 15% (If income is more than Rs. 1 crore but upto Rs. 2 crore), 25% (If income is more than Rs. 2 crore)&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Note: Higher surcharge which is 37% is not applicable in case of Section 115BAC.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Deduction not allowed: Deails of the same is given under below table&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img src=&quot;https://lh7-us.googleusercontent.com/docsz/AD_4nXeIENa8nPkdCGsMURr5LYsfig0--5o9Zt8Dc4SnSjVH6fYa5ie-Icgh7Mcavi9BSn2RiWRiy3hWliYHGBQJn6UyND9KTKfasPrXxmgCu8C1d_vp0f4NHS6tTJIwfkLz9ZYVzeGEF2P_qY_G3jGuO3ZCufhXtBKUGH5jlrGs-dqQIJPqrg9vz8Q?key=TT2jhDoCCPTDM-Vay1sU7A&quot; width=&quot;539&quot; height=&quot;527&quot;&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Rebate section 87A: Rebate will be given only to the Resident Individual&amp;nbsp; having Total Income upto Rs.7,00,000/-&amp;nbsp;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Rebate will be equal to&lt;/p&gt;
+&lt;ol&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;Amount equal to the Tax payable&amp;nbsp;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;Rs. 25,000/-&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Whichever Is lower&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Other Important Point:&amp;nbsp;&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;Section 115BAC is a default tax regime. However assessee &amp;nbsp;can avail the benefit of regular tax regime by exercising the option.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li dir=&quot;ltr&quot; aria-level=&quot;1&quot;&gt;
+&lt;p dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;Assessee does not have Income from Business &amp;amp; Profession:&amp;nbsp;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</column>
+            <column name="views">14</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-26 11:30:33</column>
+        </table>
+        <table name="blogs">
+            <column name="id">79</column>
+            <column name="slug">sample-blog-225</column>
+            <column name="title">Sample Blog 225</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 225</column>
+            <column name="keywords">gst, compliance, returns</column>
+            <column name="image">../../asset/uploads/download (1).jpeg</column>
+            <column name="content">&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;p&gt;Yash&lt;/p&gt;</column>
+            <column name="views">101</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-07-10 22:24:45</column>
+        </table>
+        <table name="blogs">
+            <column name="id">80</column>
+            <column name="slug">sample-blog-3</column>
+            <column name="title">Sample Blog 3</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 3</column>
+            <column name="keywords">customs, import, export</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">81</column>
+            <column name="slug">sample-blog-4</column>
+            <column name="title">Sample Blog 4</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 4</column>
+            <column name="keywords">tax, assessment, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">46</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-07-10 22:28:13</column>
+        </table>
+        <table name="blogs">
+            <column name="id">83</column>
+            <column name="slug">sample-blog-6</column>
+            <column name="title">Sample Blog 6</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 6</column>
+            <column name="keywords">tax, capital gains, exemptions</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">84</column>
+            <column name="slug">sample-blog-7</column>
+            <column name="title">Sample Blog 7</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 7</column>
+            <column name="keywords">gst, place of supply, invoices</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">85</column>
+            <column name="slug">sample-blog-8</column>
+            <column name="title">Sample Blog 8</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 8</column>
+            <column name="keywords">customs, duties, regulations</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">86</column>
+            <column name="slug">sample-blog-9</column>
+            <column name="title">Sample Blog 9</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 9</column>
+            <column name="keywords">tax, deductions, computation</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">87</column>
+            <column name="slug">sample-blog-10</column>
+            <column name="title">Sample Blog 10</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 10</column>
+            <column name="keywords">gst, compliance, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</column>
+            <column name="views">1</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">88</column>
+            <column name="slug">sample-blog-11</column>
+            <column name="title">Sample Blog 11</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 11</column>
+            <column name="keywords">tax, exemptions, deductions</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">89</column>
+            <column name="slug">sample-blog-12</column>
+            <column name="title">Sample Blog 12</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 12</column>
+            <column name="keywords">gst, input tax, returns</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">90</column>
+            <column name="slug">sample-blog-13</column>
+            <column name="title">Sample Blog 13</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 13</column>
+            <column name="keywords">customs, import, export</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">82</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-07-10 22:17:35</column>
+        </table>
+        <table name="blogs">
+            <column name="id">91</column>
+            <column name="slug">sample-blog-14</column>
+            <column name="title">Sample Blog 14</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 14</column>
+            <column name="keywords">tax, assessment, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">93</column>
+            <column name="slug">sample-blog-16</column>
+            <column name="title">Sample Blog 16</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 16</column>
+            <column name="keywords">tax, capital gains, exemptions</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">94</column>
+            <column name="slug">sample-blog-17</column>
+            <column name="title">Sample Blog 17</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 17</column>
+            <column name="keywords">gst, place of supply, invoices</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">95</column>
+            <column name="slug">sample-blog-18</column>
+            <column name="title">Sample Blog 18</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 18</column>
+            <column name="keywords">customs, duties, regulations</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">96</column>
+            <column name="slug">sample-blog-19</column>
+            <column name="title">Sample Blog 19</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 19</column>
+            <column name="keywords">tax, deductions, computation</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">97</column>
+            <column name="slug">sample-blog-20</column>
+            <column name="title">Sample Blog 20</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 20</column>
+            <column name="keywords">gst, compliance, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">99</column>
+            <column name="slug">sample-blog-22</column>
+            <column name="title">Sample Blog 22</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 22</column>
+            <column name="keywords">gst, input tax, returns</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">100</column>
+            <column name="slug">sample-blog-23</column>
+            <column name="title">Sample Blog 23</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 23</column>
+            <column name="keywords">customs, import, export</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">101</column>
+            <column name="slug">sample-blog-24</column>
+            <column name="title">Sample Blog 24</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 24</column>
+            <column name="keywords">tax, assessment, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">102</column>
+            <column name="slug">sample-blog-25</column>
+            <column name="title">Sample Blog 25</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 25</column>
+            <column name="keywords">gst, input tax credit</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">103</column>
+            <column name="slug">sample-blog-26</column>
+            <column name="title">Sample Blog 26</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 26</column>
+            <column name="keywords">tax, capital gains, exemptions</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">104</column>
+            <column name="slug">sample-blog-27</column>
+            <column name="title">Sample Blog 27</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 27</column>
+            <column name="keywords">gst, place of supply, invoices</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">105</column>
+            <column name="slug">sample-blog-28</column>
+            <column name="title">Sample Blog 28</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 28</column>
+            <column name="keywords">customs, duties, regulations</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">106</column>
+            <column name="slug">sample-blog-29</column>
+            <column name="title">Sample Blog 29</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 29</column>
+            <column name="keywords">tax, deductions, computation</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">107</column>
+            <column name="slug">sample-blog-30</column>
+            <column name="title">Sample Blog 30</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 30</column>
+            <column name="keywords">gst, compliance, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">108</column>
+            <column name="slug">sample-blog-31</column>
+            <column name="title">Sample Blog 31</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 31</column>
+            <column name="keywords">tax, exemptions, deductions</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">109</column>
+            <column name="slug">sample-blog-32</column>
+            <column name="title">Sample Blog 32</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 32</column>
+            <column name="keywords">gst, input tax, returns</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">110</column>
+            <column name="slug">sample-blog-33</column>
+            <column name="title">Sample Blog 33</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 33</column>
+            <column name="keywords">customs, import, export</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">111</column>
+            <column name="slug">sample-blog-34</column>
+            <column name="title">Sample Blog 34</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 34</column>
+            <column name="keywords">tax, assessment, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">112</column>
+            <column name="slug">sample-blog-35</column>
+            <column name="title">Sample Blog 35</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 35</column>
+            <column name="keywords">gst, input tax credit</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">113</column>
+            <column name="slug">sample-blog-36</column>
+            <column name="title">Sample Blog 36</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 36</column>
+            <column name="keywords">tax, capital gains, exemptions</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">114</column>
+            <column name="slug">sample-blog-37</column>
+            <column name="title">Sample Blog 37</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 37</column>
+            <column name="keywords">gst, place of supply, invoices</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">115</column>
+            <column name="slug">sample-blog-38</column>
+            <column name="title">Sample Blog 38</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 38</column>
+            <column name="keywords">customs, duties, regulations</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">116</column>
+            <column name="slug">sample-blog-39</column>
+            <column name="title">Sample Blog 39</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 39</column>
+            <column name="keywords">tax, deductions, computation</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">117</column>
+            <column name="slug">sample-blog-40</column>
+            <column name="title">Sample Blog 40</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 40</column>
+            <column name="keywords">gst, compliance, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">118</column>
+            <column name="slug">sample-blog-41</column>
+            <column name="title">Sample Blog 41</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 41</column>
+            <column name="keywords">tax, exemptions, deductions</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">119</column>
+            <column name="slug">sample-blog-42</column>
+            <column name="title">Sample Blog 42</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 42</column>
+            <column name="keywords">gst, input tax, returns</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">120</column>
+            <column name="slug">sample-blog-43</column>
+            <column name="title">Sample Blog 43</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 43</column>
+            <column name="keywords">customs, import, export</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">121</column>
+            <column name="slug">sample-blog-44</column>
+            <column name="title">Sample Blog 44</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 44</column>
+            <column name="keywords">tax, assessment, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">122</column>
+            <column name="slug">sample-blog-45</column>
+            <column name="title">Sample Blog 45</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 45</column>
+            <column name="keywords">gst, input tax credit</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</column>
+            <column name="views">2</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">123</column>
+            <column name="slug">sample-blog-46</column>
+            <column name="title">Sample Blog 46</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 46</column>
+            <column name="keywords">tax, capital gains, exemptions</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">124</column>
+            <column name="slug">sample-blog-47</column>
+            <column name="title">Sample Blog 47</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 47</column>
+            <column name="keywords">gst, place of supply, invoices</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">125</column>
+            <column name="slug">sample-blog-48</column>
+            <column name="title">Sample Blog 48</column>
+            <column name="main_category">The Customs Act, 1962</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 48</column>
+            <column name="keywords">customs, duties, regulations</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">126</column>
+            <column name="slug">sample-blog-49</column>
+            <column name="title">Sample Blog 49</column>
+            <column name="main_category">The Income Tax Act, 1961</column>
+            <column name="sub_category">Circular / Notification</column>
+            <column name="section">Section 49</column>
+            <column name="keywords">tax, deductions, computation</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <table name="blogs">
+            <column name="id">127</column>
+            <column name="slug">sample-blog-50</column>
+            <column name="title">Sample Blog 50</column>
+            <column name="main_category">The GST Act, 2017</column>
+            <column name="sub_category">Act</column>
+            <column name="section">Section 50</column>
+            <column name="keywords">gst, compliance, penalties</column>
+            <column name="image">../../asset/uploads/3156.jpg</column>
+            <column name="content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</column>
+            <column name="views">0</column>
+            <column name="author">C. A. Manish Suvasiya</column>
+            <column name="date">2024-06-28 22:27:21</column>
+        </table>
+        <!-- Table todo_data -->
+        <table name="todo_data">
+            <column name="data">&lt;p&gt;Hello&lt;/p&gt;</column>
+        </table>
+    </database>
+</pma_xml_export>

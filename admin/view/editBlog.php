@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the edit existing blog page in dashboard.
     Created on: 30 June 2024
-    Last Modified: 17 July 2024
+    Last Modified: 21 July 2024
 -->
 
 <!-- Session management -->
@@ -23,7 +23,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
     <meta name="description" content="Edit article page for the admin to edit existing articles on Taxpecharcha.">
 

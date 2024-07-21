@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code for the todo page in the dashboard.
     Created on: 02 June 2024
-    Last Modified: 17 July 2024
+    Last Modified: 21 July 2024
 -->
     
 <!-- Session handling -->
@@ -22,7 +22,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
     <meta name="description" content="TO-DO page for the admin to save notes for future plans on Taxpecharcha.">
 

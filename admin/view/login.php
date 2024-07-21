@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the login page.
     Created on: 25 May 2024
-    Last Modified: 17 July 2024
+    Last Modified: 21 July 2024
 -->
 
 <!-- Session handling -->
@@ -22,7 +22,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     
     <meta name="description" content="Login page for the admin to access the Taxpecharcha system.">
 

@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of all articles to be displayed and viewed by the users 2nd tab.
     Created on: 11 July 2024
-    Last Modified: 17 July 2024
+    Last Modified: 21 July 2024
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -14,7 +14,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
     <meta name="description" content="Browse all articles on Taxpecharcha, covering topics related to Income Tax, GST, and Customs.">
 
@@ -106,19 +106,19 @@
         <section id="categorySec">
             <!-- Income tax -->
             <div onclick="window.location.href = 'allBlogs.php?task=allIncomeTax'">
-                <img src="../../asset/images/IncomeTax.jpg" alt="Income Tax">
+                <img src="../../asset/vectors/IncomeTaxCat.svg" alt="Income Tax">
                 <big><b>The Income Tax Act, 1961</b></big>
             </div>
 
             <!-- GST -->
             <div onclick="window.location.href = 'allBlogs.php?task=allGst'">
-                <img src="../../asset/images/GST.png" alt="GST">
+                <img src="../../asset/images/GstCat.png" alt="GST" id="gstCatImg">
                 <big><b>The GST Act, 2017</b></big>
             </div>
 
             <!-- Customs -->
             <div onclick="window.location.href = 'allBlogs.php?task=allCustoms'">
-                <img src="../../asset/images/Customs.png" alt="Customs Act" id="customImg">
+                <img src="../../asset/vectors/CustomsCat.svg" alt="Customs Act" id="customImg">
                 <big><b>The Customs Act, 1962</b></big>
             </div>
         </section>

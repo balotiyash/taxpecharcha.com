@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the initialization, js, ajax code to deal with the server of the index page
  * Created on: 25 May 2024
- * Last Modified: 17 July 2024
+ * Last Modified: 21 July 2024
 */
 
 // This invokes on load
@@ -31,7 +31,7 @@ $(document).ready(() => {
     // Home page image sliding
     const slides = document.querySelectorAll('.slide');
     let currentIndex = 0;
-    const intervalTime = 5000; // 3 seconds
+    const intervalTime = 3000; // 3 seconds
     const transitionTime = 1000; // 1 second
 
     function showSlide(index) {

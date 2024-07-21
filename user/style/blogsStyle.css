@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of all article page to be viewed by the user Blogs.
     Created on: 11 July 2024
-    Last Modified: 14 July 2024
+    Last Modified: 21 July 2024
 */
 
 * {
@@ -115,7 +115,8 @@ main {
 
 #categorySec div img { width: 90%; }
 
-#customImg { margin-top: 60px; }
+/* #customImg { margin-top: 60px; } */
+#gstCatImg { margin-top: 50px; }
 
 /* Whatsapp Logo */
 #whatsappLogo {

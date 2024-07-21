@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to upload or update a blog.
 // Created on: 25 June 2024
-// Last Modified: 14 July 2024
+// Last Modified: 21 July 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -43,9 +43,12 @@ function uploadOrUpdateBlog($conn, $task) {
     $isImageSaved = false;
     $imagePath = "";
 
-    if (($task === "uploadNewBlog" || $task === "updateWithImage") && isset($_FILES["blogImage"])) {
-        $imageName = $_FILES["blogImage"]["name"];
+    // Handle image upload if required
+    $imagePath = "../../asset/vectors/DefaultBlogImage.svg"; // Default image path
+
+    if (($task === "uploadNewBlog" || $task === "updateWithImage") && isset($_FILES["blogImage"]) && $_FILES["blogImage"]["error"] == UPLOAD_ERR_OK) {
         $imageTempName = $_FILES["blogImage"]["tmp_name"];
+        $imageName = basename($_FILES["blogImage"]["name"]);
         $savingPath = "../../asset/uploads/";
         $imageSavedPath = $savingPath . $imageName;
 
@@ -57,8 +60,7 @@ function uploadOrUpdateBlog($conn, $task) {
         }
 
         // Move uploaded image to permanent location
-        $isImageSaved = move_uploaded_file($imageTempName, $imageSavedPath);
-        if ($isImageSaved) {
+        if (move_uploaded_file($imageTempName, $imageSavedPath)) {
             $imagePath = $imageSavedPath;
         } else {
             handleResponse(["error" => "Failed to save image."]);

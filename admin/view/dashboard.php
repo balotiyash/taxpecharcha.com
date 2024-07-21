@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the dashboard page after login.
     Created on: 02 June 2024
-    Last Modified: 17 July 2024
+    Last Modified: 21 July 2024
 -->
 
 <!-- Session handling -->
@@ -23,7 +23,7 @@
 <head>
     <!-- Meta tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     
     <meta name="description" content="Dashboard page of Taxpecharcha for admin to manage and maintain articles.">
     

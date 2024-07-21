@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the create new blog page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 17 July 2024
+    Last Modified: 21 July 2024
 -->
 
 <!-- session handling -->
@@ -22,7 +22,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     
     <meta name="description" content="New Article page to upload a new article by admin on the Taxpecharcha platform.">
 
@@ -130,7 +130,7 @@
 
                 <!-- blog image -->
                 <div>
-                    <label for="blogImgInput"><b>Select Blog Image</b><span class="note">*</span></label><br>
+                    <label for="blogImgInput"><b>Select Blog Image</b></label><br>
                     <input class="form-control form-control-sm" id="blogImgInput" type="file" accept="image/png, image/gif, image/jpeg, image/jpg, image/svg" required>
                     <p class="note">Note: Choosing Landscape Image is preferred.</p>
                 </div>
