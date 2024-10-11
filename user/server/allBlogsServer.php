@@ -3,7 +3,7 @@
 // Author: Yash Balotiya
 // Description: This file contains the code to load blog data of the all articles page.
 // Created on: 13 July 2024
-// Last Modified: 14 July 2024
+// Last Modified: 11 Oct 2024
 
 // Including the database connection
 include_once "../../shared/server/db_connection.php";
@@ -49,10 +49,10 @@ function fetchArticles($conn, $mainCategory, $isSearch = false)
     $offset = ($pageNo - 1) * $limit;
 
     if ($isSearch) {
-        $query1 = "SELECT image, title, content, views, slug, id FROM blogs WHERE section LIKE ? ORDER BY date DESC LIMIT ?, ?";
+        $query1 = "SELECT image, title, content, views, slug, id FROM blogs WHERE section COLLATE utf8mb4_general_ci LIKE ? ORDER BY date DESC LIMIT ?, ?";
         $mainCategory = '%' . $mainCategory . '%'; // Add wildcard characters for LIKE
     } else {
-        $query1 = "SELECT image, title, content, views, slug, id FROM blogs WHERE main_category LIKE CONCAT('%', ?, '%') ORDER BY date DESC LIMIT ?, ?";
+        $query1 = "SELECT image, title, content, views, slug, id FROM blogs WHERE main_category COLLATE utf8mb4_general_ci LIKE CONCAT('%', ?, '%') ORDER BY date DESC LIMIT ?, ?";
     }
 
     // Prepare the SQL statement
@@ -76,10 +76,8 @@ function fetchArticles($conn, $mainCategory, $isSearch = false)
     // Fetch data
     if ($result->num_rows > 0) {
         $output = "";
-
         while ($row = $result->fetch_assoc()) {
             $lastId = $row["id"];
-
             $output .= '<div class="articleContainer">
                 <img src="' . $row["image"] . '" alt="Article Image" class="articleImg" id="">
                 <div class="articleInfo">
@@ -98,7 +96,6 @@ function fetchArticles($conn, $mainCategory, $isSearch = false)
                 </div>
             </div>';
         }
-
         echo json_encode(["success" => $output, "lastId" => $lastId]);
     } else {
         echo json_encode(["message" => "No blogs found"]);

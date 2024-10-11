@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part to fetch existing blogs Page TABLE.
     Created on: 28 June 2024
-    Last Modified: 30 June 2024
+    Last Modified: 13 Aug 2024
 */
 
 /* Main div which displays blogs list */
@@ -28,7 +28,8 @@
 
 th, td {
     border-bottom: 1px solid #ddd;
-    line-height: 50px;
+    /* line-height: 50px; */
+    padding: 8px 0;
 }
 
 tr:hover { background-color: #EEEEEE; }
