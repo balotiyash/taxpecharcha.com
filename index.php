@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the home/index page.
     Created on: 24 May 2024
-    Last Modified: 21 July 2024
+    Last Modified: 21 January 2025
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -14,7 +14,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="viewport" content="width=1200"> -->
 
     <meta name="description" content="Browse all articles on Taxpecharcha, covering topics related to Income Tax, GST, and Customs.">
@@ -31,6 +31,7 @@
     <!-- Stylesheets -->
     <!-- Navbar style -->
     <link rel="stylesheet" href="shared/style/navBarStyle.css">
+    <link rel="stylesheet" href="shared/style/responsive/navBarResponsive.css">
     <link rel="stylesheet" href="shared/style/buttonStyle1.css">
 
     <!-- Footer -->

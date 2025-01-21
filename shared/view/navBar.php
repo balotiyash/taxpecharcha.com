@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the HTML5 code of navigation bar.
     Created on: 24 May 2024
-    Last Modified: 11 July 2024
+    Last Modified: 21 January 2025
 -->
 
 <!-- FontsAwesome -->
@@ -50,6 +50,24 @@
         <?php
         }
         ?>
-
     </div>
+
+    <!-- 3 Bars for Mobile Responsive Side Menu Bar -->
+    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg></a></li>
+
+    <!-- Mobile Links -->
+    <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#000">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg> </a></li>
+        <li><a href="https://www.taxpecharcha.com/" id="homeLink">Home</a></li>
+        <li><a href="../../user/view/blogs.php" id="articleLinkMob">Articles</a></li>
+        <li><a href="https://wa.me/919833591469" target="_blank">Income Tax</a></li>
+        <li><a href="https://wa.me/919833591469" target="_blank">GST</a></li>
+        <li><a href="../../user/view/profile.php" id="aboutLinkMob">About</a></li>
+    </ul>
 </nav>

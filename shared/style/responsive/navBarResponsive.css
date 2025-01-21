@@ -1,0 +1,114 @@
+/*
+    File: shared/style/responsive/navBarResponsive.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the navbar to make it responsive.
+    Created on: 21 January 2025
+    Last Modified: 21 January 2025
+*/
+
+/* Hiding Sidebar and desktop nav links */
+.sidebar, .menu-button {
+    display: none;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+/* Responsiveness */
+@media (min-width: 800px) and (max-width: 1100px) {
+    /* Making Logo Responsive */
+    #rsLogo {
+        width: 2.5vw;
+    }
+
+    #logo {
+        width: 40vw;
+    }
+}
+
+/* Hiding Login & Dashboard Button */
+@media (max-width: 900px) {
+    #dashboardBtn, #loginBtn {
+        display: none;
+    }
+}
+
+/* Navbar for mobile */
+@media (max-width: 800px) {
+    #navBtns {
+        display: none;
+    }
+
+    nav ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        /* justify-content: flex-end; */
+        align-items: center;
+        padding: 0;
+    }
+    
+    nav a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+        transition: 0.2s ease-in-out all;
+        font-size: 16px;
+    }
+
+    .sidebar li {
+        margin: 12px 0;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Making Logo Responsive */
+@media (max-width: 650px) {
+    #rsLogo {
+        width: 4.5vw;
+    }
+
+    #logo {
+        width: 70vw;
+    }
+}
+
+/* Sidebar for small screen */
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}

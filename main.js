@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the initialization, js, ajax code to deal with the server of the index page
  * Created on: 25 May 2024
- * Last Modified: 11 August 2024
+ * Last Modified: 21 Jan 2025
 */
 
 // This invokes on load
@@ -13,6 +13,8 @@ $(document).ready(() => {
     document.querySelector("#logo").src = "asset/images/Slogan.png";
     document.querySelector("#articleLink").href = "user/view/blogs.php";
     document.querySelector("#aboutLink").href = "user/view/profile.php";
+    document.querySelector("#articleLinkMob").href = "user/view/blogs.php";
+    document.querySelector("#aboutLinkMob").href = "user/view/profile.php";
     document.querySelector("#rupeesLogo").src = "asset/vectors/Rupees.svg";
     document.querySelector("#rupeesLogo").src = "asset/vectors/Rupees.svg";
     document.querySelector("#aboutMeLink").href = "user/view/profile.php";

@@ -3,7 +3,7 @@
  * Author: Yash Balotiya
  * Description: This page contains all the js code which is shared throughout the application.
  * Created on: 17 June 2024
- * Last Modified: 11 July 2024
+ * Last Modified: 21 January 2025
 */
 
 // Drop down function for navbar
@@ -81,4 +81,15 @@ function openYashProfile() {
 // Function to open Blogs Page
 function navigateToArticles() {
     window.location.href = "user/view/blogs.php";
+}
+
+// Function to handle Responsive screen Navbar
+function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+
+function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
 }
