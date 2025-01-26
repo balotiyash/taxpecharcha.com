@@ -1,0 +1,66 @@
+/* 
+    File: shared/style/responsive/footerResponsive.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the footer responsiveness.
+    Created on: 26 January 2025
+    Last Modified: 26 January 2025
+*/
+
+#fLogo,
+#aboutTaxpecharcha,
+#contactMe,
+#devInfo {
+    padding: 8px;
+}
+
+.divider {
+    width: 80%;
+    height: 1px;
+    background-color: #d3d3d3;
+    margin: 20px 0;
+    display: none;
+}
+
+@media (min-width: 850px) and (max-width: 1230px) {
+    #fLogo {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    #aboutFooter {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #fLogo,
+    #aboutTaxpecharcha,
+    #contactMe,
+    #devInfo {
+        text-align: center;
+    }
+
+    .divider {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    #aboutFooter {
+        padding: 20px 0 0 0;
+    }
+}
+
+@media (max-width: 400px) {
+    #aboutTaxpecharcha {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #aboutTaxpecharcha p {
+        width: 90vw;
+        font-size: 4vw;
+    }
+}

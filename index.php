@@ -36,6 +36,7 @@
 
     <!-- Footer -->
     <link rel="stylesheet" href="shared/style/footer.css">
+    <link rel="stylesheet" href="./shared/style/responsive/footerResponsive.css">
     
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
