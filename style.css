@@ -1,8 +1,10 @@
-/* File: style.css
-Author: Yash Balotiya
-Description: This file contains the styling part of the index page mainly sliding images part.
-Created on: 16 June 2024
-Last Modified: 21 July 2024 */
+/* 
+    File: style.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the index page mainly sliding images part.
+    Created on: 16 June 2024
+    Last Modified: 26 January 2025
+*/
 
 * {
     margin: 0;
@@ -24,11 +26,11 @@ main {
 }
 
 #welcomeSection {
-    width: 70%;
+    width: 69vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70vh;
+    height: 30vw;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the home/index page.
     Created on: 24 May 2024
-    Last Modified: 21 January 2025
+    Last Modified: 26 January 2025
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -38,8 +38,9 @@
     <link rel="stylesheet" href="shared/style/footer.css">
     
     <!-- Main stylesheet -->
-    <link rel="stylesheet" href="user/style/homePageStyle.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user/style/homePageStyle.css">
+    <link rel="stylesheet" href="shared/style/responsive/homeResponsive.css">
 
     <!-- Scripts -->
     <script src="shared/controller/jquery-3.7.1.min.js"></script>

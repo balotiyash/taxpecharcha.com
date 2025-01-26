@@ -1,0 +1,166 @@
+/* 
+    File: shared/style/responsive/homeResponsive.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the index page responsiveness.
+    Created on: 21 January 2025
+    Last Modified: 26 January 2025 
+*/
+
+@media (min-width: 800px) and (max-width: 1300px) {
+    /* Welcome Section */
+    #welcomeSection {
+        width: 90vw;
+        height: 40vw;
+    }
+
+    /* Income Tax Section */
+    #incomeSection1 {
+        width: 90vw;
+        justify-content: space-around;
+    }
+
+    .recentIncome {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Welcome Section */
+    #welcomeSection {
+        flex-direction: column-reverse;
+        height: 70vh;
+        width: 90%;
+        padding-top: 175px;
+    }
+
+    #welcomeDiv {
+        margin: 0;
+    }
+
+    #sloganTxt {
+        height: 50px;
+    }
+
+    /* Income Tax Section */
+    #incomeSection1 {
+        width: 90vw;
+    }
+
+    .recentArticles {
+        flex-wrap: wrap;
+    }
+
+    .recentIncome {
+        width: 90vw;
+    }
+    
+    .recentChilds {
+        max-width: 44vw;
+        margin-bottom: 16px;
+    }
+    
+    .recentChilds:nth-child(3) {
+        display: none;
+    }
+
+    /* GST */
+    .gstSection  div,
+    .customSection div {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        padding-top: 100px;
+    }
+
+    /* Income Tax Section */
+    #incomeSection1 {
+        flex-direction: column;
+    }
+
+    #incomeSection1 div {
+        margin-bottom: 20px;
+    }
+
+    /* GSt */
+    .gstSection  div,
+    .customSection div {
+        padding: 30px 0 0 0;
+    }
+
+    .gstSection  img {
+        padding-bottom: 30px;
+    }
+
+    .customSection img {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Income Tax Section */
+    .recentChilds:nth-child(3) {
+        display: flex;
+    }
+
+    .recentArticles {
+        /* width: 100%; */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recentChilds {
+        min-width: 75vw;
+    }
+}
+
+@media (max-width: 500px) {
+    /* Welcome Section */
+
+    #taxpecharchaTxt span {
+        font-size: 10vw;
+    }
+
+    #sloganTxt span {
+        font-size: 4vw;
+    }
+
+    /* Income Tax Section */
+    #incomeSection1 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #incomeSection1 div {
+        text-align: center;
+    }
+
+    #incomeSection1 img {
+        width: 75vw;
+    }
+
+    .title {
+        flex-direction: column;
+    }
+
+    .title h2 {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 400px) {
+    /* Income Tax Section */
+    #incomeSection1 div h1 {
+        font-size: 8vw;
+    }
+
+    #incomeSection1 div p {
+        font-size: 4vw;
+    }
+
+    .recentChilds {
+        min-width: 90vw;
+    }
+}
