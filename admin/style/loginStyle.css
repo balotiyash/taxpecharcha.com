@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of login page.
     Created on: 25 May 2024
-    Last Modified: 21 June 2024
+    Last Modified: 28 January 2025
 */
 
 * {
@@ -91,3 +91,43 @@
 .disableSelect { user-select: none; }
 
 #resetPass { color: blue; }
+
+/* Responsivness */
+@media (max-width: 900px) {
+    #mainChildDiv {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    #taxImg {
+        width: 80%;
+    }
+
+    .inputStyle {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #mainChildDiv {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    #imgDiv {
+        width: 60%;
+        display: none;
+    }
+
+    #loginFormDiv {
+        width: 90%;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .inputStyle {
+        width: 70vw;
+    }
+}
