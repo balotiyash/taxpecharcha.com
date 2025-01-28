@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the profile page.
     Created on: 26 May 2024
-    Last Modified: 21 July 2024
+    Last Modified: 28 January 2025
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -13,7 +13,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="Browse all articles on Taxpecharcha, covering topics related to Income Tax, GST, and Customs.">
 
@@ -29,16 +29,19 @@
     <!-- Stylesheets -->
     <!-- Styles for navbar -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/navBarResponsive.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Footer Style -->
     <link rel="stylesheet" href="../../shared/style/footer.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/footerResponsive.css">
 
     <!-- Fonts awesome is included in navbar -->
 
     <!-- Profile Page Style -->
     <link rel="stylesheet" href="../style/profileStyle.css">
     <link rel="stylesheet" href="../style/aboutStyle.css">
+    <link rel="stylesheet" href="../style/responsive/profileResponsive.css">
 
     <!-- Javascripts -->
     <script src="../../shared/controller/sharedJs.js"></script>
@@ -89,7 +92,7 @@
                     <i class="fa-solid fa-envelope"></i>
                     <div>
                         <p class="tag">Email</p>
-                        <p class="data">camanishsuvasiya@gmail.com</p>
+                        <p class="data">camanishsuvasiya @gmail.com</p>
                     </div>
                 </div> 
 
