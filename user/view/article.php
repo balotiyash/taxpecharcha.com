@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of actual article page to be displayed and viewed by the users.
     Created on: 10 July 2024
-    Last Modified: 21 July 2024
+    Last Modified: 28 January 2025
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -14,7 +14,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Browse all articles on Taxpecharcha, covering topics related to Income Tax, GST, and Customs." id="metaDescription">
 
@@ -29,15 +29,18 @@
     <!-- Stylesheets -->
     <!-- Styles for navbar -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/navBarResponsive.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Footer Style -->
     <link rel="stylesheet" href="../../shared/style/footer.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/footerResponsive.css">
 
     <!-- Fonts awesome is included in navbar -->
 
     <!-- Main Style -->
     <link rel="stylesheet" href="../style/articleStyle.css">
+    <link rel="stylesheet" href="../style/responsive/articleResponsive.css">
 
     <!-- Scripts -->
     <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
