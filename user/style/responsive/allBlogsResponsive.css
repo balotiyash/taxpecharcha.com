@@ -37,3 +37,9 @@
         font-size: 7vw;
     }
 }
+
+@media (max-width: 500px) {
+    #notFoundImg {
+        width: 80vw;
+    }
+}
