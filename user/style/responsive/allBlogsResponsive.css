@@ -1,0 +1,39 @@
+/* 
+    File: user/style/responsive/allblogsResponsive.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of all blogs page responsiveness.
+    Created on: 28 January 2025
+    Last Modified: 28 January 2025
+*/
+
+.articleContainer {
+    flex-grow: 1;
+    text-align: justify;
+}
+
+@media (max-width: 1200px) {
+    #mainSection {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .articleContainer {
+        width: 25%;
+    }
+}
+
+@media (max-width: 800px) {
+    .articleContainer {
+        width: 40%;
+    }
+}
+
+@media (max-width: 600px) {
+    .articleContainer {
+        width: 90%;
+    }
+
+    .title h2 {
+        font-size: 7vw;
+    }
+}
