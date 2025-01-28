@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the footer responsiveness.
     Created on: 26 January 2025
-    Last Modified: 26 January 2025
+    Last Modified: 28 January 2025
 */
 
 #fLogo,
@@ -31,8 +31,8 @@
     #aboutFooter {
         flex-direction: column;
         align-items: center;
-        padding-left: 20px;
-        padding-right: 20px;
+        /* padding-left: 20px; */
+        /* padding-right: 20px; */
     }
 
     #fLogo,
@@ -44,6 +44,10 @@
 
     .divider {
         display: block;
+    }
+
+    #rupeesLogo {
+        display: none;
     }
 }
 

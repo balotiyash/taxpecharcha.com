@@ -1,0 +1,64 @@
+/* 
+    File: user/style/responsive/blogsResponsive.css
+    Author: Yash Balotiya
+    Description: This file contains the styling part of the blogs category page responsiveness.
+    Created on: 28 January 2025
+    Last Modified: 28 January 2025
+*/
+
+#searchDiv div {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1100px) {
+    #searchBarSec {
+        width: 90vw;
+    }
+
+    #categorySec {
+        width: 95vw;
+    }
+}
+
+@media (max-width: 900px) {
+    #categorySec {
+        justify-content: center;
+    }
+
+    #categorySec div {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #categorySec div {
+        width: 80%;
+    }
+
+    #searchDiv {
+        flex-direction: column;
+    }
+    
+    #searchBar {
+        border-radius: 12px;
+    }
+
+    #searchDiv div {
+        margin-top: 8px;
+    }
+
+    #searchDiv b {
+        font-size: 16px;
+    }
+
+    main {
+        padding-top: 75px;
+    }
+}
+
+@media (max-width: 400px) {
+    #searchDiv div input {
+        width: 80%;
+    }
+}

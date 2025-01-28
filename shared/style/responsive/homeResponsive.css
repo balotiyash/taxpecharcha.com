@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the index page responsiveness.
     Created on: 21 January 2025
-    Last Modified: 26 January 2025 
+    Last Modified: 28 January 2025 
 */
 
 @media (min-width: 800px) and (max-width: 1300px) {
@@ -158,6 +158,7 @@
 
     #incomeSection1 div p {
         font-size: 4vw;
+        line-height: 20px;
     }
 
     .recentChilds {

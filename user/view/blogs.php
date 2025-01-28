@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of all articles to be displayed and viewed by the users 2nd tab.
     Created on: 11 July 2024
-    Last Modified: 21 July 2024
+    Last Modified: 28 January 2025
 -->
 
 <!-- Session handling for login or dashboard button on the navbar -->
@@ -14,7 +14,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Browse all articles on Taxpecharcha, covering topics related to Income Tax, GST, and Customs.">
 
@@ -29,15 +29,18 @@
     <!-- Stylesheets -->
     <!-- Styles for navbar -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/navBarResponsive.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Footer Style -->
     <link rel="stylesheet" href="../../shared/style/footer.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/footerResponsive.css">
 
     <!-- Fonts awesome is included in navbar -->
 
     <!-- Main Style -->
     <link rel="stylesheet" href="../style/blogsStyle.css">
+    <link rel="stylesheet" href="../style/responsive/blogsResponsive.css">
 
     <!-- Scripts -->
     <script src="../../shared/controller/jquery-3.7.1.min.js"></script>
@@ -91,8 +94,11 @@
                 <!-- Search by text input -->
                 <div id="searchDiv">
                     <label for="searchInput"><b>Search By Article Number:</b></label>
-                    <input type="text" id="searchInput" placeholder="Article No.">
-                    <i class="fa-solid fa-magnifying-glass icons" id="searchIcon"></i>
+
+                    <div>
+                        <input type="text" id="searchInput" placeholder="Article No.">
+                        <i class="fa-solid fa-magnifying-glass icons" id="searchIcon"></i>
+                    </div>
                 </div>
             </div>
         </section>
