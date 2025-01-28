@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the My Profile Page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 21 July 2024
+    Last Modified: 28 January 2025
 -->
 
 <!-- Session management -->
@@ -38,6 +38,7 @@
     <!-- Stylesheets -->
     <!-- Navbar style -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/navBarResponsive.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Left nav buttons style -->

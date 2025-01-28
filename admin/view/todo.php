@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code for the todo page in the dashboard.
     Created on: 02 June 2024
-    Last Modified: 21 July 2024
+    Last Modified: 28 January 2025
 -->
     
 <!-- Session handling -->
@@ -38,6 +38,7 @@
     <!-- Stylesheets -->
     <!-- Navbar -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/navBarResponsive.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Left nav buttons style -->
@@ -45,6 +46,7 @@
 
     <!-- Footer Style -->
     <link rel="stylesheet" href="../../shared/style/footer.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/footerResponsive.css">
 
     <!-- Fonts awesome included in navbar -->
 

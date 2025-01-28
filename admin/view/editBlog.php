@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the edit existing blog page in dashboard.
     Created on: 30 June 2024
-    Last Modified: 21 July 2024
+    Last Modified: 28 January 2025
 -->
 
 <!-- Session management -->
@@ -39,6 +39,7 @@
     <!-- Stylesheets -->
     <!-- Navbar Style -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/navBarResponsive.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
 
     <!-- Left nav buttons style -->
@@ -46,6 +47,7 @@
 
     <!-- Footer Style -->
     <link rel="stylesheet" href="../../shared/style/footer.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/footerResponsive.css">
 
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="../../shared/style/dashboardNavBtn.css">

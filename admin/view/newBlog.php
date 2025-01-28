@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains all the HTML5 code of the create new blog page in dashboard.
     Created on: 02 June 2024
-    Last Modified: 21 July 2024
+    Last Modified: 28 January 2025
 -->
 
 <!-- session handling -->
@@ -38,6 +38,7 @@
     <!-- Stylesheets -->
     <!-- Navbar style -->
     <link rel="stylesheet" href="../../shared/style/navBarStyle.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/navBarResponsive.css">
     <link rel="stylesheet" href="../../shared/style/buttonStyle1.css">
     
     <!-- Fonts awesome included in navbar -->
@@ -47,6 +48,7 @@
 
     <!-- Footer Style -->
     <link rel="stylesheet" href="../../shared/style/footer.css">
+    <link rel="stylesheet" href="../../shared/style/responsive/footerResponsive.css">
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../style/newBlogStyle.css">
