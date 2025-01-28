@@ -3,7 +3,7 @@
     Author: Yash Balotiya
     Description: This file contains the styling part of the change password page.
     Created on: 02 June 2024
-    Last Modified: 21 June 2024
+    Last Modified: 28 January 2025
 */
 
 * {
@@ -122,4 +122,41 @@ body { background-color: #f7f7f9; }
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
+}
+
+/* Responsiveness */
+@media (max-width: 800px) {
+    #resetParentDiv { width: 90%; }
+}
+
+@media (max-width: 725px) {
+    input[type="text"],
+    input[type="date"],
+    #securityQuestion,
+    input[type="password"] {
+        max-width: 40vw;
+    }
+}
+
+@media (max-width: 500px) {
+    #mainDiv {
+        padding-top: 200px;
+    }
+
+    #inputForm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #part1,
+    #part2 {
+        width: 90%;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    #securityQuestion,
+    input[type="password"] {
+        min-width: 75vw;
+    }
 }
